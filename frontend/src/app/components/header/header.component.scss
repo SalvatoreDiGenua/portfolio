@@ -1,0 +1,106 @@
+.sdg-header {
+    height: 55px;
+    padding: 5px 12px;
+    background-color: var(--sdg-color-1);
+    color: var(--sdg-color-3);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 24px;
+
+    &__actions {
+        flex: 1 1 auto;
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    &__toggle-theme {
+        flex: 0 0 auto;
+        display: flex;
+        align-items: center;
+
+        &-switch {
+            font-size: 17px;
+            position: relative;
+            display: inline-block;
+            width: 3.5em;
+            height: 2em;
+
+            .toggle-checkbox {
+                opacity: 0;
+                width: 0;
+                height: 0;
+
+                &:checked+.toggle-slider {
+                    background-color: var(--sdg-color-1);
+                }
+
+                &:focus+.toggle-slider {
+                    box-shadow: 0 0 1px var(--sdg-color-1);
+                }
+
+                &:checked+.toggle-slider:before {
+                    transform: translateX(1.5em);
+                }
+
+                &:checked+.toggle-slider::after {
+                    left: 80%;
+                    width: 0px;
+                    height: 0px;
+                }
+            }
+
+            .toggle-slider {
+                position: absolute;
+                cursor: pointer;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background-color: var(--sdg-color-1);
+                transition: .4s;
+                border-radius: 30px;
+                border: 1px solid var(--sdg-color-3);
+
+                &:before {
+                    position: absolute;
+                    content: "";
+                    height: 1.4em;
+                    width: 1.4em;
+                    border-radius: 20px;
+                    left: 0.3em;
+                    bottom: 0.3em;
+                    background-color: var(--sdg-color-3);
+                    transition: .4s;
+                }
+
+                &:after {
+                    width: 20px;
+                    height: 20px;
+                    left: 20%;
+                    top: 10%;
+                    border-radius: 50%;
+                    position: absolute;
+                    content: "";
+                    background-color: var(--sdg-color-1);
+                    transition: ease 0.4s;
+                }
+            }
+        }
+
+    }
+
+
+    button {
+        display: flex;
+        place-content: center;
+        place-items: center;
+
+        .material-symbols-outlined {
+            font-size: 38px;
+            font-weight: 300;
+        }
+    }
+
+}

@@ -45,6 +45,6 @@ Thumbs.db
 /idee
 /docs
 /.vscode
-RUN_APP.bat
+start.bat
 start-local-machine.bat
 portfolio-frontend.code-workspace

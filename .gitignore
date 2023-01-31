@@ -47,4 +47,5 @@ Thumbs.db
 /.vscode
 start.bat
 start-local-machine.bat
-portfolio-frontend.code-workspace
+portfolio.code-workspace
+npm_install.bat

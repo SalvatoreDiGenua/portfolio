@@ -55,7 +55,7 @@ export class HomeComponent implements AfterViewInit, OnDestroy {
     renderer.setClearColor(background_waves_background_color, 1);
     container.appendChild(renderer.domElement);
 
-    for (let i = 0; i < geometry.attributes['position'].count; i++) {
+    for (let i = 0; i < geometry.attributes.position.count; i++) {
       const z = Math.random() * vertex_height - vertex_height;
       geometry.attributes['position'].setZ(i, z);
       inital_Z[i] = z;

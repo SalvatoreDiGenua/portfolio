@@ -17,7 +17,7 @@ export class HomeComponent implements AfterViewInit, OnDestroy {
   constructor(private themeService: ThemeService) { }
 
   ngAfterViewInit() {
-    this.subOnChangedTheme = this.themeService.onThemeChanged.subscribe(() => this.buildScene());
+    // this.subOnChangedTheme = this.themeService.onThemeChanged.subscribe(() => this.buildScene());
   }
 
   buildScene() {
@@ -32,7 +32,7 @@ export class HomeComponent implements AfterViewInit, OnDestroy {
     const plane_segments_size = 90;
     // altezza animazione
     const plane_size = 942000;
-    const container: Element = document.querySelector('.sdg-home__three-animation') as Element;
+    const container: Element = document.querySelector('.sdg-home__three-animation');
     const canvas = container.getElementsByTagName('canvas')[0];
     if (canvas) { canvas.remove(); }
     const inital_Z: number[] = [];
@@ -87,7 +87,7 @@ export class HomeComponent implements AfterViewInit, OnDestroy {
     window.addEventListener('resize', resize, false)
   }
 
-  scroll(id: string) {
+  scrollToElement(id: string) {
     scrollToElement(id);
   }
 

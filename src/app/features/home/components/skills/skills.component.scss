@@ -1,0 +1,51 @@
+.root-skills {
+    min-width: 50%;
+    max-width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
+    padding: 30px;
+
+
+    .skill {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+
+        &__icon {
+            width: 80px;
+            height: 80px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        &__text {
+            font-size: 20px;
+            color: var(--sdg-color-2);
+        }
+    }
+
+    &__frontend,
+    &__backend {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+
+        &__title {
+            font-size: 24px;
+            color: var(--sdg-color-2);
+            text-align: center;
+        }
+
+        &-row {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 35px;
+        }
+    }
+}

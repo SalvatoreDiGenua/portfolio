@@ -1,1 +1,28 @@
-<p>skills works!</p>
+<div class="root-skills blur-effect">
+    <div class="root-skills__frontend">
+        <div class="root-skills__frontend__title">Frontend Skills</div>
+        <div class="root-skills__frontend-row">
+            <ng-container *ngTemplateOutlet="skill; context: { icon: '/assets/skills-icons/javascript.svg', text: 'JavaScript' }"></ng-container>
+            <ng-container *ngTemplateOutlet="skill; context: { icon: '/assets/skills-icons/html5.svg', text: 'HTML' }"></ng-container>
+            <ng-container *ngTemplateOutlet="skill; context: { icon: '/assets/skills-icons/css3.svg', text: 'CSS' }"></ng-container>
+        </div>
+        <div class="root-skills__frontend-row">
+            <ng-container *ngTemplateOutlet="skill; context: { icon: '/assets/skills-icons/angular.svg', text: 'Angular' }"></ng-container>
+            <ng-container *ngTemplateOutlet="skill; context: { icon: '/assets/skills-icons/typescript.svg', text: 'TypeScript' }"></ng-container>
+        </div>
+    </div>
+    <div class="root-skills__backend">
+        <div class="root-skills__backend__title">Backend Skills</div>
+        <div class="root-skills__backend-row">
+            <ng-container *ngTemplateOutlet="skill; context: { icon: '/assets/skills-icons/nodejs.svg', text: 'NodeJS' }"></ng-container>
+        </div>
+    </div>
+</div>
+
+
+<ng-template #skill let-icon="icon" let-text="text">
+    <div class="skill">
+        <div class="skill__icon" style="background-image: url({{icon}});"></div>
+        <div class="skill__text">{{text}}</div>
+    </div>
+</ng-template>

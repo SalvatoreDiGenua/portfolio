@@ -3,3 +3,11 @@
     text-overflow: ellipsis;
     overflow: hidden;
 }
+
+.blur-effect {
+    background-color: rgba(var(--sdg-color-1-rgb), 0.25);
+    box-shadow: 0 8px 32px 0 rgba(var(--sdg-color-1-rgb), 0.37);
+    backdrop-filter: blur(4px);
+    border-radius: 10px;
+    border: 1px solid rgba(var(--sdg-color-1-rgb), 0.18);
+}

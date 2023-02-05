@@ -32,7 +32,7 @@ export class ThemeService {
         break;
 
       default:
-        this.setLightTheme();
+        this.setDarkTheme();
         break;
     }
   }

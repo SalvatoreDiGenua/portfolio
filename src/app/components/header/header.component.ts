@@ -10,11 +10,4 @@ import { ThemeService } from 'src/shared/services/theme.service';
 export class HeaderComponent {
   constructor(public themeService: ThemeService) { }
 
-  onToggleTheme() {
-    if (this.themeService.getCurrentTheme() === this.themeService.typeTheme.SDG_THEME_LIGHT) {
-      this.themeService.setDarkTheme();
-    } else {
-      this.themeService.setLightTheme();
-    }
-  }
 }

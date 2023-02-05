@@ -68,4 +68,15 @@ export class ThemeService {
     this.currentThemeSbj.next(TypeTheme.SDG_THEME_DARK);
   }
 
+  /**
+   * Cambia il tema
+   */
+  onToggleTheme() {
+    if (this.getCurrentTheme() === TypeTheme.SDG_THEME_LIGHT) {
+      this.setDarkTheme();
+    } else {
+      this.setLightTheme();
+    }
+  }
+
 }

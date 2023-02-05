@@ -9,7 +9,7 @@
     </div>
     <div class="sdg-header__toggle-theme" *ngIf="themeService.onThemeChanged | async as currentTheme">
         <label class="sdg-header__toggle-theme-switch" [matTooltip]="currentTheme === themeService.typeTheme.SDG_THEME_LIGHT ? 'Passa al tema scuro' : 'Passa al tema chiaro'">
-            <input class="toggle-checkbox" type="checkbox" [ngModel]="(currentTheme === themeService.typeTheme.SDG_THEME_LIGHT) ? true : false" (ngModelChange)="onToggleTheme()">
+            <input class="toggle-checkbox" type="checkbox" [ngModel]="(currentTheme === themeService.typeTheme.SDG_THEME_LIGHT) ? true : false" (ngModelChange)="themeService.onToggleTheme()">
             <span class="toggle-slider"></span>
         </label>
     </div>

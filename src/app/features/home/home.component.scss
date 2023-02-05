@@ -39,6 +39,7 @@
             letter-spacing: 2.2px;
             animation: tracking-in-expand 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
             color: var(--sdg-color-2);
+            transition: color 200ms linear;
         }
 
         &-sub-title {
@@ -47,6 +48,7 @@
             letter-spacing: 2.2px;
             animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
             color: var(--sdg-color-4);
+            transition: color 200ms linear;
         }
 
         &-call-to-action {
@@ -68,7 +70,7 @@
         align-items: center;
         gap: 100px;
 
-        >* {
+        >*:not(sdg-contact) {
             width: 100%;
             min-height: 80vh;
             display: flex;

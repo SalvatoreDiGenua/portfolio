@@ -17,5 +17,6 @@
         flex-direction: column;
         overflow: auto;
         background-color: var(--sdg-color-1);
+        transition: background-color 200ms linear;
     }
 }

@@ -24,7 +24,8 @@ $portfolio-theme: mat.define-light-theme((
     primary: $portfolio-primary,
     accent: $portfolio-accent,
     warn: $portfolio-warn,
-  )
+  ),
+  typography: mat.define-typography-config($font-family: 'Poppins')
 ));
 
 // Include theme styles for core and each component used in your app.

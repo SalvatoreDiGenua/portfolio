@@ -2,8 +2,7 @@
     min-width: 50%;
     max-width: 80%;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-between;
     gap: 50px;
     padding: 30px;
 
@@ -47,5 +46,12 @@
             justify-content: center;
             gap: 35px;
         }
+    }
+}
+
+@media all and (max-width: 600px) {
+    .root-skills {
+        flex-wrap: wrap;
+        justify-content: center;
     }
 }

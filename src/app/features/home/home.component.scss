@@ -14,9 +14,9 @@
     justify-items: center;
     padding: 30px 12px;
 
-    &__three-animation {
+    &__animation {
         width: 100%;
-        height: 100%;
+        height: calc(90vh - 50px);
         position: absolute;
         top: 0;
     }
@@ -51,12 +51,60 @@
             transition: color 200ms linear;
         }
 
-        &-call-to-action {
+        &-action {
             flex: 1 1 auto;
             display: flex;
             flex-direction: column;
             justify-content: flex-end;
             padding-bottom: 50px;
+
+            .container-button {
+                @keyframes slide-fwd-center {
+                    0% {
+                        transform: translateZ(0);
+                    }
+
+                    100% {
+                        transform: translateZ(160px);
+                    }
+                }
+
+                &:hover {
+                    cursor: pointer;
+                }
+
+                .mouse-btn {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 20px;
+                    height: 40px;
+                    border: 2px solid var(--sdg-color-3);
+                    border-radius: 20px;
+                }
+
+                .mouse-scroll {
+                    width: 10px;
+                    height: 10px;
+                    background-color: var(--sdg-color-3);
+                    border-radius: 50%;
+                    animation: scrolling 1s linear infinite;
+
+                }
+
+                @keyframes scrolling {
+                    0% {
+                        opacity: 0;
+                        transform: translateY(-10px);
+                    }
+
+                    100% {
+                        opacity: 1;
+                        transform: translateY(10px);
+                    }
+                }
+            }
+
         }
     }
 
@@ -96,16 +144,18 @@
     }
 }
 
-@keyframes text-focus-in {
-    0% {
-        -webkit-filter: blur(12px);
-        filter: blur(12px);
-        opacity: 0;
+.shine:hover {
+    mask-image: linear-gradient(-75deg, rgba(0, 0, 0, .6) 30%, #000 50%, rgba(0, 0, 0, .6) 70%);
+    mask-size: 200%;
+    animation: shine 2s;
+}
+
+@keyframes shine {
+    from {
+        mask-position: 150%;
     }
 
-    100% {
-        -webkit-filter: blur(0px);
-        filter: blur(0px);
-        opacity: 1;
+    to {
+        mask-position: -50%;
     }
 }

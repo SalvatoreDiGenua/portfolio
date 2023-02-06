@@ -4,6 +4,8 @@ import { HomeComponent } from './home.component';
 import { HomeRoutingModule } from './home-routing.module';
 import { SkillsModule } from './components/skills/skills.module';
 import { ExperienceModule } from './components/experience/experience.module';
+import { ContactModule } from './components/contact/contact.module';
+import { MatButtonModule } from '@angular/material/button';
 
 
 
@@ -15,7 +17,9 @@ import { ExperienceModule } from './components/experience/experience.module';
     CommonModule,
     HomeRoutingModule,
     SkillsModule,
-    ExperienceModule
+    ExperienceModule,
+    ContactModule,
+    MatButtonModule
   ],
   exports: [
     HomeComponent

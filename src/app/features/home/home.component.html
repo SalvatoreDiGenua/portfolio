@@ -1,15 +1,24 @@
-<div class="sdg-home">
-    <!-- <div class="sdg-home__three-animation"></div> -->
+<div class="sdg-home" id="home">
+
+    <div class="sdg-home__animation">
+
+    </div>
+
     <div class="sdg-home__main">
         <div class="sdg-home__main-title">SALVATORE DI GENUA</div>
         <div class="sdg-home__main-sub-title">WEB DEVELOPER</div>
 
-        <div class="sdg-home__main-call-to-action">
-            <button (click)="scrollToElement('skills')">go down</button>
+        <div class="sdg-home__main-action">
+            <div class="container-button" (click)="scrollToElement('skills')">
+                <span class="mouse-btn">
+                    <span class="mouse-scroll"></span>
+                </span>
+            </div>
         </div>
     </div>
     <div class="sdg-home__start-navigation">
-        <sdg-skills id="skills"/>
-        <sdg-experience/>
+        <sdg-skills id="skills" />
+        <sdg-experience id="experience" />
+        <sdg-contact id="contact" />
     </div>
 </div>

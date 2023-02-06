@@ -1,5 +1,6 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { ThemeService } from 'src/shared/services/theme.service';
+import { scrollToElement } from 'src/shared/utility/utility';
 
 @Component({
   selector: 'sdg-header',
@@ -10,4 +11,7 @@ import { ThemeService } from 'src/shared/services/theme.service';
 export class HeaderComponent {
   constructor(public themeService: ThemeService) { }
 
+  scrollToElement(id: string) {
+    scrollToElement(id);
+  }
 }

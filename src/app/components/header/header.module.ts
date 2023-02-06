@@ -3,7 +3,6 @@ import { CommonModule } from '@angular/common';
 import { HeaderComponent } from './header.component';
 import { MatButtonModule } from '@angular/material/button';
 import { MatTooltipModule } from '@angular/material/tooltip';
-import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 
 
@@ -16,7 +15,6 @@ import { FormsModule } from '@angular/forms';
     CommonModule,
     MatButtonModule,
     MatTooltipModule,
-    RouterModule,
     FormsModule
   ],
   exports: [

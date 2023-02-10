@@ -129,12 +129,15 @@
         align-items: center;
         gap: 100px;
 
-        >*:not(sdg-contact) {
+        >* {
             width: 100%;
-            min-height: 85vh;
             display: flex;
             flex-direction: column;
             align-items: center;
+
+            &:not(sdg-contact) {
+                min-height: 85vh;
+            }
         }
     }
 

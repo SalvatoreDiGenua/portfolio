@@ -1,1 +1,32 @@
-<p>contact works!</p>
+<footer class="root-footer">
+    <section class="social-section">
+        <div class="social-section__title">STAY CONNECTED</div>
+    
+        <div class="social-section__social" *ngFor="let socialRow of (socialRows | keyvalue : originalKeyValueOrder)">
+            <div class="social-section__social-icon" *ngFor="let social of socialRow.value" [style.background]="social.color">
+                <img [src]="social.iconUrl" [alt]="social.name" [width]="60" [draggable]="false">
+            </div>
+        </div>
+    </section>
+
+    <section class="contact-section">
+        <div class="contact-section__title">Contact me!</div>
+
+        <div class="contact-section__group">
+            <input required autocomplete="off" name="name">
+            <label for="name">Name</label>
+        </div>
+        <div class="contact-section__group">
+            <input required autocomplete="off" name="email">
+            <label for="email">Email</label>
+        </div>
+        <div class="contact-section__group">
+            <textarea required autocomplete="off" name="context"></textarea>
+            <label for="context">Text</label>
+        </div>
+
+        <button class="contact-section__action">
+            <span>SEND</span>
+        </button>
+    </section>
+</footer>

@@ -12,11 +12,22 @@
     overflow: auto;
 
     &__router {
-        flex: 1 1 10px;
+        flex: 1 1 auto;
         display: flex;
         flex-direction: column;
         overflow: auto;
         background-color: var(--sdg-color-1);
         transition: background-color 200ms linear;
+
+        /* ===== Scrollbar CSS ===== */
+        /* Firefox */
+        * {
+            scrollbar-width: 0;
+        }
+
+        /* Chrome, Edge, and Safari */
+        &::-webkit-scrollbar {
+            width: 0;
+        }
     }
 }

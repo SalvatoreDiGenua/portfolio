@@ -1,25 +1,23 @@
-<div class="root-experience blur-effect">
+<div class="root-experience">
     <div class="root-experience__title">Professional Experience</div>
 
-    <div class="root-experience__list" *ngFor="let experience of experiences">
-        <details class="experience-details">
-            <summary class="experience-details__summary">
-                <span class="experience-details__summary-work">
-                    <div class="experience-company-favicon" style="background-image: url({{experience.faviconUrl}});"></div>
-                    <span class="experience-employment">{{experience.employment}}</span> 
-                    <a class="experience-site-url" [href]="experience.siteUrl" target="_blank">{{experience.company}}</a>
-                </span>
-                <span class="experience-details__summary-time">{{experience.permanence}}</span>
-            </summary>
-            <div class="experience-details__description">
-                <div class="experience-details__description-background" style="background-image: url({{experience.bgUrl}});"></div>
-                <div class="experience-details__description-text"> {{experience.description}}</div>
-                <div class="experience-details__description-stack"> 
-                    <div class="experience-details__description-stack-skill" *ngFor="let skill of experience.stack">
-                        {{skill}}
-                    </div>
+    <details class="experience-details" tabindex="-1" *ngFor="let experience of experiences">
+        <summary class="experience-details__summary">
+            <span class="experience-details__summary-work">
+                <img class="experience-company-favicon" [src]="experience.faviconUrl" alt="company-favicon">
+                <span class="experience-employment">{{experience.employment}}</span> 
+                <a class="experience-site-url" [href]="experience.siteUrl" target="_blank">{{experience.company}}</a>
+            </span>
+            <span class="experience-details__summary-time">{{experience.permanence}}</span>
+            <span class="material-symbols-outlined experience-details__status">arrow_back_ios</span>
+        </summary>
+        <div class="experience-details__description">
+            <div class="experience-details__description-text"> {{experience.description}}</div>
+            <div class="experience-details__description-stack"> 
+                <div class="experience-details__description-stack-skill" *ngFor="let skill of experience.stack">
+                    {{skill}}
                 </div>
             </div>
-        </details>
-    </div> 
+        </div>
+    </details>
 </div>

@@ -5,7 +5,6 @@ interface Experience {
   employment: string;
   siteUrl: string;
   faviconUrl: string;
-  bgUrl: string;
   permanence: string;
   description: string;
   stack: string[];
@@ -33,9 +32,7 @@ export class ExperienceComponent implements OnInit {
       permanence: '2019 / ad oggi',
       siteUrl: 'https://acca.it',
       faviconUrl: '/assets/experience-icons/acca/logo_acca.svg',
-      bgUrl: '/assets/experience-icons/acca/logo_acca_software.svg',
       stack: ['JavaScript', 'HTML5', 'CSS3', 'Angular(2+)', 'Typescript', 'Node']
     });
-  }
-
+  }  
 }

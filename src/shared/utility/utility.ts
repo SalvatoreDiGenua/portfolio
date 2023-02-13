@@ -11,3 +11,7 @@ export function scrollToElement(id: string) {
     if (!element) { return; }
     element.scrollIntoView({ behavior: 'smooth' });
 }
+
+export function replaceAll(value: string, find: string, replace: string) {
+    return value.replace(new RegExp(find, 'g'), replace);
+}

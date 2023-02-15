@@ -1,7 +1,15 @@
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<!-- Uploaded to: SVG Repo, www.svgrepo.com, Transformed by: SVG Repo Mixer Tools -->
-<svg width="800px" height="800px" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g id="SVGRepo_bgCarrier" stroke-width="0"/>
-<g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
-<g id="SVGRepo_iconCarrier"> <circle cx="24" cy="24" r="20" fill="#3B5998"/> <path fill-rule="evenodd" clip-rule="evenodd" d="M29.315 16.9578C28.6917 16.8331 27.8498 16.74 27.3204 16.74C25.8867 16.74 25.7936 17.3633 25.7936 18.3607V20.1361H29.3774L29.065 23.8137H25.7936V35H21.3063V23.8137H19V20.1361H21.3063V17.8613C21.3063 14.7453 22.7708 13 26.4477 13C27.7252 13 28.6602 13.187 29.8753 13.4363L29.315 16.9578Z" fill="white"/> </g>
-</svg>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 25.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Livello_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 40 40" style="enable-background:new 0 0 40 40;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#3B5A9D;}
+	.st1{fill:#FFFFFF;}
+</style>
+<g>
+	<path class="st0" d="M1.7,11.6v16.8c0,1.1,0.6,2.2,1.6,2.7l15.2,8.5c0.9,0.5,2.1,0.5,3,0l15.2-8.5c1-0.5,1.6-1.6,1.6-2.7V11.6
+		c0-1.1-0.6-2.2-1.6-2.7L21.5,0.4c-0.9-0.5-2.1-0.5-3,0L3.3,8.9C2.3,9.4,1.7,10.5,1.7,11.6z"/>
+	<path class="st1" d="M18.1,29v-7.8h-2.8v-3.2h2.8v-2.5c0-2.8,1.7-4.4,4.2-4.4c1.2,0,2.5,0.2,2.5,0.2V14h-1.4
+		c-1.4,0-1.8,0.9-1.8,1.7v2.1h3.1l-0.5,3.2h-2.6V29"/>
+</g>
+</svg>

@@ -3,9 +3,9 @@
         <div class="social-section__title">STAY CONNECTED</div>
     
         <div class="social-section__social" *ngFor="let socialRow of (socialRows | keyvalue : originalKeyValueOrder)">
-            <div class="social-section__social-icon" *ngFor="let social of socialRow.value" [style.background]="social.color">
+            <a class="social-section__social-icon" target="_blank" [href]="social.socialUrl" *ngFor="let social of socialRow.value">
                 <img [src]="social.iconUrl" [alt]="social.name" [width]="60" [draggable]="false">
-            </div>
+            </a>
         </div>
     </section>
 

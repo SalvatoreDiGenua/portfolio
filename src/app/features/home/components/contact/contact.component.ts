@@ -2,8 +2,8 @@ import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 
 interface Social {
   name: string;
-  color: string;
   iconUrl: string;
+  socialUrl: string;
 }
 
 @Component({
@@ -29,17 +29,17 @@ export class ContactComponent implements OnInit {
       {
         name: 'Instagram',
         iconUrl: '/assets/social-icons/instagram.svg',
-        color: 'radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%)'
+        socialUrl: 'https://www.instagram.com/salvatore_di_genua/'
       },
       {
         name: 'Facebook',
         iconUrl: '/assets/social-icons/facebook.svg',
-        color: '#3B5998'
+        socialUrl: 'https://www.facebook.com/profile.php?id=100008219641807'
       },
       {
         name: 'LinkedIn',
         iconUrl: '/assets/social-icons/linkedin.svg',
-        color: '#0a66c2'
+        socialUrl: 'https://www.linkedin.com/in/salvatore-di-genua-b664b716a'
       },
     ]
 
@@ -47,12 +47,12 @@ export class ContactComponent implements OnInit {
       {
         name: 'WhatsApp',
         iconUrl: '/assets/social-icons/whatsapp.svg',
-        color: '#25d366'
+        socialUrl: 'https://api.whatsapp.com/send?phone=3277868017'
       },
       {
         name: 'GitHub',
         iconUrl: '/assets/social-icons/github.svg',
-        color: '#fff'
+        socialUrl: 'https://github.com/SalvatoreDiGenua'
       },
     ]
   }

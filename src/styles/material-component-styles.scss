@@ -1,0 +1,14 @@
+* {
+    letter-spacing: normal;
+}
+
+
+.mdc-snackbar {
+    &__surface {
+        padding: 0 !important;
+
+        .mdc-snackbar__label {
+            padding: 0 0 0 15px !important;
+        }
+    }
+}

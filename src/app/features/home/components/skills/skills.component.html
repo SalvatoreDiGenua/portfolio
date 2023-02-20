@@ -2,7 +2,7 @@
     <div class="root-skills__title">Skills</div>
 
     <div class="root-skills__list">
-        <div class="root-skills__list-badge" *ngFor="let skill of skills" (click)="onSelectedSkillActive(skill)">
+        <div #skillRef class="root-skills__list-badge" *ngFor="let skill of skills" (click)="onSelectedSkillActive(skill)">
             <img class="badge__icon" [src]="skill.iconUrl" [alt]="skill.name">
             <div class="badge__text">{{skill.name}}</div>
         </div>

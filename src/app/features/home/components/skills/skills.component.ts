@@ -1,4 +1,6 @@
-import { ChangeDetectionStrategy, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { AfterViewInit, ChangeDetectionStrategy, Component, ElementRef, OnDestroy, OnInit, QueryList, ViewChild, ViewChildren, ViewEncapsulation } from '@angular/core';
+import { interval, Subscription } from 'rxjs';
+import { getRandomInt, unsubscribe } from 'src/shared/utility/utility';
 import Typed from 'typed.js';
 import { EXAMPLE_JAVASCRIPT, EXAMPLE_HTML, EXAMPLE_CSS, EXAMPLE_ANGULAR, EXAMPLE_SCSS, EXAMPLE_TYPESCRIPT, EXAMPLE_RXJS, EXAMPLE_NODEJS, EXAMPLE_SQL } from './example_preview_code';
 
@@ -11,19 +13,27 @@ interface Skill {
   selector: 'sdg-skills',
   templateUrl: './skills.component.html',
   styleUrls: ['./skills.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  encapsulation: ViewEncapsulation.None
 })
-export class SkillsComponent implements OnInit {
+export class SkillsComponent implements OnInit, AfterViewInit, OnDestroy {
 
+  @ViewChildren('skillRef') skillRefList: QueryList<ElementRef<HTMLDivElement>>;
   @ViewChild('wrapPreviewCode') wrapPreviewCode: ElementRef<HTMLSpanElement>;
 
   public skills: Skill[] = []
   public skillActive: Skill = null;
   public previewCode: string = null;
   private typed: Typed = null;
+  private animations: string[] = ['vibrate', 'shake-horizontal', 'shake-lr', 'jello-diagonal-1', 'jello-diagonal-2', 'wobble-hor-bottom', 'bounce-top'];
+  private subIntervalAnimation: Subscription;
 
   ngOnInit() {
     this.getSkills();
+  }
+
+  ngAfterViewInit() {
+    this.startAnimations();
   }
 
   getSkills() {
@@ -69,6 +79,18 @@ export class SkillsComponent implements OnInit {
         iconUrl: '/assets/skills-icons/sql.svg'
       }
     ]
+  }
+
+  startAnimations() {
+    const intervalObs = interval(1500);
+    this.subIntervalAnimation = intervalObs.subscribe(() => {
+      const skillRef = this.skillRefList.get(getRandomInt(0, this.skillRefList.length - 1))
+      const animation = this.animations[getRandomInt(0, this.animations.length - 1)];
+      skillRef.nativeElement.addEventListener('animationend', () => {
+        skillRef.nativeElement.style.animation = '';
+      })
+      skillRef.nativeElement.style.animation = `${animation} 0.8s ease both`;
+    })
   }
 
   onSelectedSkillActive(skill: Skill) {
@@ -127,5 +149,9 @@ export class SkillsComponent implements OnInit {
       typeSpeed: 20,
       contentType: null
     })
+  }
+
+  ngOnDestroy() {
+    unsubscribe(this.subIntervalAnimation);
   }
 }

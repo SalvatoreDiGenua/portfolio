@@ -1,4 +1,8 @@
-import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, EmbeddedViewRef, OnInit, TemplateRef, ViewChild } from '@angular/core';
+import { FormGroup, FormControl, Validators, NgForm } from '@angular/forms';
+import { MatSnackBar, MatSnackBarRef } from '@angular/material/snack-bar';
+import emailjs from '@emailjs/browser';
+import { environment } from 'src/environments/environment';
 
 interface Social {
   name: string;
@@ -14,11 +18,25 @@ interface Social {
 })
 export class ContactComponent implements OnInit {
 
+  @ViewChild('emailSendSuccesfully') emailSendSuccesfully: TemplateRef<HTMLElement>;
+  @ViewChild('emailNotSend') emailNotSend: TemplateRef<HTMLElement>;
+  @ViewChild('contactForm') contactForm: NgForm;
+
   public socialRows: { row1: Social[], row2: Social[] } = { row1: [], row2: [] };
+  public matSnackBarRef: MatSnackBarRef<EmbeddedViewRef<any>> = null;
+  public contactFormGroup = new FormGroup({
+    name: new FormControl('', Validators.required),
+    userEmail: new FormControl('', [Validators.required, Validators.email]),
+    text: new FormControl('', Validators.required)
+  });
+  public disableBtnSendEmail: boolean = false;
 
   public originalKeyValueOrder = () => {
     return 0;
   }
+
+
+  constructor(private matSnackBar: MatSnackBar) { }
 
   ngOnInit() {
     this.getSocial();
@@ -55,6 +73,29 @@ export class ContactComponent implements OnInit {
         socialUrl: 'https://github.com/SalvatoreDiGenua'
       },
     ]
+  }
+
+
+  submitForm() {
+    if (this.contactFormGroup.invalid) { return; }
+
+
+    this.contactFormGroup.disable();
+    this.disableBtnSendEmail = true;
+
+    emailjs.send(environment.emailJsKey.serviceId, environment.emailJsKey.templateId, this.contactFormGroup.value, environment.emailJsKey.publicKey)
+      .then(() => {
+        this.disableBtnSendEmail = false;
+        this.contactFormGroup.enable();
+        this.matSnackBarRef = this.matSnackBar.openFromTemplate(this.emailSendSuccesfully, { duration: 8 * 1000 });
+        this.contactForm.resetForm();
+      },
+        () => {
+          this.disableBtnSendEmail = false;
+          this.contactFormGroup.enable();
+          this.matSnackBarRef = this.matSnackBar.openFromTemplate(this.emailNotSend, { duration: 8 * 1000 });
+          this.contactForm.resetForm();
+        });
   }
 
 }

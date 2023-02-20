@@ -1,9 +1,10 @@
 <footer class="root-footer">
     <section class="social-section">
         <div class="social-section__title">STAY CONNECTED</div>
-    
+
         <div class="social-section__social" *ngFor="let socialRow of (socialRows | keyvalue : originalKeyValueOrder)">
-            <a class="social-section__social-icon" target="_blank" [href]="social.socialUrl" *ngFor="let social of socialRow.value">
+            <a class="social-section__social-icon" target="_blank" [href]="social.socialUrl"
+                *ngFor="let social of socialRow.value">
                 <img [src]="social.iconUrl" [alt]="social.name" [width]="60" [draggable]="false">
             </a>
         </div>
@@ -12,21 +13,48 @@
     <section class="contact-section">
         <div class="contact-section__title">Contact me!</div>
 
-        <div class="contact-section__group">
-            <input required autocomplete="off" name="name">
-            <label for="name">Name</label>
-        </div>
-        <div class="contact-section__group">
-            <input required autocomplete="off" name="email">
-            <label for="email">Email</label>
-        </div>
-        <div class="contact-section__group">
-            <textarea required autocomplete="off" name="context"></textarea>
-            <label for="context">Text</label>
-        </div>
+        <form #contactForm="ngForm" class="contact-section__form" [formGroup]="contactFormGroup" (ngSubmit)="submitForm()" *ngIf="contactFormGroup.controls as controls">
+            <mat-form-field appearance="outline">
+                <mat-label>Name</mat-label>
+                <input matInput formControlName="name" placeholder="Name" required>
+                <mat-error *ngIf="controls.name.hasError('required')">Name field is required</mat-error>
+            </mat-form-field>
 
-        <button class="contact-section__action">
-            <span>SEND</span>
-        </button>
+            <mat-form-field appearance="outline">
+                <mat-label>Email</mat-label>
+                <input type="email" matInput formControlName="userEmail" placeholder="Email" required>
+                <mat-error *ngIf="controls.userEmail.hasError('required')">Email field is required</mat-error>
+                <mat-error *ngIf="controls.userEmail.hasError('email')">Not a valid email</mat-error>
+            </mat-form-field>
+
+            <mat-form-field appearance="outline">
+                <mat-label>Text</mat-label>
+                <textarea matInput formControlName="text" placeholder="Text" required></textarea>
+                <mat-error *ngIf="controls.text.hasError('required')">Text field is required</mat-error>
+            </mat-form-field>
+
+            <button class="contact-section__form-btn-submit" color="primary" mat-raised-button type="submit" [disabled]="contactFormGroup.invalid || disableBtnSendEmail">
+               <ng-container *ngIf="!disableBtnSendEmail; else loaderSendEmail">Send</ng-container>
+               <ng-template #loaderSendEmail><mat-spinner></mat-spinner></ng-template>
+            </button>
+        </form>
     </section>
 </footer>
+
+
+<ng-template #emailSendSuccesfully>
+    <div class="snackbar-sended-email">
+        <span>Email sent successfully!</span>
+        <button mat-icon-button (click)="matSnackBarRef?.dismiss()">
+            <span class="material-symbols-outlined">close</span>
+        </button>
+    </div>
+</ng-template>
+<ng-template #emailNotSend>
+    <div class="snackbar-sended-email">
+        <span>Oops...something went wrong, try again in a few minutes</span>
+        <button mat-icon-button (click)="matSnackBarRef?.dismiss()">
+            <span class="material-symbols-outlined">close</span>
+        </button>
+    </div>
+</ng-template>

@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { HeaderModule } from './components/header/header.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatTooltipDefaultOptions, MAT_TOOLTIP_DEFAULT_OPTIONS } from '@angular/material/tooltip';
+import { LocationStrategy, HashLocationStrategy } from '@angular/common';
 
 const sdgTooltipDefaults: MatTooltipDefaultOptions = {
   showDelay: 0,
@@ -25,7 +26,8 @@ const sdgTooltipDefaults: MatTooltipDefaultOptions = {
     HeaderModule
   ],
   providers: [
-    { provide: MAT_TOOLTIP_DEFAULT_OPTIONS, useValue: sdgTooltipDefaults }
+    { provide: MAT_TOOLTIP_DEFAULT_OPTIONS, useValue: sdgTooltipDefaults },
+    { provide: LocationStrategy, useClass: HashLocationStrategy }
   ],
   bootstrap: [AppComponent]
 })

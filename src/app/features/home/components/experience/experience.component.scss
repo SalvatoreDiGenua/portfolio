@@ -22,11 +22,6 @@
         border-radius: 4px;
         max-width: 900px;
 
-        &::marker,
-        &::-webkit-details-marker {
-            display: none;
-        }
-
         &:not(:last-of-type) {
             margin-bottom: 20px;
         }
@@ -55,6 +50,12 @@
             align-items: center;
             gap: 50px;
             transition: all 0.3s ease;
+            list-style: none;
+
+            &::marker,
+            &::-webkit-details-marker {
+                display: none;
+            }
 
             &:hover {
                 cursor: pointer;

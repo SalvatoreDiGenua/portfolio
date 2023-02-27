@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
-import { ThemeService } from 'src/shared/services/theme.service';
+import { ThemeService } from 'src/shared/services/theme/theme.service';
 import { scrollToElement } from 'src/shared/utility/utility';
 
 @Component({

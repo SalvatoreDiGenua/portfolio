@@ -40,7 +40,6 @@ const portfolioReducers: ActionReducerMap<PortfolioState> = {
     StoreModule.forRoot(portfolioReducers),
     StoreDevtoolsModule.instrument({
       maxAge: 20,
-      trace: !environment.production,
       name: 'Portfolio'
     })
   ],

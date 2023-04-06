@@ -146,7 +146,7 @@ export class SkillsComponent implements OnInit, AfterViewInit, OnDestroy {
 
     this.typed = new Typed(this.wrapPreviewCode.nativeElement, {
       strings: [this.previewCode],
-      typeSpeed: 20,
+      typeSpeed: 2,
       contentType: null
     })
   }

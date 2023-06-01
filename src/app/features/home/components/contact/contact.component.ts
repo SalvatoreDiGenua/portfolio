@@ -44,8 +44,6 @@ export class ContactComponent {
     private matSnackBar: MatSnackBar
   ) {
     this.getSocial();
-
-    console.log(environment.production)
   }
 
   getSocial() {

@@ -1,13 +1,17 @@
-import { ChangeDetectionStrategy, Component, EmbeddedViewRef, OnInit, TemplateRef, ViewChild } from '@angular/core';
+import { ChangeDetectionStrategy, Component, EmbeddedViewRef, TemplateRef, ViewChild } from '@angular/core';
+import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { FormGroup, FormControl, Validators, NgForm } from '@angular/forms';
 import { MatSnackBar, MatSnackBarRef } from '@angular/material/snack-bar';
 import emailjs from '@emailjs/browser';
-import { environment } from 'src/environments/environment';
+import { Store, select } from '@ngrx/store';
+import { environment } from 'src/environments/environment.development';
+import { PortfolioState, Social } from 'src/shared/models/sdg-portfolio-models';
+import { getSocial } from 'src/shared/stores/social/solcial.selectors';
 
-interface Social {
-  name: string;
-  iconUrl: string;
-  socialUrl: string;
+interface ContactFormGroup {
+  name: FormControl<string>;
+  userEmail: FormControl<string>;
+  text: FormControl<string>;
 }
 
 @Component({
@@ -16,7 +20,7 @@ interface Social {
   styleUrls: ['./contact.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class ContactComponent implements OnInit {
+export class ContactComponent {
 
   @ViewChild('emailSendSuccesfully') emailSendSuccesfully: TemplateRef<HTMLElement>;
   @ViewChild('emailNotSend') emailNotSend: TemplateRef<HTMLElement>;
@@ -24,7 +28,7 @@ export class ContactComponent implements OnInit {
 
   public socialRows: { row1: Social[], row2: Social[] } = { row1: [], row2: [] };
   public matSnackBarRef: MatSnackBarRef<EmbeddedViewRef<any>> = null;
-  public contactFormGroup = new FormGroup({
+  public contactFormGroup = new FormGroup<ContactFormGroup>({
     name: new FormControl('', Validators.required),
     userEmail: new FormControl('', [Validators.required, Validators.email]),
     text: new FormControl('', Validators.required)
@@ -35,50 +39,24 @@ export class ContactComponent implements OnInit {
     return 0;
   }
 
-
-  constructor(private matSnackBar: MatSnackBar) { }
-
-  ngOnInit() {
+  constructor(
+    private portfolioStore: Store<PortfolioState>,
+    private matSnackBar: MatSnackBar
+  ) {
     this.getSocial();
+
+    console.log(environment.production)
   }
 
   getSocial() {
-    this.socialRows.row1 = [
-      {
-        name: 'Instagram',
-        iconUrl: '/assets/social-icons/instagram.svg',
-        socialUrl: 'https://www.instagram.com/salvatore_di_genua/'
-      },
-      {
-        name: 'Facebook',
-        iconUrl: '/assets/social-icons/facebook.svg',
-        socialUrl: 'https://www.facebook.com/profile.php?id=100008219641807'
-      },
-      {
-        name: 'LinkedIn',
-        iconUrl: '/assets/social-icons/linkedin.svg',
-        socialUrl: 'https://www.linkedin.com/in/salvatore-di-genua-b664b716a'
-      },
-    ]
-
-    this.socialRows.row2 = [
-      {
-        name: 'WhatsApp',
-        iconUrl: '/assets/social-icons/whatsapp.svg',
-        socialUrl: 'https://api.whatsapp.com/send?phone=3277868017'
-      },
-      {
-        name: 'GitHub',
-        iconUrl: '/assets/social-icons/github.svg',
-        socialUrl: 'https://github.com/SalvatoreDiGenua'
-      },
-    ]
+    this.portfolioStore.pipe(takeUntilDestroyed(), select(getSocial)).subscribe(social => {
+      this.socialRows.row1 = social.slice(0, 3);
+      this.socialRows.row2 = social.slice(3);
+    });
   }
-
 
   submitForm() {
     if (this.contactFormGroup.invalid) { return; }
-
 
     this.contactFormGroup.disable();
     this.disableBtnSendEmail = true;

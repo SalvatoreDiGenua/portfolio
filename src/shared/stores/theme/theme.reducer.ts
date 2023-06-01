@@ -1,6 +1,7 @@
 import { createReducer, on } from '@ngrx/store';
-import { isTypeTheme, keyThemeLocalStorage, TypeTheme } from '../theme.service';
+import { TypeTheme } from 'src/shared/models/sdg-portfolio-models';
 import { changeTheme } from './theme.actions';
+import { isTypeTheme, keyThemeLocalStorage } from 'src/shared/services/theme.service';
 
 
 export const themeReducer = createReducer(

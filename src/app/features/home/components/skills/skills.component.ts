@@ -1,13 +1,13 @@
-import { AfterViewInit, ChangeDetectionStrategy, Component, ElementRef, OnDestroy, OnInit, QueryList, ViewChild, ViewChildren, ViewEncapsulation } from '@angular/core';
-import { interval, Subscription } from 'rxjs';
-import { getRandomInt, unsubscribe } from 'src/shared/utility/utility';
+import { AfterViewInit, ChangeDetectionStrategy, Component, ElementRef, QueryList, ViewChild, ViewChildren, ViewEncapsulation } from '@angular/core';
+import { interval, Observable } from 'rxjs';
+import { getRandomInt } from 'src/shared/utility/utility';
 import Typed from 'typed.js';
 import { EXAMPLE_JAVASCRIPT, EXAMPLE_HTML, EXAMPLE_CSS, EXAMPLE_ANGULAR, EXAMPLE_SCSS, EXAMPLE_TYPESCRIPT, EXAMPLE_RXJS, EXAMPLE_NODEJS, EXAMPLE_SQL } from './example_preview_code';
+import { PortfolioState, Skill } from 'src/shared/models/sdg-portfolio-models';
+import { Store, select } from '@ngrx/store';
+import { getSkill } from 'src/shared/stores/skill/skill.selectors';
+import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 
-interface Skill {
-  name: string;
-  iconUrl: string;
-}
 
 @Component({
   selector: 'sdg-skills',
@@ -16,74 +16,29 @@ interface Skill {
   changeDetection: ChangeDetectionStrategy.OnPush,
   encapsulation: ViewEncapsulation.None
 })
-export class SkillsComponent implements OnInit, AfterViewInit, OnDestroy {
+export class SkillsComponent implements AfterViewInit {
 
   @ViewChildren('skillRef') skillRefList: QueryList<ElementRef<HTMLDivElement>>;
   @ViewChild('wrapPreviewCode') wrapPreviewCode: ElementRef<HTMLSpanElement>;
 
-  public skills: Skill[] = []
+  public skills$: Observable<Skill[]>;
+  public intervalAnimation$: Observable<number>;
   public skillActive: Skill = null;
   public previewCode: string = null;
   private typed: Typed = null;
   private animations: string[] = ['vibrate', 'shake-horizontal', 'shake-lr', 'jello-diagonal-1', 'jello-diagonal-2', 'wobble-hor-bottom', 'bounce-top'];
-  private subIntervalAnimation: Subscription;
 
-  ngOnInit() {
-    this.getSkills();
+  constructor(private portfolioStore: Store<PortfolioState>) {
+    this.skills$ = this.portfolioStore.pipe(select(getSkill));
+    this.intervalAnimation$ = interval(1500).pipe(takeUntilDestroyed());
   }
 
   ngAfterViewInit() {
     this.startAnimations();
   }
 
-  getSkills() {
-    this.skills = [
-      {
-        name: 'JavaScript',
-        iconUrl: '/assets/skills-icons/javascript.svg'
-      },
-      {
-        name: 'HTML',
-        iconUrl: '/assets/skills-icons/html5.svg'
-      },
-      {
-        name: 'CSS',
-        iconUrl: '/assets/skills-icons/css3.svg'
-      },
-      {
-        name: 'SCSS',
-        iconUrl: '/assets/skills-icons/scss.svg'
-      },
-      {
-        name: 'Angular',
-        iconUrl: '/assets/skills-icons/angular.svg'
-      },
-      {
-        name: 'TypeScript',
-        iconUrl: '/assets/skills-icons/typescript.svg'
-      },
-      {
-        name: 'RxJS',
-        iconUrl: '/assets/skills-icons/rxjs.svg'
-      },
-      // {
-      //   name: 'NgRx',
-      //   iconUrl: '/assets/skills-icons/ngrx.svg'
-      // },
-      {
-        name: 'NodeJS',
-        iconUrl: '/assets/skills-icons/nodejs.svg'
-      },
-      {
-        name: 'SQL',
-        iconUrl: '/assets/skills-icons/sql.svg'
-      }
-    ]
-  }
-
   startAnimations() {
-    const intervalObs = interval(1500);
-    this.subIntervalAnimation = intervalObs.subscribe(() => {
+    this.intervalAnimation$.subscribe(() => {
       const skillRef = this.skillRefList.get(getRandomInt(0, this.skillRefList.length - 1))
       const animation = this.animations[getRandomInt(0, this.animations.length - 1)];
       skillRef.nativeElement.addEventListener('animationend', () => {
@@ -127,6 +82,9 @@ export class SkillsComponent implements OnInit, AfterViewInit, OnDestroy {
       case 'rxjs':
         this.previewCode = EXAMPLE_RXJS;
         break;
+      case 'ngrx':
+        this.previewCode = null;
+        break;
       case 'nodejs':
         this.previewCode = EXAMPLE_NODEJS;
         break;
@@ -144,6 +102,8 @@ export class SkillsComponent implements OnInit, AfterViewInit, OnDestroy {
       this.typed.destroy();
     }
 
+    if (!this.previewCode || !this.skillActive) { return; }
+
     this.typed = new Typed(this.wrapPreviewCode.nativeElement, {
       strings: [this.previewCode],
       typeSpeed: 2,
@@ -151,7 +111,4 @@ export class SkillsComponent implements OnInit, AfterViewInit, OnDestroy {
     })
   }
 
-  ngOnDestroy() {
-    unsubscribe(this.subIntervalAnimation);
-  }
 }

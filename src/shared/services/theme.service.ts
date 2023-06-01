@@ -1,14 +1,9 @@
 import { Injectable } from '@angular/core';
 import { firstValueFrom, Observable } from 'rxjs';
 import { select, Store } from '@ngrx/store';
-import { changeTheme } from './store/theme.actions';
-import { getTheme } from './store/theme.selectors';
-import { PortfolioState } from 'src/app/app.module';
-
-export enum TypeTheme {
-  SDG_THEME_LIGHT = 'sdg-theme-light',
-  SDG_THEME_DARK = 'sdg-theme-dark'
-}
+import { changeTheme } from '../stores/theme/theme.actions';
+import { PortfolioState, TypeTheme } from '../models/sdg-portfolio-models';
+import { getTheme } from '../stores/theme/theme.selectors';
 
 export function isTypeTheme(value: string): value is TypeTheme {
   return Object.values(TypeTheme).includes(value as TypeTheme);
@@ -21,10 +16,10 @@ export const keyThemeLocalStorage: string = 'SDG-PORTFOLIO-THEME';
 })
 export class ThemeService {
 
-  public theme$: Observable<TypeTheme> = this.themeStore.pipe(select(getTheme));
+  public theme$: Observable<TypeTheme> = this.portfolioStore.pipe(select(getTheme));
   public readonly typeTheme: typeof TypeTheme = TypeTheme;
 
-  constructor(private themeStore: Store<PortfolioState>) {
+  constructor(private portfolioStore: Store<PortfolioState>) {
     this.setDefaultTheme();
   }
 
@@ -56,14 +51,14 @@ export class ThemeService {
    * Setta il tema light
    */
   setLightTheme() {
-    this.themeStore.dispatch(changeTheme({ theme: TypeTheme.SDG_THEME_LIGHT }));
+    this.portfolioStore.dispatch(changeTheme({ theme: TypeTheme.SDG_THEME_LIGHT }));
   }
 
   /**
    * Setta il tema dark
    */
   setDarkTheme() {
-    this.themeStore.dispatch(changeTheme({ theme: TypeTheme.SDG_THEME_DARK }));
+    this.portfolioStore.dispatch(changeTheme({ theme: TypeTheme.SDG_THEME_DARK }));
   }
 
   /**

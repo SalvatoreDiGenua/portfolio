@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
-import { FirebaseService } from './services/firebase/firebase.service';
+import { FirebaseService } from 'src/shared/services/firebase.service';
 
 @Component({
   selector: 'app-root',

@@ -1,12 +1,17 @@
 import { ChangeDetectionStrategy, Component, EmbeddedViewRef, TemplateRef, ViewChild } from '@angular/core';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
-import { FormGroup, FormControl, Validators, NgForm } from '@angular/forms';
+import { FormGroup, FormControl, Validators, NgForm, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatSnackBar, MatSnackBarRef } from '@angular/material/snack-bar';
 import emailjs from '@emailjs/browser';
 import { Store, select } from '@ngrx/store';
 import { environment } from 'src/environments/environment.development';
 import { PortfolioState, Social } from 'src/shared/models/sdg-portfolio-models';
 import { getSocial } from 'src/shared/stores/social/solcial.selectors';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatButtonModule } from '@angular/material/button';
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { NgFor, NgIf, KeyValuePipe } from '@angular/common';
 
 interface ContactFormGroup {
   name: FormControl<string>;
@@ -15,10 +20,12 @@ interface ContactFormGroup {
 }
 
 @Component({
-  selector: 'sdg-contact',
-  templateUrl: './contact.component.html',
-  styleUrls: ['./contact.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush
+    selector: 'sdg-contact',
+    templateUrl: './contact.component.html',
+    styleUrls: ['./contact.component.scss'],
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    standalone: true,
+    imports: [NgFor, NgIf, FormsModule, ReactiveFormsModule, MatFormFieldModule, MatInputModule, MatButtonModule, MatProgressSpinnerModule, KeyValuePipe]
 })
 export class ContactComponent {
 

@@ -7,6 +7,7 @@ import { PortfolioState, Skill } from 'src/shared/models/sdg-portfolio-models';
 import { Store, select } from '@ngrx/store';
 import { getSkill } from 'src/shared/stores/skill/skill.selectors';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
+import { NgIf, NgFor, AsyncPipe } from '@angular/common';
 
 
 @Component({
@@ -14,7 +15,9 @@ import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
   templateUrl: './skills.component.html',
   styleUrls: ['./skills.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
-  encapsulation: ViewEncapsulation.None
+  encapsulation: ViewEncapsulation.None,
+  standalone: true,
+  imports: [NgIf, NgFor, AsyncPipe]
 })
 export class SkillsComponent implements AfterViewInit {
 

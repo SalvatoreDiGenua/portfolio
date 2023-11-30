@@ -20,7 +20,7 @@ const defaultSkills: Skill[] = [
     },
     {
         name: 'Angular',
-        iconUrl: '/assets/skills-icons/angular.svg'
+        iconUrl: '/assets/skills-icons/angular-17.svg'
     },
     {
         name: 'TypeScript',

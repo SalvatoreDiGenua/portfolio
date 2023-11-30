@@ -110,35 +110,35 @@ $secondary-color: green;
 `;
 
 export const EXAMPLE_ANGULAR = `
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnDestroy } from '@angular/core';
 import { DataService } from './data.service.ts';
-import { Subscription, filter } from 'rxjs';
+import { filter } from 'rxjs';
+import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 
 @Component({
  selector: 'app-root',
- templateUrl: './app.component.html',
- styleUrls: ['./app.component.css']
+ template: '
+   @for(let object of data; track object.id) {
+      {{object.name}}
+   } @empty {
+      Empty data!
+   }
+',
+ styles: ' ',
+ standalore: true
 })
 export class AppComponent implements OnInit, OnDestroy {
  public title = 'This is App Root !';
  public data: object[] = [];
- private subGetData: Subscription;
 
- constructor(private dataService: DataService) { }
-
- ngOnInit() {
-  this.getData();
+ constructor(private dataService: DataService) {
+   this.getData();
  }
 
  getData() {
-  const obsData = this.dataService.getData().pipe(filter(Boolean));
-  this.subGetData = obsData.subscribe(data => this.data = data);
- }
-
- ngOnDestroy() {
-  if (this.subGetData) {
-    this.subGetData.unsubscribe();
-  }
+  this.dataService.getData()
+  .pipe(takeUntilDestroyed(), filter(Boolean))
+  .subscribe(data => this.data = data);
  }
 
 }

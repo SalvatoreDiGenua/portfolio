@@ -14,7 +14,6 @@ export interface Experience {
     siteUrl: string;
     faviconUrl: string;
     permanence: string;
-    description: string;
     stack: string[];
 }
 

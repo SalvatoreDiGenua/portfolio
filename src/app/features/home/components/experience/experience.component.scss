@@ -33,7 +33,7 @@
             }
 
             .experience-details__summary {
-                margin-bottom: 10px;
+                margin-bottom: 20px;
             }
         }
 
@@ -69,7 +69,6 @@
                 column-gap: 10px;
                 align-items: center;
                 color: var(--sdg-color-2);
-                min-width: 150px;
 
                 .experience-company-favicon {
                     grid-area: favicon;
@@ -112,18 +111,10 @@
         }
 
         &__description {
-            min-height: 150px;
             display: flex;
             flex-direction: column;
             justify-content: center;
             gap: 15px;
-
-            &-text {
-                flex: 0 1 auto;
-                color: var(--sdg-color-2);
-                font-size: max(1vw, 16px);
-                font-weight: 300;
-            }
 
             &-stack {
                 flex: 0 1 auto;

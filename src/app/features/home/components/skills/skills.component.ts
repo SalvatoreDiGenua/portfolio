@@ -7,7 +7,7 @@ import { PortfolioState, Skill } from 'src/shared/models/sdg-portfolio-models';
 import { Store, select } from '@ngrx/store';
 import { getSkill } from 'src/shared/stores/skill/skill.selectors';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
-import { NgIf, NgFor, AsyncPipe } from '@angular/common';
+import { AsyncPipe } from '@angular/common';
 
 
 @Component({
@@ -17,7 +17,7 @@ import { NgIf, NgFor, AsyncPipe } from '@angular/common';
   changeDetection: ChangeDetectionStrategy.OnPush,
   encapsulation: ViewEncapsulation.None,
   standalone: true,
-  imports: [NgIf, NgFor, AsyncPipe]
+  imports: [AsyncPipe]
 })
 export class SkillsComponent implements AfterViewInit {
 

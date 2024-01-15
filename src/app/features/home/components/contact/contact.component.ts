@@ -11,7 +11,7 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
-import { NgFor, NgIf, KeyValuePipe } from '@angular/common';
+import { KeyValuePipe } from '@angular/common';
 
 interface ContactFormGroup {
   name: FormControl<string>;
@@ -25,7 +25,7 @@ interface ContactFormGroup {
     styleUrls: ['./contact.component.scss'],
     changeDetection: ChangeDetectionStrategy.OnPush,
     standalone: true,
-    imports: [NgFor, NgIf, FormsModule, ReactiveFormsModule, MatFormFieldModule, MatInputModule, MatButtonModule, MatProgressSpinnerModule, KeyValuePipe]
+    imports: [FormsModule, ReactiveFormsModule, MatFormFieldModule, MatInputModule, MatButtonModule, MatProgressSpinnerModule, KeyValuePipe]
 })
 export class ContactComponent {
 

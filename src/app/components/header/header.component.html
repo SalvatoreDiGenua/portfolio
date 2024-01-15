@@ -1,16 +1,19 @@
 <header class="sdg-header">
-    <div class="sdg-header__home">
-        <button mat-icon-button matTooltip="Home" (click)="scrollToElement('home')"><span class="material-symbols-outlined">code</span></button>
-    </div>
-    <div class="sdg-header__actions">
-        <button mat-icon-button matTooltip="Skills" (click)="scrollToElement('skills')"><span class="material-symbols-outlined">verified</span></button>
-        <button mat-icon-button matTooltip="Professional Experience" (click)="scrollToElement('experience')"><span class="material-symbols-outlined">business_center</span></button>
-        <button mat-icon-button matTooltip="Contact" (click)="scrollToElement('contact')"><span class="material-symbols-outlined">help</span></button>
-    </div>
-    <div class="sdg-header__toggle-theme" *ngIf="themeService.theme$ | async as currentTheme">
-        <label class="sdg-header__toggle-theme-switch" [matTooltip]="currentTheme === themeService.typeTheme.SDG_THEME_LIGHT ? 'Switch to dark theme' : 'Switch to light theme'">
-            <input class="toggle-checkbox" type="checkbox" [ngModel]="(currentTheme === themeService.typeTheme.SDG_THEME_LIGHT) ? true : false" (ngModelChange)="themeService.onToggleTheme()">
-            <span class="toggle-slider"></span>
+  <div class="sdg-header__home">
+    <button mat-icon-button matTooltip="Home" (click)="scrollToElement('home')"><span class="material-symbols-outlined">code</span></button>
+  </div>
+  <div class="sdg-header__actions">
+    <button mat-icon-button matTooltip="Skills" (click)="scrollToElement('skills')"><span class="material-symbols-outlined">verified</span></button>
+    <button mat-icon-button matTooltip="Professional Experience" (click)="scrollToElement('experience')"><span class="material-symbols-outlined">business_center</span></button>
+    <button mat-icon-button matTooltip="Contact" (click)="scrollToElement('contact')"><span class="material-symbols-outlined">help</span></button>
+  </div>
+  @if (themeService.theme$ | async; as currentTheme) {
+    <div class="sdg-header__toggle-theme">
+      <label class="sdg-header__toggle-theme-switch" [matTooltip]="currentTheme === themeService.typeTheme.SDG_THEME_LIGHT ? 'Switch to dark theme' : 'Switch to light theme'">
+        <input class="toggle-checkbox" type="checkbox" [ngModel]="(currentTheme === themeService.typeTheme.SDG_THEME_LIGHT) ? true : false" (ngModelChange)="themeService.onToggleTheme()">
+          <span class="toggle-slider"></span>
         </label>
-    </div>
-</header>
+      </div>
+    }
+  </header>
+  

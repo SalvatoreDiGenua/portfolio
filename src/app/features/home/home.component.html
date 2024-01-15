@@ -17,22 +17,8 @@
         </div>
     </div>
     <div class="sdg-home__start-navigation">
-        @defer (on viewport) {
-            <sdg-skills id="skills" />
-        } @placeholder {
-            <div id="skills">SKILLS</div>
-        }
-
-        @defer (on viewport){
-            <sdg-experience id="experience" />
-        } @placeholder {
-            <div id="experience">EXPERIENCE</div>
-        }
-
-        @defer (on viewport){
-            <sdg-contact id="contact" />
-        } @placeholder {
-            <div id="contact">CONTACT</div>
-        }
+        <sdg-skills id="skills" />
+        <sdg-experience id="experience" />
+        <sdg-contact id="contact" />
     </div>
 </div>

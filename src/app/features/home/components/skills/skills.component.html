@@ -1,21 +1,18 @@
 <div class="root-skills">
-    <div class="root-skills__title">Skills</div>
-
-    <ng-container *ngIf="(skills$ | async) as skills">
-        <div class="root-skills__list">
-            <div #skillRef class="root-skills__list-badge" *ngFor="let skill of skills" (click)="onSelectedSkillActive(skill)">
-                <img class="badge__icon" [src]="skill.iconUrl" [alt]="skill.name">
-                <div class="badge__text">{{skill.name}}</div>
-            </div>
-        </div>
-    
-        <div class="root-skills__preview-code" [class.root-skills__preview-code-disabled]="!skillActive">
-            <span class="not-selected-skill">Select a Skill!</span>
-    
-            <span #wrapPreviewCode class="selected-skill"></span>
-        </div>
-    </ng-container>
-</div>
-
-
-
+  <div class="root-skills__title">Skills</div>
+  @if ((skills$ | async); as skills) {
+    <div class="root-skills__list">
+      @for (skill of skills; track skill) {
+        <div #skillRef class="root-skills__list-badge" (click)="onSelectedSkillActive(skill)">
+          <img class="badge__icon" [src]="skill.iconUrl" [alt]="skill.name">
+            <div class="badge__text">{{skill.name}}</div>
+          </div>
+        }
+      </div>
+      <div class="root-skills__preview-code" [class.root-skills__preview-code-disabled]="!skillActive">
+        <span class="not-selected-skill">Select a Skill!</span>
+        <span #wrapPreviewCode class="selected-skill"></span>
+      </div>
+    }
+  </div>
+  

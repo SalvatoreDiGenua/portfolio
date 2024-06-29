@@ -6,7 +6,7 @@
         <summary class="experience-details__summary">
           <span class="experience-details__summary-work">
             <img class="experience-company-favicon" [src]="experience.faviconUrl" alt="company-favicon">
-              <span class="experience-employment">{{experience.employment}}</span>
+              <span class="experience-employment ellipsis" [title]="experience.employment">{{experience.employment}}</span>
               <a class="experience-site-url" [href]="experience.siteUrl" target="_blank">{{experience.company}}</a>
             </span>
             <span class="experience-details__summary-time">{{experience.permanence}}</span>

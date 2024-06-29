@@ -48,7 +48,7 @@
 			color: var(--sdg-color-2);
 			display: flex;
 			align-items: center;
-			gap: 50px;
+			gap: 10px;
 			transition: all 0.3s ease;
 			list-style: none;
 
@@ -85,8 +85,6 @@
 				.experience-employment {
 					grid-area: employment;
 					max-width: max-content;
-					height: 18px;
-					white-space: nowrap;
 				}
 
 				.experience-site-url,
@@ -153,10 +151,6 @@
 			min-height: 40px !important;
 			max-width: 40px !important;
 			max-height: 40px !important;
-		}
-
-		.experience-employment {
-			height: 25px !important;
 		}
 
 		&-time {

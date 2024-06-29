@@ -3,8 +3,8 @@
 
 mat.$theme-ignore-duplication-warnings: true;
 
-$portfolio-warn: mat.define-palette(mat.$red-palette);
-$portfolio-typography: mat.define-typography-config($font-family: 'Poppins');
+$portfolio-warn: mat.m2-define-palette(mat.$m2-red-palette);
+$portfolio-typography: mat.m2-define-typography-config($font-family: 'Poppins');
 
 body.sdg-theme-light {
   $sdg-light-colors: (
@@ -39,9 +39,9 @@ body.sdg-theme-light {
       A700 : #192c40,
     )
   );
-  $portfolio-primary-light: mat.define-palette($sdg-light-colors, 500);
-  $portfolio-accent-light: mat.define-palette($sdg-light-colors, A200, A100, A400);
-  $portfolio-theme-light: mat.define-light-theme((
+  $portfolio-primary-light: mat.m2-define-palette($sdg-light-colors, 500);
+  $portfolio-accent-light: mat.m2-define-palette($sdg-light-colors, A200, A100, A400);
+  $portfolio-theme-light: mat.m2-define-light-theme((
     color: (
       primary: $portfolio-primary-light,
       accent: $portfolio-accent-light,
@@ -87,9 +87,9 @@ body.sdg-theme-dark {
       A700 : #192c40,
     )
   );
-  $portfolio-primary-dark: mat.define-palette($sdg-dark-colors, 500);
-  $portfolio-accent-dark: mat.define-palette($sdg-dark-colors, A200, A100, A400);
-  $portfolio-theme-dark: mat.define-dark-theme((
+  $portfolio-primary-dark: mat.m2-define-palette($sdg-dark-colors, 500);
+  $portfolio-accent-dark: mat.m2-define-palette($sdg-dark-colors, A200, A100, A400);
+  $portfolio-theme-dark: mat.m2-define-dark-theme((
     color: (
       primary: $portfolio-primary-dark,
       accent: $portfolio-accent-dark,

@@ -1,4 +1,4 @@
-import { AfterViewInit, ChangeDetectionStrategy, Component, ElementRef, QueryList, ViewChild, ViewChildren, ViewEncapsulation } from '@angular/core';
+import { AfterViewInit, ChangeDetectionStrategy, Component, ElementRef, QueryList, ViewChild, ViewChildren, ViewEncapsulation, inject } from '@angular/core';
 import { interval, Observable } from 'rxjs';
 import { getRandomInt } from 'src/shared/utility/utility';
 import Typed from 'typed.js';
@@ -20,7 +20,7 @@ import { AsyncPipe } from '@angular/common';
   imports: [AsyncPipe]
 })
 export class SkillsComponent implements AfterViewInit {
-
+  private portfolioStore = inject<Store<PortfolioState>>(Store<PortfolioState>);
   @ViewChildren('skillRef') skillRefList: QueryList<ElementRef<HTMLDivElement>>;
   @ViewChild('wrapPreviewCode') wrapPreviewCode: ElementRef<HTMLSpanElement>;
 
@@ -31,7 +31,7 @@ export class SkillsComponent implements AfterViewInit {
   private typed: Typed = null;
   private animations: string[] = ['vibrate', 'shake-horizontal', 'shake-lr', 'jello-diagonal-1', 'jello-diagonal-2', 'wobble-hor-bottom', 'bounce-top'];
 
-  constructor(private portfolioStore: Store<PortfolioState>) {
+  constructor() {
     this.skills$ = this.portfolioStore.pipe(select(getSkill));
     this.intervalAnimation$ = interval(1500).pipe(takeUntilDestroyed());
   }

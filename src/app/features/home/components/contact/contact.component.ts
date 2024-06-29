@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, EmbeddedViewRef, TemplateRef, ViewChild } from '@angular/core';
+import { ChangeDetectionStrategy, Component, EmbeddedViewRef, TemplateRef, ViewChild, inject } from '@angular/core';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { FormGroup, FormControl, Validators, NgForm, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatSnackBar, MatSnackBarRef } from '@angular/material/snack-bar';
@@ -20,15 +20,16 @@ interface ContactFormGroup {
 }
 
 @Component({
-    selector: 'sdg-contact',
-    templateUrl: './contact.component.html',
-    styleUrls: ['./contact.component.scss'],
-    changeDetection: ChangeDetectionStrategy.OnPush,
-    standalone: true,
-    imports: [FormsModule, ReactiveFormsModule, MatFormFieldModule, MatInputModule, MatButtonModule, MatProgressSpinnerModule, KeyValuePipe]
+  selector: 'sdg-contact',
+  templateUrl: './contact.component.html',
+  styleUrls: ['./contact.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  standalone: true,
+  imports: [FormsModule, ReactiveFormsModule, MatFormFieldModule, MatInputModule, MatButtonModule, MatProgressSpinnerModule, KeyValuePipe]
 })
 export class ContactComponent {
-
+  private portfolioStore = inject<Store<PortfolioState>>(Store<PortfolioState>);
+  private matSnackBar = inject(MatSnackBar);
   @ViewChild('emailSendSuccesfully') emailSendSuccesfully: TemplateRef<HTMLElement>;
   @ViewChild('emailNotSend') emailNotSend: TemplateRef<HTMLElement>;
   @ViewChild('contactForm') contactForm: NgForm;
@@ -47,8 +48,6 @@ export class ContactComponent {
   }
 
   constructor(
-    private portfolioStore: Store<PortfolioState>,
-    private matSnackBar: MatSnackBar
   ) {
     this.getSocial();
   }

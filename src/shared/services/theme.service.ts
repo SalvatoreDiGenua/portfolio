@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable, inject } from '@angular/core';
 import { firstValueFrom, Observable } from 'rxjs';
 import { select, Store } from '@ngrx/store';
 import { changeTheme } from '../stores/theme/theme.actions';
@@ -15,11 +15,11 @@ export const keyThemeLocalStorage: string = 'SDG-PORTFOLIO-THEME';
   providedIn: 'root'
 })
 export class ThemeService {
-
+  private portfolioStore = inject<Store<PortfolioState>>(Store<PortfolioState>);
   public theme$: Observable<TypeTheme> = this.portfolioStore.pipe(select(getTheme));
   public readonly typeTheme: typeof TypeTheme = TypeTheme;
 
-  constructor(private portfolioStore: Store<PortfolioState>) {
+  constructor() {
     this.setDefaultTheme();
   }
 
@@ -66,7 +66,7 @@ export class ThemeService {
    */
   async onToggleTheme() {
     const currentTheme = await this.getCurrentTheme();
-    
+
     if (currentTheme === TypeTheme.SDG_THEME_LIGHT) {
       this.setDarkTheme();
     } else {

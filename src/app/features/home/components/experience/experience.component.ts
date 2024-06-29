@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, ViewEncapsulation } from '@angular/core';
+import { ChangeDetectionStrategy, Component, ViewEncapsulation, inject } from '@angular/core';
 import { Store, select } from '@ngrx/store';
 import { Observable } from 'rxjs';
 import { Experience, PortfolioState } from 'src/shared/models/sdg-portfolio-models';
@@ -15,10 +15,10 @@ import { AsyncPipe } from '@angular/common';
   encapsulation: ViewEncapsulation.None
 })
 export class ExperienceComponent {
-
+  private portfolioStore = inject<Store<PortfolioState>>(Store<PortfolioState>);
   public experience$: Observable<Experience[]>;
 
-  constructor(private portfolioStore: Store<PortfolioState>) {
+  constructor() {
     this.experience$ = this.portfolioStore.pipe(select(getExperience))
   }
 }

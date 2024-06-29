@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, EmbeddedViewRef, TemplateRef, ViewChild, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, EmbeddedViewRef, TemplateRef, inject, viewChild } from '@angular/core';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { FormGroup, FormControl, Validators, NgForm, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatSnackBar, MatSnackBarRef } from '@angular/material/snack-bar';
@@ -30,9 +30,9 @@ interface ContactFormGroup {
 export class ContactComponent {
   private portfolioStore = inject<Store<PortfolioState>>(Store<PortfolioState>);
   private matSnackBar = inject(MatSnackBar);
-  @ViewChild('emailSendSuccesfully') emailSendSuccesfully: TemplateRef<HTMLElement>;
-  @ViewChild('emailNotSend') emailNotSend: TemplateRef<HTMLElement>;
-  @ViewChild('contactForm') contactForm: NgForm;
+  emailSendSuccesfully = viewChild<TemplateRef<HTMLElement>>('emailSendSuccesfully');
+  emailNotSend = viewChild<TemplateRef<HTMLElement>>('emailNotSend');
+  contactForm = viewChild<NgForm>('contactForm');
 
   public socialRows: { row1: Social[], row2: Social[] } = { row1: [], row2: [] };
   public matSnackBarRef: MatSnackBarRef<EmbeddedViewRef<any>> = null;
@@ -69,15 +69,14 @@ export class ContactComponent {
       .then(() => {
         this.disableBtnSendEmail = false;
         this.contactFormGroup.enable();
-        this.matSnackBarRef = this.matSnackBar.openFromTemplate(this.emailSendSuccesfully, { duration: 8 * 1000 });
-        this.contactForm.resetForm();
+        this.matSnackBarRef = this.matSnackBar.openFromTemplate(this.emailSendSuccesfully(), { duration: 8 * 1000 });
+        this.contactForm().resetForm();
       },
         () => {
           this.disableBtnSendEmail = false;
           this.contactFormGroup.enable();
-          this.matSnackBarRef = this.matSnackBar.openFromTemplate(this.emailNotSend, { duration: 8 * 1000 });
-          this.contactForm.resetForm();
+          this.matSnackBarRef = this.matSnackBar.openFromTemplate(this.emailNotSend(), { duration: 8 * 1000 });
+          this.contactForm().resetForm();
         });
   }
-
 }

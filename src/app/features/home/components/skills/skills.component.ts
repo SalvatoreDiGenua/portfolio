@@ -1,4 +1,4 @@
-import { AfterViewInit, ChangeDetectionStrategy, Component, ElementRef, QueryList, ViewChild, ViewChildren, ViewEncapsulation, inject } from '@angular/core';
+import { AfterViewInit, ChangeDetectionStrategy, Component, ElementRef, ViewEncapsulation, inject, viewChild, viewChildren } from '@angular/core';
 import { interval, Observable } from 'rxjs';
 import { getRandomInt } from 'src/shared/utility/utility';
 import Typed from 'typed.js';
@@ -21,8 +21,8 @@ import { AsyncPipe } from '@angular/common';
 })
 export class SkillsComponent implements AfterViewInit {
   private portfolioStore = inject<Store<PortfolioState>>(Store<PortfolioState>);
-  @ViewChildren('skillRef') skillRefList: QueryList<ElementRef<HTMLDivElement>>;
-  @ViewChild('wrapPreviewCode') wrapPreviewCode: ElementRef<HTMLSpanElement>;
+  skillRefList = viewChildren<ElementRef<HTMLDivElement>>('skillRef');
+  wrapPreviewCode = viewChild<ElementRef<HTMLSpanElement>>('wrapPreviewCode');
 
   public skills$: Observable<Skill[]>;
   public intervalAnimation$: Observable<number>;
@@ -42,7 +42,7 @@ export class SkillsComponent implements AfterViewInit {
 
   startAnimations() {
     this.intervalAnimation$.subscribe(() => {
-      const skillRef = this.skillRefList.get(getRandomInt(0, this.skillRefList.length - 1))
+      const skillRef = this.skillRefList()[getRandomInt(0, this.skillRefList().length - 1)]
       const animation = this.animations[getRandomInt(0, this.animations.length - 1)];
       skillRef.nativeElement.addEventListener('animationend', () => {
         skillRef.nativeElement.style.animation = '';
@@ -107,11 +107,10 @@ export class SkillsComponent implements AfterViewInit {
 
     if (!this.previewCode || !this.skillActive) { return; }
 
-    this.typed = new Typed(this.wrapPreviewCode.nativeElement, {
+    this.typed = new Typed(this.wrapPreviewCode().nativeElement, {
       strings: [this.previewCode],
       typeSpeed: 2,
       contentType: null
     })
   }
-
 }

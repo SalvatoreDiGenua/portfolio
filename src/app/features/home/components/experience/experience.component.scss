@@ -1,162 +1,170 @@
 .root-experience {
-    min-width: 50%;
-    max-width: 80%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+	min-width: 50%;
+	max-width: 80%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 
 
-    &__title {
-        color: var(--sdg-color-2);
-        font-size: max(3vw, 40px);
-        text-align: center;
-        margin-bottom: 50px;
-    }
+	&__title {
+		color: var(--sdg-color-2);
+		font-size: max(3vw, 40px);
+		text-align: center;
+		margin-bottom: 50px;
+	}
 
-    .experience-details {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        padding: 10px;
-        border: 1px solid var(--sdg-color-3);
-        border-radius: 4px;
-        max-width: 900px;
+	.experience-details {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		padding: 10px;
+		border: 1px solid var(--sdg-color-3);
+		border-radius: 4px;
+		max-width: 900px;
 
-        &:not(:last-of-type) {
-            margin-bottom: 20px;
-        }
+		&:not(:last-of-type) {
+			margin-bottom: 20px;
+		}
 
 
-        &[open] {
-            .experience-details__status {
-                transform: rotate(-90deg);
-            }
+		&[open] {
+			.experience-details__status {
+				transform: rotate(-90deg);
+			}
 
-            .experience-details__summary {
-                margin-bottom: 20px;
-            }
-        }
+			.experience-details__summary {
+				margin-bottom: 20px;
+			}
+		}
 
-        &__status {
-            transition: all 0.3s ease;
-            font-size: 16px;
-        }
+		&__status {
+			transition: all 0.3s ease;
+			font-size: 16px;
+		}
 
-        &__summary {
-            font-size: max(1vw, 20px);
-            font-weight: 600;
-            color: var(--sdg-color-2);
-            display: flex;
-            align-items: center;
-            gap: 50px;
-            transition: all 0.3s ease;
-            list-style: none;
+		&__summary {
+			font-size: max(1vw, 20px);
+			font-weight: 600;
+			color: var(--sdg-color-2);
+			display: flex;
+			align-items: center;
+			gap: 50px;
+			transition: all 0.3s ease;
+			list-style: none;
 
-            &::marker,
-            &::-webkit-details-marker {
-                display: none;
-            }
+			&::marker,
+			&::-webkit-details-marker {
+				display: none;
+			}
 
-            &:hover {
-                cursor: pointer;
-            }
+			&:hover {
+				cursor: pointer;
+			}
 
-            &-work {
-                flex: 1 1 auto;
-                display: grid;
-                grid-template-areas: "favicon employment" "favicon company";
-                grid-template-columns: auto 1fr;
-                column-gap: 10px;
-                align-items: center;
-                color: var(--sdg-color-2);
+			&-work {
+				flex: 1 1 auto;
+				display: grid;
+				grid-template-areas: "favicon employment" "favicon company";
+				grid-template-columns: auto 1fr;
+				column-gap: 10px;
+				align-items: center;
+				color: var(--sdg-color-2);
 
-                .experience-company-favicon {
-                    grid-area: favicon;
-                    background-position: center;
-                    background-repeat: no-repeat;
-                    background-size: cover;
-                    min-width: 50px;
-                    min-height: 50px;
-                    max-width: 50px;
-                    max-height: 50px;
-                    filter: drop-shadow(0 0 1px var(--sdg-color-2));
-                }
+				.experience-company-favicon {
+					grid-area: favicon;
+					background-position: center;
+					background-repeat: no-repeat;
+					background-size: cover;
+					min-width: 50px;
+					min-height: 50px;
+					max-width: 50px;
+					max-height: 50px;
+					filter: drop-shadow(0 0 1px var(--sdg-color-2));
+				}
 
-                .experience-employment {
-                    grid-area: employment;
-                    max-width: max-content;
-                    height: 18px;
-                    white-space: nowrap;
-                }
+				.experience-employment {
+					grid-area: employment;
+					max-width: max-content;
+					height: 18px;
+					white-space: nowrap;
+				}
 
-                .experience-site-url,
-                .experience-site-url:visited {
-                    grid-area: company;
-                    color: var(--sdg-color-4);
-                    text-decoration: none;
-                    max-width: max-content;
-                    font-size: max(0.5vw, 15px);
-                    white-space: nowrap;
+				.experience-site-url,
+				.experience-site-url:visited {
+					grid-area: company;
+					color: var(--sdg-color-4);
+					text-decoration: none;
+					max-width: max-content;
+					font-size: max(0.5vw, 15px);
+					white-space: nowrap;
 
-                    &:hover {
-                        text-decoration: underline;
-                    }
-                }
-            }
+					&:hover {
+						text-decoration: underline;
+					}
+				}
+			}
 
-            &-time {
-                text-align: center;
-            }
+			&-time {
+				text-align: center;
+			}
 
-        }
+		}
 
-        &__description {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            gap: 15px;
+		&__description {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			gap: 15px;
 
-            &-stack {
-                flex: 0 1 auto;
-                display: flex;
-                flex-wrap: wrap;
-                gap: 5px;
+			&-text {
+				color: var(--sdg-color-2);
 
-                &-skill {
-                    padding: 5px 10px;
-                    border-radius: 50px;
-                    font-size: max(0.5vw, 12px);
-                    background-color: var(--sdg-color-3);
-                    color: var(--sdg-color-1);
-                }
-            }
-        }
-    }
+				&-skill {
+					color: var(--sdg-color-3);
+				}
+			}
+
+			&-stack {
+				flex: 0 1 auto;
+				display: flex;
+				flex-wrap: wrap;
+				gap: 5px;
+
+				&-skill {
+					padding: 5px 10px;
+					border-radius: 50px;
+					font-size: max(0.5vw, 12px);
+					background-color: var(--sdg-color-3);
+					color: var(--sdg-color-1);
+				}
+			}
+		}
+	}
 
 }
 
 @media all and (max-width: 600px) {
 
-    .experience-details__summary {
-        justify-content: center !important;
+	.experience-details__summary {
+		justify-content: center !important;
 
-        .experience-company-favicon {
-            min-width: 40px !important;
-            min-height: 40px !important;
-            max-width: 40px !important;
-            max-height: 40px !important;
-        }
+		.experience-company-favicon {
+			min-width: 40px !important;
+			min-height: 40px !important;
+			max-width: 40px !important;
+			max-height: 40px !important;
+		}
 
-        .experience-employment {
-            height: 25px !important;
-        }
+		.experience-employment {
+			height: 25px !important;
+		}
 
-        &-time {
-            display: none;
-        }
-    }
+		&-time {
+			display: none;
+		}
+	}
 
-    .experience-details__description {
-        margin-top: 15px !important;
-    }
+	.experience-details__description {
+		margin-top: 15px !important;
+	}
 }

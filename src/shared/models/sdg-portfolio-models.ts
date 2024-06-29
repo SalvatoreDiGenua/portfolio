@@ -15,6 +15,7 @@ export interface Experience {
     faviconUrl: string;
     permanence: string;
     stack: string[];
+    description: string;
 }
 
 export interface Social {

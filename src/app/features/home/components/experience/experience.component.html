@@ -13,6 +13,7 @@
             <span class="material-symbols-outlined experience-details__status">arrow_back_ios</span>
           </summary>
           <div class="experience-details__description">
+            <div class="experience-details__description-text" [innerHTML]="experience.description"></div>
             <div class="experience-details__description-stack">
               @for (skill of experience.stack; track skill) {
                 <div class="experience-details__description-stack-skill">

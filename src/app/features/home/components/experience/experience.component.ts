@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, ViewEncapsulation } from '@angular/core';
 import { Store, select } from '@ngrx/store';
 import { Observable } from 'rxjs';
 import { Experience, PortfolioState } from 'src/shared/models/sdg-portfolio-models';
@@ -11,7 +11,8 @@ import { AsyncPipe } from '@angular/common';
   styleUrls: ['./experience.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
   standalone: true,
-  imports: [AsyncPipe]
+  imports: [AsyncPipe],
+  encapsulation: ViewEncapsulation.None
 })
 export class ExperienceComponent {
 

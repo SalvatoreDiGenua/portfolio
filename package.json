@@ -15,8 +15,8 @@
     "test": "ng test",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
-    "serve:ssg": "npx http-server dist/ngx-request-lock-docs/browser -p 8080",
-    "serve:ssr": "node dist/ngx-request-lock-docs/server/server.mjs"
+    "serve:ssg": "npx http-server dist/portfolio/browser -p 8080",
+    "serve:ssr": "node dist/portfolio/server/server.mjs"
   },
   "dependencies": {
     "@angular/animations": "^22.0.0",

@@ -22,7 +22,7 @@
 
 Visit my personal portfolio:
 
-<a href="https://salvatoredigenua.github.io/portfolio-v2/"><img src="https://img.shields.io/badge/Portfolio-6366f1?style=for-the-badge&logo=angular&logoColor=white" alt="Portfolio" /></a>
+<a href="https://salvatoredigenua.github.io/portfolio/"><img src="https://img.shields.io/badge/Portfolio-6366f1?style=for-the-badge&logo=angular&logoColor=white" alt="Portfolio" /></a>
 
 > The portfolio is a responsive single-page application built with Angular and Tailwind CSS, available in Italian and English.
 

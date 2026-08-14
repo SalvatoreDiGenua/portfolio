@@ -1,5 +1,5 @@
-import { Service, inject, signal } from '@angular/core';
-import { DOCUMENT } from '@angular/common';
+import { DOCUMENT, isPlatformBrowser } from '@angular/common';
+import { PLATFORM_ID, Service, inject, signal } from '@angular/core';
 import { TranslocoService } from '@jsverse/transloco';
 
 export type SupportedLanguage = 'it' | 'en';
@@ -8,7 +8,9 @@ export type SupportedLanguage = 'it' | 'en';
 export class LanguageService {
   private readonly transloco = inject(TranslocoService);
   private readonly document = inject(DOCUMENT);
-  private readonly storageKey = 'portfolio-language';
+  private readonly platformId = inject(PLATFORM_ID);
+  public static readonly storageKey = 'sdg-portfolio.language';
+
   readonly language = signal<SupportedLanguage>(this.getInitialLanguage());
 
   constructor() {
@@ -19,7 +21,10 @@ export class LanguageService {
     this.language.set(language);
     this.transloco.setActiveLang(language);
     this.document.documentElement.lang = language;
-    localStorage.setItem(this.storageKey, language);
+
+    if (isPlatformBrowser(this.platformId)) {
+      localStorage.setItem(LanguageService.storageKey, language);
+    }
   }
 
   toggle(): void {
@@ -27,8 +32,16 @@ export class LanguageService {
   }
 
   private getInitialLanguage(): SupportedLanguage {
-    const stored = localStorage.getItem(this.storageKey);
-    if (stored === 'it' || stored === 'en') return stored;
+    if (!isPlatformBrowser(this.platformId)) {
+      return 'en';
+    }
+
+    const storedLanguage = localStorage.getItem(LanguageService.storageKey);
+
+    if (storedLanguage === 'it' || storedLanguage === 'en') {
+      return storedLanguage;
+    }
+
     return navigator.language.toLowerCase().startsWith('it') ? 'it' : 'en';
   }
 }

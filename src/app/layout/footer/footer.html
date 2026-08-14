@@ -1,12 +1,28 @@
 <footer class="border-t border-white/5 bg-ink-950 py-8">
-  <div class="section-container flex flex-col items-center justify-between gap-4 text-sm text-slate-500 sm:flex-row">
-    <p>&copy; {{ year }} {{ profile.name }}. {{ 'footer.rights' | transloco }}</p>
+  <div
+    class="section-container flex flex-col items-center justify-between gap-4 text-sm text-slate-500 sm:flex-row"
+  >
+    <p>
+      &copy; {{ year }} {{ profile.name }}. {{ 'footer.rights' | transloco }}
+    </p>
     <div class="flex items-center gap-4">
-      <a href="https://github.com/SalvatoreDiGenua/portfolio" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-slate-400 transition-colors hover:text-white">
-        <img src="https://cdn.simpleicons.org/github" alt="" aria-hidden="true" class="h-4 w-4 shrink-0 brightness-0 invert" />
+      <a
+        href="https://github.com/SalvatoreDiGenua/portfolio"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-flex items-center gap-2 text-slate-400 transition-colors hover:text-white"
+      >
+        <img
+          src="https://cdn.simpleicons.org/github"
+          alt=""
+          aria-hidden="true"
+          class="h-4 w-4 shrink-0 brightness-0 invert"
+        />
         {{ 'footer.sourceCode' | transloco }}
       </a>
-      <span class="font-mono text-xs text-slate-600">{{ 'footer.built' | transloco }}</span>
+      <span class="font-mono text-xs text-slate-600">{{
+        'footer.built' | transloco
+      }}</span>
     </div>
   </div>
 </footer>

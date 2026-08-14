@@ -79,18 +79,7 @@ I integrate AI into the engineering workflow to improve code generation, refacto
 
 An Angular library focused on preventing duplicated or overlapping requests in frontend applications.
 
-<a href="https://github.com/SalvatoreDiGenua/ngx-request-lock"><img src="https://img.shields.io/badge/View%20project-18181b?style=for-the-badge&logo=github&logoColor=white" alt="View ngx-request-lock" /></a>
-
-## GitHub statistics
-
-<div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=SalvatoreDiGenua&show_icons=true&hide_border=true&theme=tokyonight&rank_icon=github" height="165" alt="GitHub statistics" />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=SalvatoreDiGenua&layout=compact&hide_border=true&theme=tokyonight" height="165" alt="Top languages" />
-</div>
-
-<div align="center">
-  <img src="https://streak-stats.demolab.com?user=SalvatoreDiGenua&theme=tokyonight&hide_border=true" alt="GitHub streak" />
-</div>
+<a href="https://github.com/SalvatoreDiGenua/ngx-request-lock-docs"><img src="https://img.shields.io/badge/View%20project-18181b?style=for-the-badge&logo=github&logoColor=white" alt="View ngx-request-lock" /></a>
 
 ## Education
 
@@ -107,7 +96,6 @@ An Angular library focused on preventing duplicated or overlapping requests in f
 
 <p>
   <a href="mailto:saldigenua@gmail.com"><img src="https://img.shields.io/badge/Email-saldigenua%40gmail.com-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" /></a>
-  <a href="tel:+393277868017"><img src="https://img.shields.io/badge/Phone-%2B39%20327%207868017-22C55E?style=for-the-badge&logo=phone&logoColor=white" alt="Phone" /></a>
 </p>
 
 <div align="center">

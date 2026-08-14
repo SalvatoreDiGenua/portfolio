@@ -1,1 +1,21 @@
-<section id="about" class="py-24 sm:py-32"><div class="section-container"><div class="mb-12 flex flex-col gap-2"><span class="section-label">{{ 'about.label' | transloco }}</span><h2 class="text-3xl sm:text-4xl">{{ 'about.title' | transloco }}</h2></div><div class="grid gap-12 lg:grid-cols-3"><div class="lg:col-span-2"><p class="text-lg leading-relaxed text-slate-300">{{ profile.summary }}</p></div><div class="grid grid-cols-3 gap-4 lg:grid-cols-1 lg:gap-6">@for (stat of stats; track stat.key) {<div class="card text-center lg:text-left"><p class="text-3xl font-extrabold text-primary-400">{{ stat.value }}</p><p class="mt-1 text-sm text-slate-400">{{ stat.key | transloco }}</p></div>}</div></div></div></section>
+<section id="about" class="py-24 sm:py-32">
+  <div class="section-container">
+    <div class="mb-12 flex flex-col gap-2">
+      <span class="section-label">{{ 'about.label' | transloco }}</span>
+      <h2 class="text-3xl sm:text-4xl">{{ 'about.title' | transloco }}</h2>
+    </div>
+    <div class="grid gap-12 lg:grid-cols-3">
+      <div class="lg:col-span-2">
+        <p class="text-lg leading-relaxed text-slate-300">{{ profile.summary }}</p>
+      </div>
+      <div class="grid grid-cols-3 gap-4 lg:grid-cols-1 lg:gap-6">
+        @for (stat of stats; track stat.key) {
+        <div class="card text-center lg:text-left">
+          <p class="text-3xl font-extrabold text-primary-400">{{ stat.value }}</p>
+          <p class="mt-1 text-sm text-slate-400">{{ stat.key | transloco }}</p>
+        </div>
+        }
+      </div>
+    </div>
+  </div>
+</section>

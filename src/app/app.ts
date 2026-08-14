@@ -14,8 +14,18 @@ import { ContactComponent } from './sections/contact/contact';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [TranslocoModule, NavbarComponent, HeroComponent, AboutComponent, SkillsComponent, ExperienceComponent, EducationComponent, ContactComponent, FooterComponent],
-  templateUrl: './app.html'
+  imports: [
+    TranslocoModule,
+    NavbarComponent,
+    HeroComponent,
+    AboutComponent,
+    SkillsComponent,
+    ExperienceComponent,
+    EducationComponent,
+    ContactComponent,
+    FooterComponent,
+  ],
+  templateUrl: './app.html',
 })
 export class App {
   private readonly languageService = inject(LanguageService);

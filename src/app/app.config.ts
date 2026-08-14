@@ -14,9 +14,9 @@ export const appConfig: ApplicationConfig = {
         availableLangs: ['it', 'en'],
         defaultLang: 'it',
         reRenderOnLangChange: true,
-        prodMode: true
+        prodMode: true,
       },
-      loader: TranslocoHttpLoader
-    })
-  ]
+      loader: TranslocoHttpLoader,
+    }),
+  ],
 };

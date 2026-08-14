@@ -1,0 +1,36 @@
+{
+  "nav": {
+    "about": "Chi sono",
+    "skills": "Competenze",
+    "experience": "Esperienza",
+    "education": "Formazione",
+    "contact": "Contatti",
+    "contactMe": "Contattami"
+  },
+  "hero": {
+    "availability": "Disponibile per nuove collaborazioni",
+    "greeting": "Ciao, sono",
+    "description": "Costruisco interfacce moderne e scalabili con Angular, integrando strumenti di sviluppo assistito da AI per accelerare qualità e velocità di consegna.",
+    "experienceCta": "Guarda la mia esperienza",
+    "scroll": "Scorri"
+  },
+  "about": {
+    "label": "01 — Chi sono",
+    "title": "Profilo professionale",
+    "years": "Anni di esperienza",
+    "projects": "Aziende / progetti chiave",
+    "technologies": "Tecnologie padroneggiate"
+  },
+  "skills": { "label": "02 — Competenze", "title": "Stack tecnologico" },
+  "experience": { "label": "03 — Esperienza", "title": "Percorso professionale" },
+  "education": { "label": "04 — Formazione", "title": "Percorso di studi" },
+  "contact": {
+    "label": "05 — Contatti",
+    "title": "Parliamo del tuo prossimo progetto",
+    "description": "Sono disponibile per collaborazioni come consulente frontend, sviluppatore Angular o per ruoli di team leadership."
+  },
+  "footer": {
+    "rights": "Tutti i diritti riservati.",
+    "built": "Costruito con Angular & Tailwind CSS"
+  }
+}

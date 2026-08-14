@@ -1,1 +1,16 @@
-<section id="contact" class="py-24 sm:py-32"><div class="section-container"><div class="relative overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-br from-ink-800 via-ink-900 to-ink-950 p-10 text-center sm:p-16"><div class="pointer-events-none absolute -right-16 -top-16 h-64 w-64 rounded-full bg-primary-600/20 blur-[100px]"></div><span class="section-label">{{ 'contact.label' | transloco }}</span><h2 class="mt-3 text-3xl sm:text-4xl">{{ 'contact.title' | transloco }}</h2><p class="mx-auto mt-4 max-w-xl text-slate-400">{{ 'contact.description' | transloco }}</p><div class="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row"><a [href]="'mailto:' + profile.email" class="btn-primary">{{ profile.email }}</a><a [href]="'tel:' + profile.phone" class="btn-secondary">{{ profile.phone }}</a></div><div class="mt-8 text-sm text-slate-500">{{ profile.location }}</div></div></div></section>
+<section id="contact" class="py-24 sm:py-32">
+  <div class="section-container">
+    <div
+      class="relative overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-br from-ink-800 via-ink-900 to-ink-950 p-10 text-center sm:p-16">
+      <div
+        class="pointer-events-none absolute -right-16 -top-16 h-64 w-64 rounded-full bg-primary-600/20 blur-[100px]"></div>
+      <span class="section-label">{{ 'contact.label' | transloco }}</span>
+      <h2 class="mt-3 text-3xl sm:text-4xl">{{ 'contact.title' | transloco }}</h2>
+      <p class="mx-auto mt-4 max-w-xl text-slate-400">{{ 'contact.description' | transloco }}</p>
+      <div class="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
+        <a [href]="'mailto:' + profile.email" class="btn-primary">Contattami!</a>
+      </div>
+      <div class="mt-8 text-sm text-slate-500">{{ profile.location }}</div>
+    </div>
+  </div>
+</section>

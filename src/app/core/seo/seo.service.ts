@@ -11,17 +11,20 @@ export class SeoService {
   private readonly siteUrl = 'https://salvatoredigenua.github.io/portfolio-v2/';
 
   update(language: SupportedLanguage): void {
-    const content = language === 'it'
-      ? {
-          title: 'Salvatore Di Genua | Senior Frontend Engineer Angular',
-          description: 'Portfolio di Salvatore Di Genua, Senior Frontend Engineer specializzato in Angular, TypeScript e AI-assisted development.',
-          locale: 'it_IT'
-        }
-      : {
-          title: 'Salvatore Di Genua | Senior Frontend Engineer Angular',
-          description: 'Portfolio of Salvatore Di Genua, Senior Frontend Engineer specialized in Angular, TypeScript and AI-assisted development.',
-          locale: 'en_US'
-        };
+    const content =
+      language === 'it'
+        ? {
+            title: 'Salvatore Di Genua | Senior Frontend Engineer Angular',
+            description:
+              'Portfolio di Salvatore Di Genua, Senior Frontend Engineer specializzato in Angular, TypeScript e AI-assisted development.',
+            locale: 'it_IT',
+          }
+        : {
+            title: 'Salvatore Di Genua | Senior Frontend Engineer Angular',
+            description:
+              'Portfolio of Salvatore Di Genua, Senior Frontend Engineer specialized in Angular, TypeScript and AI-assisted development.',
+            locale: 'en_US',
+          };
 
     this.title.setTitle(content.title);
     this.meta.updateTag({ name: 'description', content: content.description });

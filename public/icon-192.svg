@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="192" height="192" viewBox="0 0 192 192" role="img" aria-labelledby="title desc">
-  <title id="title">SDG portfolio logo</title><desc id="desc">Logo SDG con parentesi angolari</desc>
+  <title id="title">Salvatore Di Genua portfolio logo</title><desc id="desc">Logo Salvatore Di Genua con parentesi angolari</desc>
   <rect width="192" height="192" rx="38" fill="#0a0a0f"/>
   <path d="M45 63 25 96l20 33" fill="none" stroke="#818cf8" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
   <text x="49" y="108" fill="#f8fafc" font-family="Inter,Arial,sans-serif" font-size="43" font-weight="800" letter-spacing="-3">SDG</text>

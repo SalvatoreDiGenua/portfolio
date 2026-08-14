@@ -29,13 +29,21 @@ export class SeoService {
     this.title.setTitle(content.title);
     this.meta.updateTag({ name: 'description', content: content.description });
     this.meta.updateTag({ property: 'og:title', content: content.title });
-    this.meta.updateTag({ property: 'og:description', content: content.description });
+    this.meta.updateTag({
+      property: 'og:description',
+      content: content.description,
+    });
     this.meta.updateTag({ property: 'og:url', content: this.siteUrl });
     this.meta.updateTag({ property: 'og:locale', content: content.locale });
     this.meta.updateTag({ name: 'twitter:title', content: content.title });
-    this.meta.updateTag({ name: 'twitter:description', content: content.description });
+    this.meta.updateTag({
+      name: 'twitter:description',
+      content: content.description,
+    });
 
-    let canonical = this.document.querySelector<HTMLLinkElement>('link[rel="canonical"]');
+    let canonical = this.document.querySelector<HTMLLinkElement>(
+      'link[rel="canonical"]',
+    );
     if (!canonical) {
       canonical = this.document.createElement('link');
       canonical.rel = 'canonical';

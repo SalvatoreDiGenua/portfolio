@@ -1,4 +1,7 @@
-<section id="education" class="border-t border-white/5 bg-ink-900/40 py-24 sm:py-32">
+<section
+  id="education"
+  class="border-t border-white/5 bg-ink-900/40 py-24 sm:py-32"
+>
   <div class="section-container">
     <div class="mb-12 flex flex-col gap-2">
       <span class="section-label">{{ 'education.label' | transloco }}</span>
@@ -6,13 +9,19 @@
     </div>
     <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
       @for (item of education; track item.key) {
-      <div class="card">
-        <h3 class="text-lg font-semibold text-white">{{ item.key + '.title' | transloco }}</h3>
-        <p class="mt-1 text-sm text-slate-400">{{ item.key + '.institution' | transloco }}</p>
-        <p class="mt-3 font-mono text-xs uppercase tracking-widest text-primary-400">
-          {{ item.key + '.period' | transloco }}
-        </p>
-      </div>
+        <div class="card">
+          <h3 class="text-lg font-semibold text-white">
+            {{ item.key + '.title' | transloco }}
+          </h3>
+          <p class="mt-1 text-sm text-slate-400">
+            {{ item.key + '.institution' | transloco }}
+          </p>
+          <p
+            class="mt-3 font-mono text-xs uppercase tracking-widest text-primary-400"
+          >
+            {{ item.key + '.period' | transloco }}
+          </p>
+        </div>
       }
     </div>
   </div>

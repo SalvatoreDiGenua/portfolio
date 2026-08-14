@@ -1,10 +1,10 @@
-import { Injectable, inject, signal } from '@angular/core';
+import { Service, inject, signal } from '@angular/core';
 import { DOCUMENT } from '@angular/common';
 import { TranslocoService } from '@jsverse/transloco';
 
 export type SupportedLanguage = 'it' | 'en';
 
-@Injectable({ providedIn: 'root' })
+@Service()
 export class LanguageService {
   private readonly transloco = inject(TranslocoService);
   private readonly document = inject(DOCUMENT);

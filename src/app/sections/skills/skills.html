@@ -1,18 +1,1 @@
-<section id="skills" class="border-t border-white/5 bg-ink-900/40 py-24 sm:py-32">
-  <div class="section-container">
-    <div class="mb-12 flex flex-col gap-2">
-      <span class="section-label">{{ 'skills.label' | transloco }}</span>
-      <h2 class="text-3xl sm:text-4xl">{{ 'skills.title' | transloco }}</h2>
-    </div>
-    <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-      @for (group of skillGroups; track group.title) {
-      <div class="card">
-        <h3 class="text-lg font-semibold text-white">{{ group.title }}</h3>
-        <div class="mt-4 flex flex-wrap gap-2">
-          @for (item of group.items; track item) {<span class="chip">{{ item }}</span>}
-        </div>
-      </div>
-      }
-    </div>
-  </div>
-</section>
+<section id="skills" class="border-t border-white/5 bg-ink-900/40 py-24 sm:py-32"><div class="section-container"><div class="mb-12 flex flex-col gap-2"><span class="section-label">{{ 'skills.label' | transloco }}</span><h2 class="text-3xl sm:text-4xl">{{ 'skills.title' | transloco }}</h2></div><div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">@for (group of skillGroups; track group.key) {<div class="card"><h3 class="text-lg font-semibold text-white">{{ group.key + '.title' | transloco }}</h3><div class="mt-4 flex flex-wrap gap-2">@for (item of group.items; track item) {<span class="chip">{{ group.key + '.items.' + item | transloco }}</span>}</div></div>}</div></div></section>

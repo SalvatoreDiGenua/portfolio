@@ -8,7 +8,7 @@ export class SeoService {
   private readonly document = inject(DOCUMENT);
   private readonly title = inject(Title);
   private readonly meta = inject(Meta);
-  private readonly siteUrl = 'https://salvatoredigenua.github.io/portfolio/';
+  private readonly siteUrl = 'https://salvatoredigenua.netlify.app/';
 
   update(language: SupportedLanguage): void {
     const content =

@@ -4,7 +4,6 @@ import { EDUCATION } from '../../core/profile.data';
 
 @Component({
   selector: 'app-education',
-  standalone: true,
   imports: [TranslocoModule],
   templateUrl: './education.html',
 })

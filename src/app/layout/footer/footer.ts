@@ -4,7 +4,6 @@ import { PROFILE } from '../../core/profile.data';
 
 @Component({
   selector: 'app-footer',
-  standalone: true,
   imports: [TranslocoModule],
   templateUrl: './footer.html',
 })

@@ -9,7 +9,6 @@ interface NavLink {
 
 @Component({
   selector: 'app-navbar',
-  standalone: true,
   imports: [TranslocoModule],
   templateUrl: './navbar.html',
 })

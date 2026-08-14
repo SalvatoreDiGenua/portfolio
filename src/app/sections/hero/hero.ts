@@ -4,7 +4,6 @@ import { PROFILE } from '../../core/profile.data';
 
 @Component({
   selector: 'app-hero',
-  standalone: true,
   imports: [TranslocoModule],
   templateUrl: './hero.html',
 })

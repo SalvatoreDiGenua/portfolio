@@ -4,7 +4,6 @@ import { PROFILE } from '../../core/profile.data';
 
 @Component({
   selector: 'app-contact',
-  standalone: true,
   imports: [TranslocoModule],
   templateUrl: './contact.html',
 })

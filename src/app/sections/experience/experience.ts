@@ -4,7 +4,6 @@ import { EXPERIENCES } from '../../core/profile.data';
 
 @Component({
   selector: 'app-experience',
-  standalone: true,
   imports: [TranslocoModule],
   templateUrl: './experience.html',
 })

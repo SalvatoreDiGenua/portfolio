@@ -4,7 +4,6 @@ import { PROFILE } from '../../core/profile.data';
 
 @Component({
   selector: 'app-about',
-  standalone: true,
   imports: [TranslocoModule],
   templateUrl: './about.html',
 })

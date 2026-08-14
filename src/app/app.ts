@@ -13,7 +13,6 @@ import { ContactComponent } from './sections/contact/contact';
 
 @Component({
   selector: 'app-root',
-  standalone: true,
   imports: [
     TranslocoModule,
     NavbarComponent,

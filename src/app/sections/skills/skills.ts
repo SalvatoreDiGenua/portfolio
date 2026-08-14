@@ -4,7 +4,6 @@ import { SKILLS } from '../../core/profile.data';
 
 @Component({
   selector: 'app-skills',
-  standalone: true,
   imports: [TranslocoModule],
   templateUrl: './skills.html',
 })

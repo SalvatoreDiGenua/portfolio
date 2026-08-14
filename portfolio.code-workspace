@@ -9,6 +9,6 @@
     "workbench.tree.enableStickyScroll": false,
   },
   "extensions": {
-    "recommendations": ["dbaeumer.vscode-eslint"],
+    "recommendations": [],
   },
 }

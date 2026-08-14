@@ -1,18 +1,76 @@
 {
-  "nav": {"about":"About me","skills":"Skills","experience":"Experience","education":"Education","contact":"Contact","contactMe":"Contact me"},
-  "hero": {"availability":"Available for new collaborations","greeting":"Hi, I am","description":"I build modern and scalable interfaces with Angular, integrating AI-assisted development tools to improve delivery speed and quality.","experienceCta":"View my experience","scroll":"Scroll"},
-  "about": {"label":"01 — About me","title":"Professional profile","years":"Years of experience","projects":"Companies / key projects","technologies":"Technologies mastered"},
-  "skills": {"label":"02 — Skills","title":"Technology stack"},
-  "experience": {"label":"03 — Experience","title":"Professional journey","items": {
-    "orbyta": {"role":"Senior IT Consultant - Frontend & Application Architecture","company":"Orbyta Tech","period":"2025 — Present","description":"Frontend consulting for modern and high-performance web applications. Development with advanced Angular, Signals, RxJS, NgRx, PrimeNG, Tailwind and Bootstrap; architecture definition with the client and autonomous management of priorities and delivery. Integration with Java backends and real-time features through STOMP. Use of Cursor, OpenCode, MCP servers and skills to support code writing, review and refactoring."},
-    "scai": {"role":"Senior Frontend Developer & Team Lead","company":"SCAI Tecno","period":"2023 — 2025","description":"Led the frontend team in developing a debt recovery management application based on a Micro-Frontend architecture. Worked with Angular, RxJS, PrimeNG and Bootstrap and implemented end-to-end tests with Cypress on key flows, reducing regression risk during releases. Technical mentoring, best practices, code review and alignment with business goals in an Agile context."},
-    "acca": {"role":"Full Stack Developer","company":"ACCA Software S.p.A.","period":"2019 — 2023","description":"Developed the Angular and RxJS frontend of usBIM.com, a Kanban application for workflow management, using Angular Material and DevExpress. Integrated REST APIs with Node.js and Express.js, built real-time features with Socket.IO and managed persistence with MySQL in an Agile context."}
-  }},
-  "education": {"label":"04 — Education","title":"Education background","items": {
-    "master": {"title":"Master's Degree in AI Engineering","institution":"eCampus Digital School","period":"2025 — ongoing"},
-    "degree": {"title":"Bachelor's Degree in Computer and Automation Engineering","institution":"eCampus Online University","period":"2022 — 2024"},
-    "diploma": {"title":"IT Specialist Diploma","institution":"IISS Rinaldo D'Aquino, Montella","period":"2014 — 2019"}
-  }},
-  "contact": {"label":"05 — Contact","title":"Let's talk about your next project","description":"I am available for collaborations as a frontend consultant, Angular developer or team leader."},
-  "footer": {"rights":"All rights reserved.","built":"Built with Angular & Tailwind CSS"}
+  "nav": {
+    "about": "About me",
+    "skills": "Skills",
+    "experience": "Experience",
+    "education": "Education",
+    "contact": "Contact",
+    "contactMe": "Contact me"
+  },
+  "hero": {
+    "availability": "Available for new collaborations",
+    "greeting": "Hi, I am",
+    "description": "I build modern and scalable interfaces with Angular, integrating AI-assisted development tools to improve delivery speed and quality.",
+    "experienceCta": "View my experience",
+    "scroll": "Scroll"
+  },
+  "about": {
+    "label": "01 — About me",
+    "title": "Professional profile",
+    "years": "Years of experience",
+    "projects": "Companies / key projects",
+    "technologies": "Technologies mastered"
+  },
+  "skills": { "label": "02 — Skills", "title": "Technology stack" },
+  "experience": {
+    "label": "03 — Experience",
+    "title": "Professional journey",
+    "items": {
+      "orbyta": {
+        "role": "Senior IT Consultant - Frontend & Application Architecture",
+        "company": "Orbyta Tech",
+        "period": "2025 — Present",
+        "description": "Frontend consulting for modern and high-performance web applications. Development with advanced Angular, Signals, RxJS, NgRx, PrimeNG, Tailwind and Bootstrap; architecture definition with the client and autonomous management of priorities and delivery. Integration with Java backends and real-time features through STOMP. Use of Cursor, OpenCode, MCP servers and skills to support code writing, review and refactoring."
+      },
+      "scai": {
+        "role": "Senior Frontend Developer & Team Lead",
+        "company": "SCAI Tecno",
+        "period": "2023 — 2025",
+        "description": "Led the frontend team in developing a debt recovery management application based on a Micro-Frontend architecture. Worked with Angular, RxJS, PrimeNG and Bootstrap and implemented end-to-end tests with Cypress on key flows, reducing regression risk during releases. Technical mentoring, best practices, code review and alignment with business goals in an Agile context."
+      },
+      "acca": {
+        "role": "Full Stack Developer",
+        "company": "ACCA Software S.p.A.",
+        "period": "2019 — 2023",
+        "description": "Developed the Angular and RxJS frontend of usBIM.com, a Kanban application for workflow management, using Angular Material and DevExpress. Integrated REST APIs with Node.js and Express.js, built real-time features with Socket.IO and managed persistence with MySQL in an Agile context."
+      }
+    }
+  },
+  "education": {
+    "label": "04 — Education",
+    "title": "Education background",
+    "items": {
+      "master": {
+        "title": "Master's Degree in AI Engineering",
+        "institution": "eCampus Digital School",
+        "period": "2025 — ongoing"
+      },
+      "degree": {
+        "title": "Bachelor's Degree in Computer and Automation Engineering",
+        "institution": "eCampus Online University",
+        "period": "2022 — 2024"
+      },
+      "diploma": {
+        "title": "IT Specialist Diploma",
+        "institution": "IISS Rinaldo D'Aquino, Montella",
+        "period": "2014 — 2019"
+      }
+    }
+  },
+  "contact": {
+    "label": "05 — Contact",
+    "title": "Let's talk about your next project",
+    "description": "I am available for collaborations as a frontend consultant, Angular developer or team leader."
+  },
+  "footer": { "rights": "All rights reserved.", "built": "Built with Angular & Tailwind CSS" }
 }

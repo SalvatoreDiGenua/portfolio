@@ -15,6 +15,8 @@ import {
   LanguageService,
   SupportedLanguage,
 } from './core/i18n/language.service';
+import { routes } from './app.routes';
+import { provideRouter } from '@angular/router';
 
 class NoopStorage implements Storage {
   length = 0;
@@ -40,6 +42,7 @@ export const appConfig: ApplicationConfig = {
     provideZonelessChangeDetection(),
     provideAnimations(),
     provideHttpClient(),
+    provideRouter(routes),
     provideTransloco({
       config: {
         availableLangs: ['en', 'it'] as SupportedLanguage[],

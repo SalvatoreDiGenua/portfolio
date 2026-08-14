@@ -4,7 +4,7 @@ export const routes: Routes = [
   {
     path: '',
     pathMatch: 'full',
-    redirectTo: '',
+    loadComponent: () => import('./app').then((c) => c.App),
   },
   {
     path: '**',

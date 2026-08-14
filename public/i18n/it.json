@@ -19,7 +19,10 @@
     "title": "Profilo professionale",
     "years": "Anni di esperienza",
     "projects": "Aziende / progetti chiave",
-    "technologies": "Tecnologie padroneggiate"
+    "technologies": "Tecnologie padroneggiate",
+    "profile": {
+      "summary": "Sviluppo applicazioni web dal 2019, con specializzazione in Angular e TypeScript e nelle funzionalità più recenti del framework, tra cui Signals e Standalone Components. Ho lavorato sia come sviluppatore che come team lead su progetti fintech e piattaforme cloud, occupandomi di architettura, sviluppo, qualità del codice e collaborazione con clienti e stakeholder. Integro Cursor, Antigravity, Claude Code e OpenCode nel flusso quotidiano; uso skills personalizzate e server MCP per rendere code generation, refactoring e documentazione più precisi e coerenti con l'architettura del progetto."
+    }
   },
   "skills": {
     "label": "02 — Competenze",

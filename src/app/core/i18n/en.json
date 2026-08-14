@@ -1,0 +1,10 @@
+{
+  "nav": { "about": "About me", "skills": "Skills", "experience": "Experience", "education": "Education", "contact": "Contact", "contactMe": "Contact me" },
+  "hero": { "availability": "Available for new collaborations", "greeting": "Hi, I am", "description": "I build modern and scalable interfaces with Angular, integrating AI-assisted development tools to improve delivery speed and quality.", "experienceCta": "View my experience", "scroll": "Scroll" },
+  "about": { "label": "01 — About me", "title": "Professional profile", "years": "Years of experience", "projects": "Companies / key projects", "technologies": "Technologies mastered" },
+  "skills": { "label": "02 — Skills", "title": "Technology stack" },
+  "experience": { "label": "03 — Experience", "title": "Professional journey" },
+  "education": { "label": "04 — Education", "title": "Education background" },
+  "contact": { "label": "05 — Contact", "title": "Let's talk about your next project", "description": "I am available for collaborations as a frontend consultant, Angular developer or team leader." },
+  "footer": { "rights": "All rights reserved.", "built": "Built with Angular & Tailwind CSS" }
+}

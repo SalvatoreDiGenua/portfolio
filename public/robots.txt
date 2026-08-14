@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://salvatoredigenua.github.io/portfolio-v2/sitemap.xml

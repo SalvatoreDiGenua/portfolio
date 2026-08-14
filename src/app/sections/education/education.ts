@@ -1,11 +1,6 @@
 import { Component } from '@angular/core';
+import { TranslocoModule } from '@jsverse/transloco';
 import { EDUCATION } from '../../core/profile.data';
 
-@Component({
-  selector: 'app-education',
-  standalone: true,
-  templateUrl: './education.html'
-})
-export class EducationComponent {
-  readonly education = EDUCATION;
-}
+@Component({ selector: 'app-education', standalone: true, imports: [TranslocoModule], templateUrl: './education.html' })
+export class EducationComponent { readonly education = EDUCATION; }

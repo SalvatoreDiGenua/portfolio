@@ -1,62 +1,32 @@
 # Portfolio v2 — Salvatore Di Genua
 
-Portfolio web personale, monopagina, minimale e responsive, di Salvatore Di Genua — Senior Frontend Engineer specializzato in Angular.
+Portfolio personale monopagina realizzato con Angular 22 e Tailwind CSS.
 
-## Stack tecnologico
+## Funzionalità
 
-- **Angular 22** — standalone components, Signals, zoneless change detection, nuova sintassi di controllo flusso (`@for`, `@if`)
-- **Tailwind CSS** — utility-first styling con palette custom dark-mode (design system "Developer Portfolio" — minimalismo + accenti indigo/cyan, ispirato alle linee guida della skill [ui-ux-pro-max](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill))
-- **TypeScript strict mode**
+- Angular standalone components e zoneless change detection.
+- Tailwind CSS con design system dark indigo/cyan.
+- Multilingua italiano/inglese con Transloco.
+- Selettore lingua responsive nella navbar.
+- Metadati SEO aggiornati dinamicamente per lingua.
+- Canonical, Open Graph, Twitter Cards e JSON-LD `Person`.
+- `robots.txt`, `sitemap.xml`, web manifest e asset social.
+- Prettier con configurazione coerente con `ngx-request-lock-docs`.
 
-## Struttura del progetto
-
-```
-src/app/
-├── core/
-│   └── profile.data.ts       # Dati del CV centralizzati (esperienze, skill, formazione)
-├── layout/
-│   ├── navbar/                # Header sticky con menu responsive
-│   └── footer/
-├── sections/
-│   ├── hero/                  # Sezione di apertura
-│   ├── about/                 # Profilo professionale
-│   ├── skills/                # Stack tecnologico a card
-│   ├── experience/             # Timeline esperienze lavorative
-│   ├── education/              # Percorso di formazione
-│   └── contact/                # Call to action e contatti
-├── app.ts / app.html
-├── app.config.ts
-└── main.ts
-```
-
-## Design system
-
-Palette pensata per un portfolio da sviluppatore: sfondo scuro (`ink-950/900/800`), colore primario **indigo** (`primary-500` `#6366f1`), accento **cyan** (`accent-500` `#06b6d4`), tipografia `Inter` (testo) + `JetBrains Mono` (elementi tecnici/label). Componenti con glassmorphism leggero, bordi sottili, hover con leggero glow, animazioni contenute e rispetto di `prefers-reduced-motion`.
-
-## Avvio in locale
+## Avvio
 
 ```bash
 npm install
 npm start
 ```
 
-L'app sarà disponibile su `http://localhost:4200`.
-
-## Build di produzione
+## Formattazione
 
 ```bash
-npm run build
+npm run format
+npm run format:check
 ```
 
-L'output verrà generato in `dist/portfolio-v2`.
+## SEO
 
-## Sviluppo assistito da AI
-
-Il progetto è stato scaffoldato seguendo le convenzioni delle skill ufficiali Angular:
-
-- [`angular-new-app`](https://github.com/angular/skills/tree/main/angular-new-app) per la struttura del progetto
-- [`angular-developer`](https://github.com/angular/skills/tree/main/angular-developer) per pattern architetturali, Signals e best practice sui componenti standalone
-
-## Licenza
-
-Progetto personale — tutti i diritti riservati.
+Prima del deploy, sostituire in `src/index.html`, `SeoService`, `robots.txt` e `sitemap.xml` il dominio di esempio con il dominio pubblico definitivo. Aggiornare anche l'URL LinkedIn nel JSON-LD quando sarà disponibile.

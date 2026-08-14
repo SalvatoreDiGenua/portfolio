@@ -1,1 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><rect width="512" height="512" rx="96" fill="#0a0a0f"/><path d="M112 154h288v48H160v58h192v48H160v50h240v48H112z" fill="#818cf8"/><circle cx="390" cy="124" r="24" fill="#22d3ee"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 192 192" role="img" aria-labelledby="title desc">
+  <title id="title">SDG portfolio logo</title><desc id="desc">Logo SDG con parentesi angolari</desc>
+  <rect width="192" height="192" rx="38" fill="#0a0a0f"/>
+  <path d="M45 63 25 96l20 33" fill="none" stroke="#818cf8" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="49" y="108" fill="#f8fafc" font-family="Inter,Arial,sans-serif" font-size="43" font-weight="800" letter-spacing="-3">SDG</text>
+  <path d="M147 63 167 96l-20 33" fill="none" stroke="#22d3ee" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

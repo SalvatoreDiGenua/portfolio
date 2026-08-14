@@ -1,1 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><rect width="512" height="512" rx="96" fill="#0a0a0f"/><path d="M112 154h288v48H160v58h192v48H160v50h240v48H112z" fill="#818cf8"/><circle cx="390" cy="124" r="24" fill="#22d3ee"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="SDG portfolio logo">
+  <rect width="64" height="64" rx="13" fill="#0a0a0f"/>
+  <path d="M17 20 8 32l9 12" fill="none" stroke="#818cf8" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="18" y="37" fill="#f8fafc" font-family="Arial,sans-serif" font-size="14" font-weight="800" letter-spacing="-1">SDG</text>
+  <path d="M47 20 56 32l-9 12" fill="none" stroke="#22d3ee" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

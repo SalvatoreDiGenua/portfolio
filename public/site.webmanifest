@@ -2,7 +2,7 @@
   "name": "Salvatore Di Genua — Portfolio",
   "short_name": "SDG Portfolio",
   "description": "Portfolio di Salvatore Di Genua, Senior Frontend Engineer specializzato in Angular.",
-  "start_url": "/portfolio-v2/",
+  "start_url": "/portfolio/",
   "display": "standalone",
   "background_color": "#0a0a0f",
   "theme_color": "#6366f1",

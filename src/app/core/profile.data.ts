@@ -88,6 +88,6 @@ export const SKILLS: SkillGroup[] = [
   },
   {
     key: 'skills.groups.methods',
-    items: ['scrum', 'cicd', 'microfrontend', 'leadership', 'mentoring'],
+    items: ['scrum', 'microfrontend', 'leadership', 'mentoring'],
   },
 ];

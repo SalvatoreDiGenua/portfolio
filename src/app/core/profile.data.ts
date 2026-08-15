@@ -83,7 +83,7 @@ export const SKILLS: SkillGroup[] = [
   },
   {
     key: 'skills.groups.ai',
-    items: ['cursor', 'antigravity', 'Copilot', 'claude', 'opencode', 'skills', 'mcp'],
+    items: ['cursor', 'antigravity', 'copilot', 'claude', 'opencode', 'skills', 'mcp'],
   },
   {
     key: 'skills.groups.methods',

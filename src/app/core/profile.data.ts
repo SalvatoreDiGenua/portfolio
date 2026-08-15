@@ -15,7 +15,6 @@ export const PROFILE = {
   subtitle: 'AI-Assisted Development & Team Leadership',
   location: 'Montella, Campania, Italia',
   email: 'saldigenua@gmail.com',
-  phone: '+39 327 7868017',
   linkedin: 'https://www.linkedin.com/in/salvatore-di-genua-b664b716a',
   summary: 'about.profile.summary',
 };

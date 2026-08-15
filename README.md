@@ -14,9 +14,9 @@
 - ⚡ I specialize in **Angular, TypeScript, Signals, RxJS, NgRx and Standalone Components**.
 - 🤝 I have experience as a **Senior Frontend Developer and Team Lead** in Agile environments.
 - 🧩 I work with scalable architectures, Micro-Frontends, real-time applications and REST APIs.
-- 🤖 I use **Cursor, Antigravity, Claude Code, OpenCode, custom skills and MCP servers** in my daily development workflow.
+- 🤖 I use **Cursor, Antigravity, Copilot, Claude Code, OpenCode, custom skills and MCP servers** in my daily development workflow.
 - 🌱 I’m currently pursuing a **Master’s Degree in AI Engineering**.
-- 📍 Based in **Benevento, Campania, Italy**.
+- 📍 Based in **Montella, Campania, Italy**.
 
 ## Portfolio
 

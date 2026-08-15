@@ -21,7 +21,7 @@
     "projects": "Companies / key projects",
     "technologies": "Technologies mastered",
     "profile": {
-      "summary": "I have been developing web applications since 2019, specializing in Angular and TypeScript, with a focus on the framework’s latest features, including Signals and Standalone Components. I have worked both as a developer and as a team lead on fintech projects and cloud platforms, taking responsibility for architecture, development, code quality, and collaboration with clients and stakeholders. I integrate Cursor, Antigravity, Claude Code, and OpenCode into my daily workflow, using custom skills and MCP servers to make code generation, refactoring, and documentation more precise and consistent with the project’s architecture."
+      "summary": "I have been developing web applications since 2019, specializing in Angular and TypeScript, with a focus on the framework’s latest features, including Signals and Standalone Components. I have worked both as a developer and as a team lead on fintech projects and cloud platforms, taking responsibility for architecture, development, code quality, and collaboration with clients and stakeholders. I integrate Cursor, Antigravity, Copilot, Claude Code, and OpenCode into my daily workflow, using custom skills and MCP servers to make code generation, refactoring, and documentation more precise and consistent with the project’s architecture."
     }
   },
   "skills": {

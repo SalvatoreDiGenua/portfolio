@@ -22,14 +22,7 @@ export const PROFILE = {
 export const EXPERIENCES: ExperienceItem[] = [
   {
     key: 'experience.items.orbyta',
-    tags: [
-      'Angular',
-      'Signals',
-      'RxJS',
-      'NgRx',
-      'PrimeNG',
-      'Tailwind'
-    ],
+    tags: ['Angular', 'Signals', 'RxJS', 'NgRx', 'PrimeNG', 'Tailwind'],
   },
   {
     key: 'experience.items.scai',
@@ -83,7 +76,15 @@ export const SKILLS: SkillGroup[] = [
   },
   {
     key: 'skills.groups.ai',
-    items: ['cursor', 'antigravity', 'copilot', 'claude', 'opencode', 'skills', 'mcp'],
+    items: [
+      'cursor',
+      'antigravity',
+      'copilot',
+      'claude',
+      'opencode',
+      'skills',
+      'mcp',
+    ],
   },
   {
     key: 'skills.groups.methods',

@@ -79,6 +79,7 @@
         "items": {
           "cursor": "Cursor",
           "antigravity": "Antigravity",
+          "copilot": "Copilot",
           "claude": "Claude Code",
           "opencode": "OpenCode",
           "skills": "Custom Skills",

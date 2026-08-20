@@ -84,12 +84,18 @@ export class SeoService {
 
     try {
       const schema = JSON.parse(script.textContent ?? '{}');
-      schema.description = content.description;
-      schema.inLanguage = language;
-      schema.url = url;
+      if (schema.mainEntity) {
+        schema.mainEntity.description = content.description;
+        schema.mainEntity.inLanguage = language;
+        schema.mainEntity.url = url;
+      } else {
+        schema.description = content.description;
+        schema.inLanguage = language;
+        schema.url = url;
+      }
       script.textContent = JSON.stringify(schema, null, 2);
     } catch {
-      //
+      // ignore parse errors
     }
   }
 

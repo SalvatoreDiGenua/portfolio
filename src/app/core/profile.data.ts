@@ -1,15 +1,28 @@
+export interface Profile {
+  readonly name: string;
+  readonly title: string;
+  readonly subtitle: string;
+  readonly location: string;
+  readonly email: string;
+  readonly linkedin: string;
+  readonly summary: string;
+}
+
 export interface ExperienceItem {
-  key: string;
-  tags: string[];
+  readonly key: string;
+  readonly tags: readonly string[];
 }
+
 export interface EducationItem {
-  key: string;
+  readonly key: string;
 }
+
 export interface SkillGroup {
-  key: string;
-  items: string[];
+  readonly key: string;
+  readonly items: readonly string[];
 }
-export const PROFILE = {
+
+export const PROFILE: Profile = {
   name: 'Salvatore Di Genua',
   title: 'Senior Frontend Engineer - Angular Specialist',
   subtitle: 'AI-Assisted Development & Team Leadership',

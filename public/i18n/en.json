@@ -151,6 +151,7 @@
   "footer": {
     "rights": "All rights reserved.",
     "built": "Built with Angular & Tailwind CSS",
-    "sourceCode": "Source code"
+    "sourceCode": "Source code",
+    "linkedin": "LinkedIn"
   }
 }

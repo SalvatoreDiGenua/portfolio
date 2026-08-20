@@ -2,12 +2,11 @@
   class="fixed inset-x-0 top-0 z-50 border-b border-white/5 bg-ink-950/80 backdrop-blur-lg"
 >
   <nav class="section-container flex h-16 items-center justify-between">
-    <a href="#top" class="font-mono text-lg font-bold text-white"
-      ><span class="text-primary-400">&lt;</span>SDG<span
-        class="text-primary-400"
-        >/&gt;</span
-      ></a
-    >
+    <a href="#top" class="font-mono text-lg font-bold text-white">
+      <span class="text-primary-400">&lt;</span>
+      SDG
+      <span class="text-primary-400">/&gt;</span>
+    </a>
 
     <ul class="hidden items-center gap-8 md:flex">
       @for (link of links; track link.href) {
@@ -77,8 +76,9 @@
               [href]="link.href"
               class="block text-sm font-medium text-slate-300 hover:text-primary-400"
               (click)="closeMenu()"
-              >{{ link.key | transloco }}</a
             >
+              {{ link.key | transloco }}
+            </a>
           </li>
         }
       </ul>

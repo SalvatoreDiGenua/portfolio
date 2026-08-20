@@ -13,8 +13,9 @@
   >
     <span
       class="chip mb-6 border-primary-500/30 bg-primary-500/10 text-primary-300"
-      >{{ 'hero.availability' | transloco }}</span
     >
+      {{ 'hero.availability' | transloco }}
+    </span>
     <h1 class="text-4xl font-extrabold leading-tight sm:text-5xl md:text-6xl">
       {{ 'hero.greeting' | transloco }}
       <span class="text-primary-400">{{ profile.name }}</span>
@@ -29,18 +30,18 @@
       {{ 'hero.description' | transloco }}
     </p>
     <div class="mt-10 flex flex-col gap-4 sm:flex-row">
-      <a href="#contact" class="btn-primary">{{
-        'nav.contactMe' | transloco
-      }}</a
-      ><a href="#experience" class="btn-secondary">{{
-        'hero.experienceCta' | transloco
-      }}</a>
+      <a href="#contact" class="btn-primary">
+        {{ 'nav.contactMe' | transloco }}
+      </a>
+      <a href="#experience" class="btn-secondary">
+        {{ 'hero.experienceCta' | transloco }}
+      </a>
     </div>
     <div class="mt-14 flex items-center gap-3 text-slate-500">
-      <span class="text-xs font-mono uppercase tracking-widest">{{
-        'hero.scroll' | transloco
-      }}</span
-      ><span aria-hidden="true">↓</span>
+      <span class="text-xs font-mono uppercase tracking-widest">
+        {{ 'hero.scroll' | transloco }}
+      </span>
+      <span aria-hidden="true">↓</span>
     </div>
   </div>
 </section>

@@ -95,7 +95,7 @@ An Angular library focused on preventing duplicated or overlapping requests in f
 ## Get in touch
 
 <p>
-  <a href="mailto:saldigenua@gmail.com"><img src="https://img.shields.io/badge/Email-saldigenua%40gmail.com-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" /></a>
+  <a href="mailto:salvatoredigenua.developer@gmail.com"><img src="https://img.shields.io/badge/Email-salvatoredigenua.developer%40gmail.com-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" /></a>
 </p>
 
 <div align="center">

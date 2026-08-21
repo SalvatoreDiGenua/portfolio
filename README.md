@@ -1,32 +1,66 @@
 <div align="center">
-  <h1>Hi, I'm Salvatore Di Genua 👋</h1>
+  <h1>Salvatore Di Genua 👋</h1>
   <h3>Senior Frontend Engineer · Angular Specialist · AI-Assisted Development</h3>
 
   <p>
-    <a href="https://github.com/SalvatoreDiGenua"><img src="https://komarev.com/ghpvc/?username=SalvatoreDiGenua&label=Profile%20views&color=6366f1&style=flat" alt="Profile views" /></a>
+    <a href="https://salvatoredigenua.netlify.app/">Portfolio</a> ·
+    <a href="https://github.com/SalvatoreDiGenua">GitHub</a> ·
+    <a href="mailto:salvatoredigenua.developer@gmail.com">Email</a>
+  </p>
+
+  <p>
+    <a href="https://github.com/SalvatoreDiGenua"><img src="https://komarev.com/ghpvc/?username=SalvatoreDiGenua&label=Profile%20views&color=6366f1&style=flat" alt="GitHub profile views" /></a>
     <a href="https://github.com/SalvatoreDiGenua?tab=followers"><img src="https://img.shields.io/github/followers/SalvatoreDiGenua?label=Followers&style=flat&color=06b6d4" alt="GitHub followers" /></a>
   </p>
 </div>
 
-## About me
+## 👨‍💻 About me
 
-- 🔭 I’m currently working as a **Senior IT Consultant — Frontend & Application Architecture** at Orbyta Tech.
-- ⚡ I specialize in **Angular, TypeScript, Signals, RxJS, NgRx and Standalone Components**.
-- 🤝 I have experience as a **Senior Frontend Developer and Team Lead** in Agile environments.
-- 🧩 I work with scalable architectures, Micro-Frontends, real-time applications and REST APIs.
-- 🤖 I use **Cursor, Antigravity, Copilot, Claude Code, OpenCode, custom skills and MCP servers** in my daily development workflow.
-- 🌱 I’m currently pursuing a **Master’s Degree in AI Engineering**.
-- 📍 Based in **Montella, Campania, Italy**.
+I am a **Senior Frontend Engineer and Angular Specialist** focused on building maintainable, scalable web applications and exploring modern development workflows.
 
-## Portfolio
+- 🔭 **Current role:** Senior IT Consultant — Frontend & Application Architecture at Orbyta Tech
+- ⚡ **Core expertise:** Angular, TypeScript, Signals, RxJS, NgRx and Standalone Components
+- 🧩 **Architecture:** Micro-Frontends, REST APIs, real-time applications and scalable frontend systems
+- 🤝 **Leadership:** Senior frontend development, technical mentoring, code review and team leadership
+- 🤖 **AI-assisted development:** Cursor, Antigravity, Copilot, Claude Code, OpenCode, custom skills and MCP servers
+- 🌱 **Education:** Master’s Degree in AI Engineering, currently in progress
+- 📍 **Location:** Montella, Campania, Italy
 
-Visit my personal portfolio:
+## 🌐 Portfolio
 
-<a href="https://salvatoredigenua.netlify.app/"><img src="https://img.shields.io/badge/Portfolio-6366f1?style=for-the-badge&logo=angular&logoColor=white" alt="Portfolio" /></a>
+My portfolio is a responsive Angular single-page application available in Italian and English. It showcases my experience, technical skills, professional background and personal projects.
 
-> The portfolio is a responsive single-page application built with Angular and Tailwind CSS, available in Italian and English.
+<p>
+  <a href="https://salvatoredigenua.netlify.app/"><img src="https://img.shields.io/badge/Visit%20portfolio-6366f1?style=for-the-badge&logo=angular&logoColor=white" alt="Visit Salvatore Di Genua portfolio" /></a>
+</p>
 
-## Tech stack
+## 🚀 Projects
+
+A selection of projects I maintain or use to explore modern Angular development.
+
+### Angular Boilerplate
+
+A reusable Angular starter designed to stay aligned with the latest Angular features and provide a solid foundation for new applications. It demonstrates a **signal-based architecture**, SSR and hydration, modern control flow, deferred loading, internationalization, SEO, testing and Tailwind CSS.
+
+<p>
+  <a href="https://github.com/SalvatoreDiGenua/angular-boilerplate"><img src="https://img.shields.io/badge/Repository-18181b?style=for-the-badge&logo=github&logoColor=white" alt="Angular Boilerplate GitHub repository" /></a>
+  <a href="https://stackblitz.com/fork/github/SalvatoreDiGenua/angular-boilerplate/tree/main?startScript=start&title=Angular%20Boilerplate"><img src="https://img.shields.io/badge/Try%20it%20on%20StackBlitz-1389FD?style=for-the-badge&logo=stackblitz&logoColor=white" alt="Try Angular Boilerplate on StackBlitz" /></a>
+</p>
+
+**Highlights:** Angular · Signals · SSR · Hydration · `@defer` · Signal Forms · i18n · SEO · Vitest · Tailwind CSS
+
+### ngx-request-lock
+
+An Angular library for coordinating UI locking while concurrent HTTP requests are running. It uses modern Angular primitives such as **Signals**, `HttpContext` and functional interceptors to keep request-related UI state predictable and reusable.
+
+<p>
+  <a href="https://github.com/SalvatoreDiGenua/ngx-request-lock-docs"><img src="https://img.shields.io/badge/Repository-18181b?style=for-the-badge&logo=github&logoColor=white" alt="ngx-request-lock GitHub repository" /></a>
+  <a href="https://ngx-request-lock-docs.netlify.app/"><img src="https://img.shields.io/badge/Live%20documentation-0ea5e9?style=for-the-badge&logo=netlify&logoColor=white" alt="ngx-request-lock live documentation" /></a>
+</p>
+
+**Highlights:** Angular · Signals · HttpContext · Functional Interceptors · HTTP request coordination
+
+## 🧰 Tech stack
 
 ### Frontend
 
@@ -38,13 +72,13 @@ Visit my personal portfolio:
 </p>
 
 <p>
-  <img src="https://img.shields.io/badge/Signals-6366F1?style=flat-square" alt="Signals" />
-  <img src="https://img.shields.io/badge/Standalone%20Components-6366F1?style=flat-square" alt="Standalone Components" />
+  <img src="https://img.shields.io/badge/Signals-6366F1?style=flat-square" alt="Angular Signals" />
+  <img src="https://img.shields.io/badge/Standalone%20Components-6366F1?style=flat-square" alt="Angular Standalone Components" />
   <img src="https://img.shields.io/badge/NgRx-BA2BD2?style=flat-square" alt="NgRx" />
   <img src="https://img.shields.io/badge/Micro--Frontends-06B6D4?style=flat-square" alt="Micro-Frontends" />
 </p>
 
-### UI and styling
+### UI & styling
 
 <p>
   <a href="https://tailwindcss.com/"><img src="https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white" alt="Tailwind CSS" /></a>
@@ -53,7 +87,7 @@ Visit my personal portfolio:
   <a href="https://getbootstrap.com/"><img src="https://img.shields.io/badge/Bootstrap-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white" alt="Bootstrap" /></a>
 </p>
 
-### Backend and testing
+### Backend, testing & tooling
 
 <p>
   <a href="https://nodejs.org/"><img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white" alt="Node.js" /></a>
@@ -62,40 +96,36 @@ Visit my personal portfolio:
   <a href="https://www.cypress.io/"><img src="https://img.shields.io/badge/Cypress-17202C?style=for-the-badge&logo=cypress&logoColor=69D3A7" alt="Cypress" /></a>
 </p>
 
-## AI-assisted development
+## 🤖 AI-assisted development
 
-I integrate AI into the engineering workflow to improve code generation, refactoring, reviews and documentation while keeping the architecture and quality standards under control.
+I use AI as an engineering aid rather than a replacement for architectural decisions, code review or testing. My workflow currently includes:
 
-- Cursor
-- Antigravity
-- Claude Code
-- OpenCode
-- Custom development skills
-- MCP servers
+- **Cursor** — daily coding and refactoring
+- **Antigravity** — AI-assisted development workflows
+- **Claude Code / OpenCode** — repository-level tasks and automation
+- **Custom skills** — reusable project-specific development guidance
+- **MCP servers** — contextual tooling and integrations
 
-## Featured project
+The goal is simple: make development faster while keeping architecture, readability, testing and maintainability under control.
 
-### ngx-request-lock
+## 🎓 Education
 
-An Angular library focused on preventing duplicated or overlapping requests in frontend applications.
+- **Master in AI Engineering** — eCampus Digital School · 2025 — ongoing
+- **Bachelor’s Degree in Computer and Automation Engineering** — eCampus Online University · 2022 — 2024
+- **IT Specialist Diploma** — IISS Rinaldo D’Aquino, Montella · 2014 — 2019
 
-<a href="https://github.com/SalvatoreDiGenua/ngx-request-lock-docs"><img src="https://img.shields.io/badge/View%20project-18181b?style=for-the-badge&logo=github&logoColor=white" alt="View ngx-request-lock" /></a>
+## 🌍 Languages
 
-## Education
+- 🇮🇹 Italian — Native
+- 🇬🇧 English — B1, improving
 
-- **Master in AI Engineering** — eCampus Digital School, 2025 — ongoing
-- **Bachelor’s Degree in Computer and Automation Engineering** — eCampus Online University, 2022 — 2024
-- **IT Specialist Diploma** — IISS Rinaldo D’Aquino, Montella, 2014 — 2019
+## 📬 Get in touch
 
-## Languages
-
-- Italian — Native
-- English — B1, improving
-
-## Get in touch
+If you would like to discuss an Angular project, frontend architecture, technical leadership or collaboration, feel free to reach out.
 
 <p>
-  <a href="mailto:salvatoredigenua.developer@gmail.com"><img src="https://img.shields.io/badge/Email-salvatoredigenua.developer%40gmail.com-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" /></a>
+  <a href="mailto:salvatoredigenua.developer@gmail.com"><img src="https://img.shields.io/badge/Email-salvatoredigenua.developer%40gmail.com-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email Salvatore Di Genua" /></a>
+  <a href="https://www.linkedin.com/in/salvatore-di-genua-b664b716a"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="Salvatore Di Genua on LinkedIn" /></a>
 </p>
 
 <div align="center">

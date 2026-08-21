@@ -67,11 +67,30 @@ export const EDUCATION: EducationItem[] = [
 export const SKILLS: SkillGroup[] = [
   {
     key: 'skills.groups.frontend',
-    items: ['angular', 'typescript', 'signals', 'standalone', 'changeDetection', 'rxjs', 'state', 'react'],
+    items: [
+      'angular',
+      'typescript',
+      'signals',
+      'standalone',
+      'changeDetection',
+      'rxjs',
+      'state',
+      'react',
+    ],
   },
   {
     key: 'skills.groups.ui',
-    items: ['html', 'css', 'scss', 'tailwind', 'material', 'primeng', 'bootstrap', 'mui', 'devexpress'],
+    items: [
+      'html',
+      'css',
+      'scss',
+      'tailwind',
+      'material',
+      'primeng',
+      'bootstrap',
+      'mui',
+      'devexpress',
+    ],
   },
   {
     key: 'skills.groups.testing',
@@ -83,7 +102,15 @@ export const SKILLS: SkillGroup[] = [
   },
   {
     key: 'skills.groups.ai',
-    items: ['cursor', 'antigravity', 'copilot', 'claude', 'opencode', 'skills', 'mcp'],
+    items: [
+      'cursor',
+      'antigravity',
+      'copilot',
+      'claude',
+      'opencode',
+      'skills',
+      'mcp',
+    ],
   },
   {
     key: 'skills.groups.methods',
@@ -98,7 +125,8 @@ export const PROJECTS: readonly ProjectItem[] = [
     category: 'Angular',
     tags: ['Angular', 'Signals', 'SSR', 'Hydration', 'Tailwind CSS'],
     repositoryUrl: 'https://github.com/SalvatoreDiGenua/angular-boilerplate',
-    liveUrl: 'https://stackblitz.com/fork/github/SalvatoreDiGenua/angular-boilerplate/tree/main?startScript=start&title=Angular%20Boilerplate',
+    liveUrl:
+      'https://stackblitz.com/fork/github/SalvatoreDiGenua/angular-boilerplate/tree/main?startScript=start&title=Angular%20Boilerplate',
     liveLabel: 'projects.liveDemo',
     accent: 'primary',
   },

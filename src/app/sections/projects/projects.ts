@@ -35,36 +35,41 @@ import { PROJECTS } from '../../core/profile.data';
               [class.card]="project.accent === 'accent'"
             >
               <div>
-                <div class="mb-4 flex items-start justify-between gap-4 border-b border-white/[0.06] pb-4">
+                <div
+                  class="mb-4 flex items-start justify-between gap-4 border-b border-white/[0.06] pb-4"
+                >
                   <div>
                     <span
                       class="font-mono text-[10px] font-semibold uppercase tracking-wider"
                       [class.text-primary-300]="project.accent === 'primary'"
                       [class.text-accent-300]="project.accent === 'accent'"
                     >
-                      {{ (index + 1).toString().padStart(2, '0') }} — {{ project.category }}
+                      {{ (index + 1).toString().padStart(2, '0') }} —
+                      {{ project.category }}
                     </span>
-                    <h3 class="mt-2 text-xl font-bold tracking-tight text-white sm:text-2xl">{{ project.name }}</h3>
+                    <h3
+                      class="mt-2 text-xl font-bold tracking-tight text-white sm:text-2xl"
+                    >
+                      {{ project.name }}
+                    </h3>
                   </div>
-                  <span
-                    class="inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-lg border"
-                    [class.border-primary-500\/20]="project.accent === 'primary'"
-                    [class.bg-primary-500\/10]="project.accent === 'primary'"
-                    [class.text-primary-300]="project.accent === 'primary'"
-                    [class.border-accent-500\/20]="project.accent === 'accent'"
-                    [class.bg-accent-500\/10]="project.accent === 'accent'"
-                    [class.text-accent-300]="project.accent === 'accent'"
-                    aria-hidden="true"
-                  >↗</span>
                 </div>
 
-                <p class="text-sm leading-relaxed text-slate-300/90 sm:text-base">
+                <p
+                  class="text-sm leading-relaxed text-slate-300/90 sm:text-base"
+                >
                   {{ project.key + '.description' | transloco }}
                 </p>
 
-                <div class="mt-6 flex flex-wrap gap-2 border-t border-white/[0.06] pt-4">
+                <div
+                  class="mt-6 flex flex-wrap gap-2 border-t border-white/[0.06] pt-4"
+                >
                   @for (tag of project.tags; track tag; let tagIndex = $index) {
-                    <span [class.chip-accent]="tagIndex < 2" [class.chip]="tagIndex >= 2">{{ tag }}</span>
+                    <span
+                      [class.chip-accent]="tagIndex < 2"
+                      [class.chip]="tagIndex >= 2"
+                      >{{ tag }}</span
+                    >
                   }
                 </div>
               </div>
@@ -77,7 +82,8 @@ import { PROJECTS } from '../../core/profile.data';
                   rel="noopener noreferrer"
                   [attr.aria-label]="'projects.viewProject' | transloco"
                 >
-                  {{ 'projects.viewProject' | transloco }} <span aria-hidden="true">↗</span>
+                  {{ 'projects.viewProject' | transloco }}
+                  <span aria-hidden="true">↗</span>
                 </a>
                 <span class="text-slate-600" aria-hidden="true">/</span>
                 <a
@@ -87,7 +93,8 @@ import { PROJECTS } from '../../core/profile.data';
                   rel="noopener noreferrer"
                   [attr.aria-label]="project.liveLabel | transloco"
                 >
-                  {{ project.liveLabel | transloco }} <span aria-hidden="true">↗</span>
+                  {{ project.liveLabel | transloco }}
+                  <span aria-hidden="true">↗</span>
                 </a>
               </div>
             </article>

@@ -10,6 +10,7 @@ import { SkillsComponent } from './sections/skills/skills';
 import { ExperienceComponent } from './sections/experience/experience';
 import { EducationComponent } from './sections/education/education';
 import { ContactComponent } from './sections/contact/contact';
+import { Projects } from './sections/projects/projects';
 
 @Component({
   selector: 'app-root',
@@ -21,6 +22,7 @@ import { ContactComponent } from './sections/contact/contact';
     SkillsComponent,
     ExperienceComponent,
     EducationComponent,
+    Projects,
     ContactComponent,
     FooterComponent,
   ],

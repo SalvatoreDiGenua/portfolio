@@ -3,6 +3,7 @@
     "about": "About me",
     "skills": "Skills",
     "experience": "Experience",
+    "projects": "Projects",
     "education": "Education",
     "contact": "Contact",
     "contactMe": "Contact me",
@@ -123,8 +124,21 @@
       }
     }
   },
+  "projects": {
+    "label": "04 — Projects",
+    "title": "Personal projects",
+    "angular": {
+      "description": "A reusable Angular boilerplate and a living showcase of modern framework capabilities, including Signals, SSR, hydration, @defer, Signal Forms, i18n, SEO and testing."
+    },
+    "requestLock": {
+      "description": "An Angular library for coordinating UI locking during concurrent HTTP requests, built with Signals, HttpContext and functional interceptors."
+    },
+    "viewProject": "View project",
+    "liveDemo": "Live demo",
+    "documentation": "Documentation"
+  },
   "education": {
-    "label": "04 — Education",
+    "label": "05 — Education",
     "title": "Education background",
     "items": {
       "master": {
@@ -145,7 +159,7 @@
     }
   },
   "contact": {
-    "label": "05 — Contact",
+    "label": "06 — Contact",
     "title": "Let's talk about your next project",
     "description": "I am available for collaborations as a frontend consultant, Angular developer or team leader."
   },

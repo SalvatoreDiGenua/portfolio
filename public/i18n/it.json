@@ -3,6 +3,7 @@
     "about": "Chi sono",
     "skills": "Competenze",
     "experience": "Esperienza",
+    "projects": "Progetti",
     "education": "Formazione",
     "contact": "Contatti",
     "contactMe": "Contattami",
@@ -123,8 +124,21 @@
       }
     }
   },
+  "projects": {
+    "label": "04 — Progetti",
+    "title": "Progetti personali",
+    "angular": {
+      "description": "Un boilerplate Angular riutilizzabile e una vetrina vivente delle funzionalità moderne del framework, con Signals, SSR, hydration, @defer, Signal Forms, i18n, SEO e testing."
+    },
+    "requestLock": {
+      "description": "Una libreria Angular per coordinare il blocco dell'interfaccia durante richieste HTTP concorrenti, basata su Signals, HttpContext e functional interceptors."
+    },
+    "viewProject": "Repository",
+    "liveDemo": "Demo live",
+    "documentation": "Documentazione"
+  },
   "education": {
-    "label": "04 — Formazione",
+    "label": "05 — Formazione",
     "title": "Percorso di studi",
     "items": {
       "master": {
@@ -145,7 +159,7 @@
     }
   },
   "contact": {
-    "label": "05 — Contatti",
+    "label": "06 — Contatti",
     "title": "Parliamo del tuo prossimo progetto",
     "description": "Sono disponibile per collaborazioni come consulente frontend, sviluppatore Angular o per ruoli di team leadership."
   },

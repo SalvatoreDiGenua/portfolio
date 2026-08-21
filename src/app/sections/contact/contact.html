@@ -35,21 +35,12 @@
           [href]="'mailto:' + profile.email"
           class="btn-primary min-h-[48px] !px-8 text-base shadow-glow"
         >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            class="h-5 w-5"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
+          <img
+            src="https://s.magecdn.com/social/mw-mail.svg"
+            alt=""
             aria-hidden="true"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-            />
-          </svg>
+            class="h-4 w-4"
+          />
           <span>{{ 'nav.contactMe' | transloco }}</span>
         </a>
 
@@ -60,17 +51,24 @@
           class="btn-secondary min-h-[48px] !px-6 text-sm"
           aria-label="Connettiti con Salvatore Di Genua su LinkedIn (apre in una nuova scheda)"
         >
+          <img
+            src="https://s.magecdn.com/social/mw-linkedin.svg"
+            alt=""
+            aria-hidden="true"
+            class="h-4 w-4"
+          />
           <span>LinkedIn</span>
-          <span aria-hidden="true">↗</span>
         </a>
       </div>
 
       <div
-        class="mt-10 flex items-center justify-center gap-2 text-xs font-mono text-slate-400"
+        class="mt-10 flex flex-col items-center justify-center gap-2 text-xs font-mono text-slate-400 sm:flex-row"
       >
-        <span class="h-1.5 w-1.5 rounded-full bg-emerald-400"></span>
-        <span>{{ profile.location }}</span>
-        <span class="text-white/20">•</span>
+        <div class="flex items-center gap-2">
+          <span class="h-1.5 w-1.5 rounded-full bg-emerald-400"></span>
+          <span>{{ profile.location }}</span>
+        </div>
+        <span class="hidden text-white/20 sm:block">•</span>
         <a
           [href]="'mailto:' + profile.email"
           class="hover:text-white transition-colors underline underline-offset-4 decoration-primary-400/40"

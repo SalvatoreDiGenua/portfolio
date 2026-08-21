@@ -24,7 +24,13 @@ export class NavbarComponent {
     { key: 'nav.contact', href: '#contact' },
   ];
 
-  toggleMenu(): void { this.isOpen.update((open) => !open); }
-  closeMenu(): void { this.isOpen.set(false); }
-  toggleLanguage(): void { this.languageService.toggle(); }
+  toggleMenu(): void {
+    this.isOpen.update((open) => !open);
+  }
+  closeMenu(): void {
+    this.isOpen.set(false);
+  }
+  toggleLanguage(): void {
+    this.languageService.toggle();
+  }
 }

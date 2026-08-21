@@ -6,8 +6,15 @@ import { PROJECTS } from '../../core/profile.data';
   selector: 'app-projects',
   imports: [TranslocoPipe],
   template: `
-    <section id="projects" class="relative border-t border-white/[0.06] bg-ink-900/40 py-24 sm:py-32" aria-labelledby="projects-title">
-      <div class="pointer-events-none absolute left-1/3 top-1/2 h-72 w-72 -translate-y-1/2 rounded-full bg-primary-600/10 blur-[130px]" aria-hidden="true"></div>
+    <section
+      id="projects"
+      class="relative border-t border-white/[0.06] bg-ink-900/40 py-24 sm:py-32"
+      aria-labelledby="projects-title"
+    >
+      <div
+        class="pointer-events-none absolute left-1/3 top-1/2 h-72 w-72 -translate-y-1/2 rounded-full bg-primary-600/10 blur-[130px]"
+        aria-hidden="true"
+      ></div>
 
       <div class="section-container relative z-10">
         <div class="mb-12 flex flex-col gap-2">
@@ -15,7 +22,9 @@ import { PROJECTS } from '../../core/profile.data';
             <span class="h-1.5 w-1.5 rounded-full bg-primary-400"></span>
             {{ 'projects.label' | transloco }}
           </span>
-          <h2 id="projects-title" class="text-3xl sm:text-4xl lg:text-5xl">{{ 'projects.title' | transloco }}</h2>
+          <h2 id="projects-title" class="text-3xl sm:text-4xl lg:text-5xl">
+            {{ 'projects.title' | transloco }}
+          </h2>
         </div>
 
         <div class="grid gap-6 lg:grid-cols-2">
@@ -26,31 +35,48 @@ import { PROJECTS } from '../../core/profile.data';
               [class.card]="project.accent === 'accent'"
             >
               <div>
-                <div class="mb-4 flex items-start justify-between gap-4 border-b border-white/[0.06] pb-4">
+                <div
+                  class="mb-4 flex items-start justify-between gap-4 border-b border-white/[0.06] pb-4"
+                >
                   <div>
                     <span
                       class="font-mono text-[10px] font-semibold uppercase tracking-wider"
                       [class.text-primary-300]="project.accent === 'primary'"
                       [class.text-accent-300]="project.accent === 'accent'"
                     >
-                      {{ (index + 1).toString().padStart(2, '0') }} — {{ project.category }}
+                      {{ (index + 1).toString().padStart(2, '0') }} —
+                      {{ project.category }}
                     </span>
-                    <h3 class="mt-2 text-xl font-bold tracking-tight text-white sm:text-2xl">{{ project.name }}</h3>
+                    <h3
+                      class="mt-2 text-xl font-bold tracking-tight text-white sm:text-2xl"
+                    >
+                      {{ project.name }}
+                    </h3>
                   </div>
                 </div>
 
-                <p class="text-sm leading-relaxed text-slate-300/90 sm:text-base">
+                <p
+                  class="text-sm leading-relaxed text-slate-300/90 sm:text-base"
+                >
                   {{ project.key + '.description' | transloco }}
                 </p>
 
-                <div class="mt-6 flex flex-wrap gap-2 border-t border-white/[0.06] pt-4">
+                <div
+                  class="mt-6 flex flex-wrap gap-2 border-t border-white/[0.06] pt-4"
+                >
                   @for (tag of project.tags; track tag; let tagIndex = $index) {
-                    <span [class.chip-accent]="tagIndex < 2" [class.chip]="tagIndex >= 2">{{ tag }}</span>
+                    <span
+                      [class.chip-accent]="tagIndex < 2"
+                      [class.chip]="tagIndex >= 2"
+                      >{{ tag }}</span
+                    >
                   }
                 </div>
               </div>
 
-              <div class="mt-8 flex flex-wrap gap-3 border-t border-white/[0.06] pt-5">
+              <div
+                class="mt-8 flex flex-wrap gap-3 border-t border-white/[0.06] pt-5"
+              >
                 <a
                   class="inline-flex min-h-11 items-center justify-center rounded-lg border border-accent-500/30 bg-accent-500/10 px-4 py-2.5 text-xs font-mono font-semibold uppercase tracking-wider text-accent-300 transition-all hover:border-accent-400/50 hover:bg-accent-500/15 hover:text-accent-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent-300 focus-visible:outline-offset-2"
                   [href]="project.repositoryUrl"

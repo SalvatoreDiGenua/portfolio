@@ -22,6 +22,17 @@ export interface SkillGroup {
   readonly items: readonly string[];
 }
 
+export interface ProjectItem {
+  readonly key: string;
+  readonly name: string;
+  readonly category: string;
+  readonly tags: readonly string[];
+  readonly repositoryUrl: string;
+  readonly liveUrl: string;
+  readonly liveLabel: string;
+  readonly accent: 'primary' | 'accent';
+}
+
 export const PROFILE: Profile = {
   name: 'Salvatore Di Genua',
   title: 'Senior Frontend Engineer - Angular Specialist',
@@ -31,6 +42,7 @@ export const PROFILE: Profile = {
   linkedin: 'https://www.linkedin.com/in/salvatore-di-genua-b664b716a',
   summary: 'about.profile.summary',
 };
+
 export const EXPERIENCES: ExperienceItem[] = [
   {
     key: 'experience.items.orbyta',
@@ -45,38 +57,21 @@ export const EXPERIENCES: ExperienceItem[] = [
     tags: ['Angular', 'Node.js', 'Express.js', 'Socket.IO', 'MySQL'],
   },
 ];
+
 export const EDUCATION: EducationItem[] = [
   { key: 'education.items.master' },
   { key: 'education.items.degree' },
   { key: 'education.items.diploma' },
 ];
+
 export const SKILLS: SkillGroup[] = [
   {
     key: 'skills.groups.frontend',
-    items: [
-      'angular',
-      'typescript',
-      'signals',
-      'standalone',
-      'changeDetection',
-      'rxjs',
-      'state',
-      'react',
-    ],
+    items: ['angular', 'typescript', 'signals', 'standalone', 'changeDetection', 'rxjs', 'state', 'react'],
   },
   {
     key: 'skills.groups.ui',
-    items: [
-      'html',
-      'css',
-      'scss',
-      'tailwind',
-      'material',
-      'primeng',
-      'bootstrap',
-      'mui',
-      'devexpress',
-    ],
+    items: ['html', 'css', 'scss', 'tailwind', 'material', 'primeng', 'bootstrap', 'mui', 'devexpress'],
   },
   {
     key: 'skills.groups.testing',
@@ -88,18 +83,33 @@ export const SKILLS: SkillGroup[] = [
   },
   {
     key: 'skills.groups.ai',
-    items: [
-      'cursor',
-      'antigravity',
-      'copilot',
-      'claude',
-      'opencode',
-      'skills',
-      'mcp',
-    ],
+    items: ['cursor', 'antigravity', 'copilot', 'claude', 'opencode', 'skills', 'mcp'],
   },
   {
     key: 'skills.groups.methods',
     items: ['scrum', 'microfrontend', 'leadership', 'mentoring'],
+  },
+];
+
+export const PROJECTS: readonly ProjectItem[] = [
+  {
+    key: 'projects.angular',
+    name: 'angular-boilerplate',
+    category: 'Angular',
+    tags: ['Angular', 'Signals', 'SSR', 'Hydration', 'Tailwind CSS'],
+    repositoryUrl: 'https://github.com/SalvatoreDiGenua/angular-boilerplate',
+    liveUrl: 'https://stackblitz.com/fork/github/SalvatoreDiGenua/angular-boilerplate/tree/main?startScript=start&title=Angular%20Boilerplate',
+    liveLabel: 'projects.liveDemo',
+    accent: 'primary',
+  },
+  {
+    key: 'projects.requestLock',
+    name: 'ngx-request-lock',
+    category: 'Angular Library',
+    tags: ['Angular', 'Signals', 'HttpClient', 'Interceptors'],
+    repositoryUrl: 'https://github.com/SalvatoreDiGenua/ngx-request-lock-docs',
+    liveUrl: 'https://ngx-request-lock-docs.netlify.app/',
+    liveLabel: 'projects.documentation',
+    accent: 'accent',
   },
 ];

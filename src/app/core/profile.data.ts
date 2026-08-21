@@ -128,7 +128,7 @@ export const PROJECTS: readonly ProjectItem[] = [
     liveUrl:
       'https://stackblitz.com/fork/github/SalvatoreDiGenua/angular-boilerplate/tree/main?startScript=start&title=Angular%20Boilerplate',
     liveLabel: 'projects.liveDemo',
-    accent: 'primary',
+    accent: 'accent',
   },
   {
     key: 'projects.requestLock',

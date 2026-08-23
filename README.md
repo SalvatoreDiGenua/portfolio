@@ -18,7 +18,7 @@
 
 I am a **Senior Frontend Engineer and Angular Specialist** focused on building maintainable, scalable web applications and exploring modern development workflows.
 
-- 🔭 **Current role:** Senior IT Consultant — Frontend & Application Architecture at Orbyta Tech
+- 🔭 **Current role:** Senior IT Consultant - Frontend & Application Architecture at Orbyta Tech
 - ⚡ **Core expertise:** Angular, TypeScript, Signals, RxJS, NgRx and Standalone Components
 - 🧩 **Architecture:** Micro-Frontends, REST APIs, real-time applications and scalable frontend systems
 - 🤝 **Leadership:** Senior frontend development, technical mentoring, code review and team leadership
@@ -100,24 +100,24 @@ An Angular library for coordinating UI locking while concurrent HTTP requests ar
 
 I use AI as an engineering aid rather than a replacement for architectural decisions, code review or testing. My workflow currently includes:
 
-- **Cursor** — daily coding and refactoring
-- **Antigravity** — AI-assisted development workflows
-- **Claude Code / OpenCode** — repository-level tasks and automation
-- **Custom skills** — reusable project-specific development guidance
-- **MCP servers** — contextual tooling and integrations
+- **Cursor** - daily coding and refactoring
+- **Antigravity** - AI-assisted development workflows
+- **Claude Code / OpenCode** - repository-level tasks and automation
+- **Custom skills** - reusable project-specific development guidance
+- **MCP servers** - contextual tooling and integrations
 
-The goal is simple: make development faster while keeping architecture, readability, testing and maintainability under control.
+The goal is to make development faster while keeping architecture, readability, testing and maintainability under control.
 
 ## 🎓 Education
 
-- **Master in AI Engineering** — eCampus Digital School · 2025 — ongoing
-- **Bachelor’s Degree in Computer and Automation Engineering** — eCampus Online University · 2022 — 2024
-- **IT Specialist Diploma** — IISS Rinaldo D’Aquino, Montella · 2014 — 2019
+- **Master in AI Engineering** - eCampus Digital School · 2025 - ongoing
+- **Bachelor’s Degree in Computer and Automation Engineering** - eCampus Online University · 2022 - 2024
+- **IT Specialist Diploma** - IISS Rinaldo D’Aquino, Montella · 2014 - 2019
 
 ## 🌍 Languages
 
-- 🇮🇹 Italian — Native
-- 🇬🇧 English — B1, improving
+- 🇮🇹 Italian - Native
+- 🇬🇧 English - B1, improving
 
 ## 📬 Get in touch
 
@@ -129,5 +129,5 @@ If you would like to discuss an Angular project, frontend architecture, technica
 </p>
 
 <div align="center">
-  <sub>Built with Angular, TypeScript and a continuous curiosity for better developer workflows.</sub>
+  <sub>Built with Angular, TypeScript and a continuous focus on better developer workflows.</sub>
 </div>

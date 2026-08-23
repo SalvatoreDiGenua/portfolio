@@ -1,3 +1,4 @@
 /sitemap.xml   /sitemap.xml   200
 /robots.txt    /robots.txt    200
+https://salvatoredigenua.netlify.app/* https://salvatoredigenua.it/:splat 301!
 /*             /index.html    200

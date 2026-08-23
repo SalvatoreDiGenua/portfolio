@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://salvatoredigenua.netlify.app/sitemap.xml
+Sitemap: https://salvatoredigenua.it/sitemap.xml

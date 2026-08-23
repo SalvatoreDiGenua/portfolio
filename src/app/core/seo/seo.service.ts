@@ -9,7 +9,7 @@ interface SeoContent {
   locale: string;
 }
 
-const BASE_URL = 'https://salvatoredigenua.netlify.app/';
+const BASE_URL = 'https://salvatoredigenua.it/';
 
 const CONTENT: Record<SupportedLanguage, SeoContent> = {
   it: {

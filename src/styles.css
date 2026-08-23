@@ -30,14 +30,14 @@
     width: 8px;
   }
   ::-webkit-scrollbar-track {
-    background: #07080c;
+    background: #070a08;
   }
   ::-webkit-scrollbar-thumb {
-    background: #1e2333;
+    background: #1d2a22;
     border-radius: 4px;
   }
   ::-webkit-scrollbar-thumb:hover {
-    background: #3730a3;
+    background: #166534;
   }
 }
 
@@ -51,11 +51,11 @@
   }
 
   .btn-primary {
-    @apply inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-primary-600 to-indigo-600 px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-primary-950/50 transition-all duration-300 hover:from-primary-500 hover:to-indigo-500 hover:shadow-glow hover:-translate-y-0.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-400 active:translate-y-0;
+    @apply inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-primary-600 to-primary-700 px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-primary-950/50 transition-all duration-300 hover:from-primary-500 hover:to-primary-600 hover:shadow-glow hover:-translate-y-0.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-400 active:translate-y-0;
   }
 
   .btn-secondary {
-    @apply inline-flex items-center justify-center gap-2 rounded-xl border border-white/15 bg-white/[0.04] px-6 py-3 text-sm font-semibold text-slate-100 backdrop-blur-md transition-all duration-300 hover:border-primary-400/50 hover:bg-white/[0.08] hover:text-white hover:-translate-y-0.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-400 active:translate-y-0;
+    @apply inline-flex items-center justify-center gap-2 rounded-xl border border-white/15 bg-white/[0.04] px-6 py-3 text-sm font-semibold text-slate-100 backdrop-blur-md transition-all duration-300 hover:border-primary-400/50 hover:bg-primary-500/10 hover:text-white hover:-translate-y-0.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-400 active:translate-y-0;
   }
 
   .card {
@@ -77,6 +77,11 @@
   .skip-link {
     @apply sr-only focus:not-sr-only focus:fixed focus:top-20 focus:left-4 focus:z-[60] focus:rounded-lg focus:bg-primary-600 focus:px-4 focus:py-2 focus:text-sm focus:font-semibold focus:text-white focus:shadow-glow focus:outline-none focus:ring-2 focus:ring-accent-400;
   }
+}
+
+:focus-visible {
+  outline: 2px solid #bef264;
+  outline-offset: 2px;
 }
 
 @media (prefers-reduced-motion: reduce) {

@@ -1,0 +1,6 @@
+[[redirects]]
+  from = "/*"
+  to = "https://salvatoredigenua.it/:splat"
+  status = 301
+  force = true
+  conditions = {Host = ["salvatoredigenua.netlify.app"]}

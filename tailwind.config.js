@@ -6,34 +6,34 @@ module.exports = {
     extend: {
       colors: {
         primary: {
-          50: '#eef2ff',
-          100: '#e0e7ff',
-          200: '#c7d2fe',
-          300: '#a5b4fc',
-          400: '#818cf8',
-          500: '#6366f1',
-          600: '#4f46e5',
-          700: '#4338ca',
-          800: '#3730a3',
-          900: '#312e81',
-          950: '#1e1b4b',
+          50: '#f0fdf4',
+          100: '#dcfce7',
+          200: '#bbf7d0',
+          300: '#86efac',
+          400: '#4ade80',
+          500: '#22c55e',
+          600: '#15803d',
+          700: '#166534',
+          800: '#14532d',
+          900: '#064e3b',
+          950: '#022c22',
         },
         accent: {
-          300: '#67e8f9',
-          400: '#22d3ee',
-          500: '#06b6d4',
-          600: '#0891b2',
+          300: '#d9f99d',
+          400: '#bef264',
+          500: '#a3e635',
+          600: '#84cc16',
         },
         emerald: {
           400: '#34d399',
           500: '#10b981',
         },
         ink: {
-          950: '#07080c',
-          900: '#0c0e15',
-          850: '#11141e',
-          800: '#161a26',
-          700: '#1e2333',
+          950: '#070a08',
+          900: '#0a0f0c',
+          850: '#101713',
+          800: '#151d18',
+          700: '#1d2a22',
         },
       },
       fontFamily: {
@@ -53,10 +53,10 @@ module.exports = {
         ],
       },
       boxShadow: {
-        glow: '0 0 40px -10px rgba(99, 102, 241, 0.5)',
-        'glow-cyan': '0 0 40px -10px rgba(34, 211, 238, 0.45)',
+        glow: '0 0 40px -10px rgba(34, 197, 94, 0.45)',
+        'glow-cyan': '0 0 40px -10px rgba(190, 242, 100, 0.38)',
         'glow-subtle':
-          '0 4px 20px -2px rgba(0, 0, 0, 0.5), 0 0 15px -2px rgba(99, 102, 241, 0.15)',
+          '0 4px 20px -2px rgba(0, 0, 0, 0.5), 0 0 15px -2px rgba(34, 197, 94, 0.14)',
       },
       backgroundImage: {
         'grid-pattern':
@@ -64,7 +64,7 @@ module.exports = {
         'dot-pattern':
           'radial-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px)',
         'hero-gradient':
-          'radial-gradient(ellipse 80% 50% at 50% -20%, rgba(99, 102, 241, 0.25), transparent)',
+          'radial-gradient(ellipse 80% 50% at 50% -20%, rgba(34, 197, 94, 0.22), transparent)',
       },
     },
   },

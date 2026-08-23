@@ -3,7 +3,7 @@
   <h3>Senior Frontend Engineer · Angular Specialist · AI-Assisted Development</h3>
 
   <p>
-    <a href="https://salvatoredigenua.netlify.app/">Portfolio</a> ·
+    <a href="https://salvatoredigenua.it/">Portfolio</a> ·
     <a href="https://github.com/SalvatoreDiGenua">GitHub</a> ·
     <a href="mailto:salvatoredigenua.developer@gmail.com">Email</a>
   </p>
@@ -31,7 +31,7 @@ I am a **Senior Frontend Engineer and Angular Specialist** focused on building m
 My portfolio is a responsive Angular single-page application available in Italian and English. It showcases my experience, technical skills, professional background and personal projects.
 
 <p>
-  <a href="https://salvatoredigenua.netlify.app/"><img src="https://img.shields.io/badge/Visit%20portfolio-6366f1?style=for-the-badge&logo=angular&logoColor=white" alt="Visit Salvatore Di Genua portfolio" /></a>
+  <a href="https://salvatoredigenua.it/"><img src="https://img.shields.io/badge/Visit%20portfolio-6366f1?style=for-the-badge&logo=angular&logoColor=white" alt="Visit Salvatore Di Genua portfolio" /></a>
 </p>
 
 ## 🚀 Projects
@@ -44,7 +44,7 @@ A reusable Angular starter designed to stay aligned with the latest Angular feat
 
 <p>
   <a href="https://github.com/SalvatoreDiGenua/angular-boilerplate"><img src="https://img.shields.io/badge/Repository-18181b?style=for-the-badge&logo=github&logoColor=white" alt="Angular Boilerplate GitHub repository" /></a>
-  <a href="https://stackblitz.com/fork/github/SalvatoreDiGenua/angular-boilerplate/tree/main?startScript=start&title=Angular%20Boilerplate"><img src="https://img.shields.io/badge/Try%20it%20on%20StackBlitz-1389FD?style=for-the-badge&logo=stackblitz&logoColor=white" alt="Try Angular Boilerplate on StackBlitz" /></a>
+  <a href="https://stackblitz.com/fork/github/SalvatoreDiGenua/angular-boilerplate/tree/main?startScript=start&title=Angular%20Boilerplate"><img src="https://img.shields.io/badge/Try%20it%20on%20StackBlitz-1389FD?style=for-the-badge&logo=stackblitz" alt="Try Angular Boilerplate on StackBlitz" /></a>
 </p>
 
 **Highlights:** Angular · Signals · SSR · Hydration · `@defer` · Signal Forms · i18n · SEO · Vitest · Tailwind CSS

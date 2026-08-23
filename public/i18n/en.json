@@ -12,22 +12,22 @@
   "hero": {
     "availability": "Available for new collaborations",
     "greeting": "Hi, I am",
-    "description": "I build modern and scalable interfaces with Angular, integrating AI-assisted development tools to improve delivery speed and quality.",
+    "description": "I build modern and scalable interfaces with Angular and use AI-assisted development tools to improve delivery speed and code quality.",
     "experienceCta": "View my experience",
     "scroll": "Scroll"
   },
   "about": {
-    "label": "01 — About me",
+    "label": "01 - About me",
     "title": "Professional profile",
     "years": "Years of experience",
     "projects": "Companies / key projects",
-    "technologies": "Technologies mastered",
+    "technologies": "Core technologies",
     "profile": {
-      "summary": "I have been developing web applications since 2019, specializing in Angular and TypeScript, with a focus on the framework’s latest features, including Signals and Standalone Components. I have worked both as a developer and as a team lead on fintech projects and cloud platforms, taking responsibility for architecture, development, code quality, and collaboration with clients and stakeholders. I integrate Cursor, Antigravity, Copilot, Claude Code, and OpenCode into my daily workflow, using custom skills and MCP servers to make code generation, refactoring, and documentation more precise and consistent with the project’s architecture."
+      "summary": "I have been developing web applications since 2019, specializing in Angular and TypeScript, with a focus on Signals and Standalone Components. I have worked as a developer and team lead on fintech projects and cloud platforms, covering architecture, development, code quality, and collaboration with clients and stakeholders. I use Cursor, Antigravity, Copilot, Claude Code, and OpenCode in my daily workflow, along with custom skills and MCP servers for code generation, refactoring, and documentation that fit the project's architecture."
     }
   },
   "skills": {
-    "label": "02 — Skills",
+    "label": "02 - Skills",
     "title": "Technology stack",
     "groups": {
       "frontend": {
@@ -101,34 +101,34 @@
     }
   },
   "experience": {
-    "label": "03 — Experience",
+    "label": "03 - Experience",
     "title": "Professional journey",
     "items": {
       "orbyta": {
         "role": "Senior IT Consultant - Frontend & Application Architecture",
         "company": "Orbyta Tech",
-        "period": "2025 — Present",
-        "description": "Frontend consulting for modern and high-performance web applications. Development with advanced Angular, Signals, RxJS, NgRx, PrimeNG, Tailwind and Bootstrap; architecture definition with the client and autonomous management of priorities and delivery. Integration with Java backends and real-time features through STOMP. Use of Cursor, OpenCode, MCP servers and skills to support code writing, review and refactoring."
+        "period": "2025 - Present",
+        "description": "Frontend consulting for modern web applications. I work with Angular, Signals, RxJS, NgRx, PrimeNG, Tailwind and Bootstrap, define architecture with the client, and manage priorities and delivery. I integrate Java backends and real-time features through STOMP. I also use Cursor, OpenCode, MCP servers and custom skills for code writing, review and refactoring."
       },
       "scai": {
         "role": "Senior Frontend Developer & Team Lead",
         "company": "SCAI Tecno",
-        "period": "2023 — 2025",
-        "description": "Led the frontend team in developing a debt recovery management application based on a Micro-Frontend architecture. Worked with Angular, RxJS, PrimeNG and Bootstrap and implemented end-to-end tests with Cypress on key flows, reducing regression risk during releases. Technical mentoring, best practices, code review and alignment with business goals in an Agile context."
+        "period": "2023 - 2025",
+        "description": "Led the frontend team developing a debt recovery management application with a Micro-Frontend architecture. I worked with Angular, RxJS, PrimeNG and Bootstrap and added Cypress end-to-end tests for key flows, reducing regression risk during releases. I also handled technical mentoring, code review and alignment with business goals in an Agile environment."
       },
       "acca": {
         "role": "Full Stack Developer",
         "company": "ACCA Software S.p.A.",
-        "period": "2019 — 2023",
-        "description": "Developed the Angular and RxJS frontend of usBIM.com, a Kanban application for workflow management, using Angular Material and DevExpress. Integrated REST APIs with Node.js and Express.js, built real-time features with Socket.IO and managed persistence with MySQL in an Agile context."
+        "period": "2019 - 2023",
+        "description": "Developed the Angular and RxJS frontend of usBIM.com, a Kanban application for workflow management, using Angular Material and DevExpress. Integrated REST APIs with Node.js and Express.js, built real-time features with Socket.IO, and worked with MySQL for persistence in an Agile environment."
       }
     }
   },
   "projects": {
-    "label": "04 — Projects",
+    "label": "04 - Projects",
     "title": "Personal projects",
     "angular": {
-      "description": "A reusable Angular boilerplate and a living showcase of modern framework capabilities, including Signals, SSR, hydration, @defer, Signal Forms, i18n, SEO and testing."
+      "description": "A reusable Angular boilerplate that demonstrates Signals, SSR, hydration, @defer, Signal Forms, i18n, SEO and testing in a working application."
     },
     "requestLock": {
       "description": "An Angular library for coordinating UI locking during concurrent HTTP requests, built with Signals, HttpContext and functional interceptors."
@@ -138,28 +138,28 @@
     "documentation": "Documentation"
   },
   "education": {
-    "label": "05 — Education",
+    "label": "05 - Education",
     "title": "Education background",
     "items": {
       "master": {
         "title": "Master's Degree in AI Engineering",
         "institution": "eCampus Digital School",
-        "period": "2025 — ongoing"
+        "period": "2025 - ongoing"
       },
       "degree": {
         "title": "Bachelor's Degree in Computer and Automation Engineering",
         "institution": "eCampus Online University",
-        "period": "2022 — 2024"
+        "period": "2022 - 2024"
       },
       "diploma": {
         "title": "IT Specialist Diploma",
         "institution": "IISS Rinaldo D'Aquino, Montella",
-        "period": "2014 — 2019"
+        "period": "2014 - 2019"
       }
     }
   },
   "contact": {
-    "label": "06 — Contact",
+    "label": "06 - Contact",
     "title": "Let's talk about your next project",
     "description": "I am available for collaborations as a frontend consultant, Angular developer or team leader."
   },

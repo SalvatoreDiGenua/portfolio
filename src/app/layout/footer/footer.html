@@ -1,52 +1,16 @@
-<footer
-  class="border-t border-white/[0.08] bg-ink-950/90 py-10 backdrop-blur-md"
->
-  <div
-    class="section-container flex flex-col items-center justify-between gap-6 text-sm text-slate-400 sm:flex-row"
-  >
-    <div
-      class="flex flex-col items-center gap-2 text-center sm:items-start sm:text-left"
-    >
-      <p class="text-slate-300 font-medium">
-        &copy; {{ year }}
-        <span class="text-white">{{ profile.name }}</span>
-        . {{ 'footer.rights' | transloco }}
-      </p>
-      <span class="font-mono text-xs text-slate-500">
-        {{ 'footer.built' | transloco }}
-      </span>
+<footer class="border-t border-white/[0.08] bg-ink-950/90 py-10 backdrop-blur-md">
+  <div class="section-container flex flex-col items-center justify-between gap-6 text-sm text-slate-400 sm:flex-row">
+    <div class="flex flex-col items-center gap-2 text-center sm:items-start sm:text-left">
+      <p class="text-slate-300 font-medium">&copy; {{ year }} <span class="text-white">{{ profile.name }}</span>. {{ 'footer.rights' | transloco }}</p>
+      <span class="font-mono text-xs text-slate-500">{{ 'footer.built' | transloco }}</span>
     </div>
-
     <div class="flex items-center gap-6">
-      <a
-        href="https://github.com/SalvatoreDiGenua/portfolio"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="inline-flex items-center gap-2 text-slate-400 transition-colors hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent-400 rounded px-2 py-1"
-        aria-label="Repository GitHub del Portfolio (apre in una nuova scheda)"
-      >
-        <img
-          src="https://s.magecdn.com/social/mw-github.svg"
-          alt=""
-          aria-hidden="true"
-          class="h-4 w-4"
-        />
+      <a href="https://github.com/SalvatoreDiGenua/portfolio" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-slate-400 transition-colors hover:text-brand-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent-400 rounded px-2 py-1" aria-label="Repository GitHub del Portfolio (apre in una nuova scheda)">
+        <img src="https://s.magecdn.com/social/mw-github.svg" alt="" aria-hidden="true" class="h-4 w-4" />
         <span>{{ 'footer.sourceCode' | transloco }}</span>
       </a>
-
-      <a
-        [href]="profile.linkedin"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="inline-flex items-center gap-2 text-slate-400 transition-colors hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent-400 rounded px-2 py-1"
-        aria-label="Profilo LinkedIn di Salvatore Di Genua (apre in una nuova scheda)"
-      >
-        <img
-          src="https://s.magecdn.com/social/mw-linkedin.svg"
-          alt=""
-          aria-hidden="true"
-          class="h-4 w-4"
-        />
+      <a [href]="profile.linkedin" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-slate-400 transition-colors hover:text-brand-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent-400 rounded px-2 py-1" aria-label="Profilo LinkedIn di Salvatore Di Genua (apre in una nuova scheda)">
+        <img src="https://s.magecdn.com/social/mw-linkedin.svg" alt="" aria-hidden="true" class="h-4 w-4" />
         <span>{{ 'footer.linkedin' | transloco }}</span>
       </a>
     </div>

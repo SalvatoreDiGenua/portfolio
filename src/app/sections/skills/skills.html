@@ -1,74 +1,28 @@
-<section
-  id="skills"
-  class="relative border-t border-white/[0.06] bg-ink-900/50 py-24 sm:py-32"
->
-  <!-- Background Glow -->
-  <div
-    class="pointer-events-none absolute left-1/3 bottom-10 h-72 w-72 rounded-full bg-primary-600/10 blur-[130px]"
-    aria-hidden="true"
-  ></div>
-
+<section id="skills" class="relative border-t border-white/[0.06] bg-ink-900/50 py-24 sm:py-32">
+  <div class="pointer-events-none absolute left-1/3 bottom-10 h-72 w-72 rounded-full bg-brand-600/10 blur-[130px]" aria-hidden="true"></div>
   <div class="section-container relative z-10">
     <div class="mb-12 flex flex-col gap-2">
-      <span class="section-label">
-        <span class="h-1.5 w-1.5 rounded-full bg-primary-400"></span>
-        {{ 'skills.label' | transloco }}
-      </span>
-      <h2 class="text-3xl sm:text-4xl lg:text-5xl">
-        {{ 'skills.title' | transloco }}
-      </h2>
+      <span class="section-label"><span class="h-1.5 w-1.5 rounded-full bg-brand-400"></span>{{ 'skills.label' | transloco }}</span>
+      <h2 class="text-3xl sm:text-4xl lg:text-5xl">{{ 'skills.title' | transloco }}</h2>
     </div>
-
     <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
       @for (group of skillGroups; track group.key) {
-        <div
-          class="card group flex flex-col justify-between"
-          [class.card-highlight]="
-            group.key === 'skills.groups.frontend' ||
-            group.key === 'skills.groups.ai'
-          "
-        >
+        <div class="card group flex flex-col justify-between" [class.card-highlight]="group.key === 'skills.groups.frontend' || group.key === 'skills.groups.ai'">
           <div>
-            <div
-              class="flex items-center justify-between gap-2 border-b border-white/[0.06] pb-4 mb-4"
-            >
+            <div class="flex items-center justify-between gap-2 border-b border-white/[0.06] pb-4 mb-4">
               <h3 class="text-lg font-bold text-white flex items-center gap-2">
-                @if (group.key === 'skills.groups.frontend') {
-                  <span class="h-2 w-2 rounded-full bg-primary-400"></span>
-                } @else if (group.key === 'skills.groups.ai') {
-                  <span class="h-2 w-2 rounded-full bg-accent-400"></span>
-                } @else {
-                  <span class="h-2 w-2 rounded-full bg-slate-500"></span>
-                }
+                @if (group.key === 'skills.groups.frontend') { <span class="h-2 w-2 rounded-full bg-brand-400"></span> }
+                @else if (group.key === 'skills.groups.ai') { <span class="h-2 w-2 rounded-full bg-accent-400"></span> }
+                @else { <span class="h-2 w-2 rounded-full bg-slate-500"></span> }
                 {{ group.key + '.title' | transloco }}
               </h3>
-              @if (
-                group.key === 'skills.groups.frontend' ||
-                group.key === 'skills.groups.ai'
-              ) {
-                <span
-                  class="font-mono text-[10px] uppercase tracking-wider text-accent-400 font-semibold px-2 py-0.5 rounded-full bg-accent-500/10 border border-accent-500/20"
-                >
-                  Core
-                </span>
+              @if (group.key === 'skills.groups.frontend' || group.key === 'skills.groups.ai') {
+                <span class="font-mono text-[10px] uppercase tracking-wider text-accent-400 font-semibold px-2 py-0.5 rounded-full bg-accent-500/10 border border-accent-500/20">Core</span>
               }
             </div>
-
             <div class="flex flex-wrap gap-2">
               @for (item of group.items; track item) {
-                <span
-                  [class]="
-                    (group.key === 'skills.groups.frontend' &&
-                      (item === 'angular' ||
-                        item === 'signals' ||
-                        item === 'typescript')) ||
-                    group.key === 'skills.groups.ai'
-                      ? 'chip-accent'
-                      : 'chip'
-                  "
-                >
-                  {{ group.key + '.items.' + item | transloco }}
-                </span>
+                <span [class]="(group.key === 'skills.groups.frontend' && (item === 'angular' || item === 'signals' || item === 'typescript')) || group.key === 'skills.groups.ai' ? 'chip-accent' : 'chip'">{{ group.key + '.items.' + item | transloco }}</span>
               }
             </div>
           </div>

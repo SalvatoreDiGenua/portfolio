@@ -1,36 +1,150 @@
-<header class="fixed inset-x-0 top-0 z-50 border-b border-white/[0.08] bg-ink-950/80 backdrop-blur-xl transition-all">
-  <nav class="section-container flex h-16 items-center justify-between" aria-label="Navigazione principale">
-    <a href="#top" class="group inline-flex items-center gap-2 font-mono text-base font-bold text-white transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent-300 rounded-lg px-1.5 py-1" aria-label="Salvatore Di Genua - Torna all'inizio">
-      <span class="text-primary-300 transition-transform group-hover:-translate-x-0.5">&lt;</span>
-      <span class="tracking-wider bg-gradient-to-r from-white via-slate-200 to-slate-400 bg-clip-text text-transparent">SDG</span>
-      <span class="text-accent-300 transition-transform group-hover:translate-x-0.5">/&gt;</span>
-      <span class="relative flex h-2 w-2 ml-1" title="Available for work"><span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-300 opacity-75"></span><span class="relative inline-flex h-2 w-2 rounded-full bg-emerald-400"></span></span>
+<header
+  class="fixed inset-x-0 top-0 z-50 border-b border-white/[0.08] bg-ink-950/80 backdrop-blur-xl transition-all"
+>
+  <nav
+    class="section-container flex h-16 items-center justify-between"
+    aria-label="Navigazione principale"
+  >
+    <a
+      href="#top"
+      class="group inline-flex items-center gap-2 font-mono text-base font-bold text-white transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent-300 rounded-lg px-1.5 py-1"
+      aria-label="Salvatore Di Genua - Torna all'inizio"
+    >
+      <span
+        class="text-primary-300 transition-transform group-hover:-translate-x-0.5"
+      >
+        &lt;
+      </span>
+      <span
+        class="tracking-wider bg-gradient-to-r from-white via-slate-200 to-slate-400 bg-clip-text text-transparent"
+      >
+        SDG
+      </span>
+      <span
+        class="text-accent-300 transition-transform group-hover:translate-x-0.5"
+      >
+        /&gt;
+      </span>
+      <span class="relative flex h-2 w-2 ml-1" title="Available for work">
+        <span
+          class="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-300 opacity-75"
+        ></span>
+        <span
+          class="relative inline-flex h-2 w-2 rounded-full bg-emerald-400"
+        ></span>
+      </span>
     </a>
 
     <ul class="hidden items-center gap-8 md:flex">
       @for (link of links; track link.href) {
-        <li><a [href]="link.href" class="relative text-sm font-medium text-slate-300 transition-all duration-200 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent-300 rounded-md px-2 py-1">{{ link.key | transloco }}</a></li>
+        <li>
+          <a
+            [href]="link.href"
+            class="relative text-sm font-medium text-slate-300 transition-all duration-200 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent-300 rounded-md px-2 py-1"
+          >
+            {{ link.key | transloco }}
+          </a>
+        </li>
       }
     </ul>
 
     <div class="flex items-center gap-3">
-      <button type="button" class="inline-flex min-h-[38px] items-center gap-1.5 rounded-xl border border-white/10 bg-white/[0.04] px-3 py-1.5 text-xs font-mono font-semibold uppercase tracking-wider text-slate-300 backdrop-blur-md transition-all hover:border-primary-400/50 hover:bg-primary-500/10 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent-300" (click)="toggleLanguage()" [attr.aria-label]="languageService.language() === 'it' ? 'Passa alla lingua inglese (EN)' : 'Switch to Italian language (IT)'">
-        <span [class.text-accent-300]="languageService.language() === 'it'">IT</span><span class="text-white/20">|</span><span [class.text-accent-300]="languageService.language() === 'en'">EN</span>
+      <button
+        type="button"
+        class="inline-flex min-h-[38px] items-center gap-1.5 rounded-xl border border-white/10 bg-white/[0.04] px-3 py-1.5 text-xs font-mono font-semibold uppercase tracking-wider text-slate-300 backdrop-blur-md transition-all hover:border-primary-400/50 hover:bg-primary-500/10 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent-300"
+        (click)="toggleLanguage()"
+        [attr.aria-label]="
+          languageService.language() === 'it'
+            ? 'Passa alla lingua inglese (EN)'
+            : 'Switch to Italian language (IT)'
+        "
+      >
+        <span [class.text-accent-300]="languageService.language() === 'it'">
+          IT
+        </span>
+        <span class="text-white/20">|</span>
+        <span [class.text-accent-300]="languageService.language() === 'en'">
+          EN
+        </span>
       </button>
-      <a href="#contact" class="btn-primary !px-4 !py-2 text-xs hidden md:inline-flex">{{ 'nav.contactMe' | transloco }}</a>
-      <button type="button" class="inline-flex min-h-[44px] min-w-[44px] items-center justify-center rounded-xl border border-white/10 bg-white/[0.04] p-2.5 text-slate-200 backdrop-blur-md transition-colors hover:bg-white/[0.08] hover:text-white md:hidden focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent-300" (click)="toggleMenu()" [attr.aria-expanded]="isOpen()" [attr.aria-label]="isOpen() ? 'Chiudi menu di navigazione' : 'Apri menu di navigazione'">
-        @if (!isOpen()) { <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" /></svg> } @else { <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg> }
+      <a
+        href="#contact"
+        class="btn-primary !px-4 !py-2 text-xs hidden md:inline-flex"
+      >
+        {{ 'nav.contactMe' | transloco }}
+      </a>
+      <button
+        type="button"
+        class="inline-flex min-h-[44px] min-w-[44px] items-center justify-center rounded-xl border border-white/10 bg-white/[0.04] p-2.5 text-slate-200 backdrop-blur-md transition-colors hover:bg-white/[0.08] hover:text-white md:hidden focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent-300"
+        (click)="toggleMenu()"
+        [attr.aria-expanded]="isOpen()"
+        [attr.aria-label]="
+          isOpen() ? 'Chiudi menu di navigazione' : 'Apri menu di navigazione'
+        "
+      >
+        @if (!isOpen()) {
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-5 w-5"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            aria-hidden="true"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          </svg>
+        } @else {
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-5 w-5"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            aria-hidden="true"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M6 18L18 6M6 6l12 12"
+            />
+          </svg>
+        }
       </button>
     </div>
   </nav>
 
   @if (isOpen()) {
-    <div class="border-t border-white/[0.08] bg-ink-950/95 px-6 py-6 shadow-2xl backdrop-blur-2xl md:hidden animate-in fade-in slide-in-from-top-2">
+    <div
+      class="border-t border-white/[0.08] bg-ink-950/95 px-6 py-6 shadow-2xl backdrop-blur-2xl md:hidden animate-in fade-in slide-in-from-top-2"
+    >
       <ul class="flex flex-col gap-4">
         @for (link of links; track link.href) {
-          <li><a [href]="link.href" class="flex items-center justify-between rounded-lg px-3 py-2 text-base font-medium text-slate-300 transition-colors hover:bg-white/5 hover:text-white" (click)="closeMenu()"><span>{{ link.key | transloco }}</span><span class="text-xs font-mono text-primary-300">→</span></a></li>
+          <li>
+            <a
+              [href]="link.href"
+              class="flex items-center justify-between rounded-lg px-3 py-2 text-base font-medium text-slate-300 transition-colors hover:bg-white/5 hover:text-white"
+              (click)="closeMenu()"
+            >
+              <span>{{ link.key | transloco }}</span>
+              <span class="text-xs font-mono text-primary-300">→</span>
+            </a>
+          </li>
         }
-        <li class="pt-2"><a href="#contact" class="btn-primary w-full text-center" (click)="closeMenu()">{{ 'nav.contactMe' | transloco }}</a></li>
+        <li class="pt-2">
+          <a
+            href="#contact"
+            class="btn-primary w-full text-center"
+            (click)="closeMenu()"
+          >
+            {{ 'nav.contactMe' | transloco }}
+          </a>
+        </li>
       </ul>
     </div>
   }

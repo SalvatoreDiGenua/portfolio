@@ -1,23 +1,91 @@
-<section id="top" class="relative flex min-h-[92vh] items-center justify-center overflow-hidden bg-grid-pattern bg-[size:40px_40px] pt-28 pb-16">
-  <div class="pointer-events-none absolute inset-0 bg-gradient-to-b from-brand-900/30 via-ink-950/80 to-ink-950" aria-hidden="true"></div>
-  <div class="pointer-events-none absolute left-1/2 top-1/4 h-[500px] w-[500px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-gradient-to-tr from-brand-600/25 via-accent-500/20 to-transparent blur-[140px]" aria-hidden="true"></div>
-  <div class="pointer-events-none absolute -left-20 top-1/2 h-72 w-72 rounded-full bg-brand-600/15 blur-[120px]" aria-hidden="true"></div>
-  <div class="section-container relative z-10 flex flex-col items-center text-center">
-    <div class="mb-6 inline-flex items-center gap-2 rounded-full border border-brand-500/30 bg-brand-500/10 px-4 py-1.5 text-xs font-mono font-medium text-brand-300 backdrop-blur-md shadow-sm">
-      <span class="relative flex h-2 w-2"><span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-brand-300 opacity-75"></span><span class="relative inline-flex h-2 w-2 rounded-full bg-brand-400"></span></span>
+<section
+  id="top"
+  class="relative flex min-h-[92vh] items-center justify-center overflow-hidden bg-grid-pattern bg-[size:40px_40px] pt-28 pb-16"
+>
+  <div
+    class="pointer-events-none absolute inset-0 bg-gradient-to-b from-brand-900/30 via-ink-950/80 to-ink-950"
+    aria-hidden="true"
+  ></div>
+  <div
+    class="pointer-events-none absolute left-1/2 top-1/4 h-[500px] w-[500px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-gradient-to-tr from-brand-600/25 via-accent-500/20 to-transparent blur-[140px]"
+    aria-hidden="true"
+  ></div>
+  <div
+    class="pointer-events-none absolute -left-20 top-1/2 h-72 w-72 rounded-full bg-brand-600/15 blur-[120px]"
+    aria-hidden="true"
+  ></div>
+  <div
+    class="section-container relative z-10 flex flex-col items-center text-center"
+  >
+    <div
+      class="mb-6 inline-flex items-center gap-2 rounded-full border border-brand-500/30 bg-brand-500/10 px-4 py-1.5 text-xs font-mono font-medium text-brand-300 backdrop-blur-md shadow-sm"
+    >
+      <span class="relative flex h-2 w-2">
+        <span
+          class="absolute inline-flex h-full w-full animate-ping rounded-full bg-brand-300 opacity-75"
+        ></span>
+        <span
+          class="relative inline-flex h-2 w-2 rounded-full bg-brand-400"
+        ></span>
+      </span>
       <span>{{ 'hero.availability' | transloco }}</span>
     </div>
     <h1 class="text-4xl font-extrabold tracking-tight sm:text-6xl md:text-7xl">
       {{ 'hero.greeting' | transloco }}
-      <span class="bg-gradient-to-r from-brand-300 via-accent-300 to-brand-400 bg-clip-text text-transparent">{{ profile.name }}</span>
+      <span
+        class="bg-gradient-to-r from-brand-300 via-accent-300 to-brand-400 bg-clip-text text-transparent"
+      >
+        {{ profile.name }}
+      </span>
     </h1>
-    <p class="mt-5 max-w-2xl text-xl font-semibold text-slate-200 sm:text-2xl">{{ profile.title }}</p>
-    <p class="mt-2 font-mono text-sm uppercase tracking-widest text-accent-300 font-medium">{{ profile.subtitle }}</p>
-    <p class="mt-6 max-w-2xl text-base leading-relaxed text-slate-300/90 sm:text-lg">{{ 'hero.description' | transloco }}</p>
-    <div class="mt-10 flex flex-col gap-4 sm:flex-row items-center justify-center w-full max-w-md">
-      <a href="#contact" class="btn-primary w-full sm:w-auto min-h-[48px]"><span>{{ 'nav.contactMe' | transloco }}</span><svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg></a>
-      <a href="#experience" class="btn-secondary w-full sm:w-auto min-h-[48px]"><span>{{ 'hero.experienceCta' | transloco }}</span><span class="font-mono text-xs text-brand-300">↓</span></a>
+    <p class="mt-5 max-w-2xl text-xl font-semibold text-slate-200 sm:text-2xl">
+      {{ profile.title }}
+    </p>
+    <p
+      class="mt-2 font-mono text-sm uppercase tracking-widest text-accent-300 font-medium"
+    >
+      {{ profile.subtitle }}
+    </p>
+    <p
+      class="mt-6 max-w-2xl text-base leading-relaxed text-slate-300/90 sm:text-lg"
+    >
+      {{ 'hero.description' | transloco }}
+    </p>
+    <div
+      class="mt-10 flex flex-col gap-4 sm:flex-row items-center justify-center w-full max-w-md"
+    >
+      <a href="#contact" class="btn-primary w-full sm:w-auto min-h-[48px]">
+        <span>{{ 'nav.contactMe' | transloco }}</span>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-4 w-4"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          aria-hidden="true"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M14 5l7 7m0 0l-7 7m7-7H3"
+          />
+        </svg>
+      </a>
+      <a href="#experience" class="btn-secondary w-full sm:w-auto min-h-[48px]">
+        <span>{{ 'hero.experienceCta' | transloco }}</span>
+        <span class="font-mono text-xs text-brand-300">↓</span>
+      </a>
     </div>
-    <a href="#about" class="mt-14 inline-flex items-center gap-2 text-slate-400 transition-colors hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent-300 rounded-md px-2 py-1" aria-label="Scorri alla sezione Chi sono"><span class="text-xs font-mono uppercase tracking-widest">{{ 'hero.scroll' | transloco }}</span><span class="animate-bounce text-sm" aria-hidden="true">↓</span></a>
+    <a
+      href="#about"
+      class="mt-14 inline-flex items-center gap-2 text-slate-400 transition-colors hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent-300 rounded-md px-2 py-1"
+      aria-label="Scorri alla sezione Chi sono"
+    >
+      <span class="text-xs font-mono uppercase tracking-widest">
+        {{ 'hero.scroll' | transloco }}
+      </span>
+      <span class="animate-bounce text-sm" aria-hidden="true">↓</span>
+    </a>
   </div>
 </section>

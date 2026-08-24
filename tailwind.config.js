@@ -5,35 +5,34 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: {
-          50: '#eef2ff',
-          100: '#e0e7ff',
-          200: '#c7d2fe',
-          300: '#a5b4fc',
-          400: '#818cf8',
-          500: '#6366f1',
-          600: '#4f46e5',
-          700: '#4338ca',
-          800: '#3730a3',
-          900: '#312e81',
-          950: '#1e1b4b',
-        },
-        accent: {
-          300: '#67e8f9',
-          400: '#22d3ee',
-          500: '#06b6d4',
-          600: '#0891b2',
-        },
-        emerald: {
+        // Brand system: Emerald is the identity, Lime is the highlight.
+        brand: {
+          300: '#6ee7b7',
           400: '#34d399',
           500: '#10b981',
+          600: '#059669',
+          700: '#047857',
+          800: '#065f46',
+          900: '#064e3b',
+        },
+        accent: {
+          300: '#d9f99d',
+          400: '#bef264',
+          500: '#a3e635',
+          600: '#84cc16',
         },
         ink: {
-          950: '#07080c',
-          900: '#0c0e15',
-          850: '#11141e',
-          800: '#161a26',
-          700: '#1e2333',
+          950: '#070a08',
+          900: '#0a0f0c',
+          850: '#101713',
+          800: '#151d18',
+          700: '#1d2a22',
+        },
+        content: {
+          primary: '#f8fafc',
+          secondary: '#cbd5e1',
+          muted: '#94a3b8',
+          disabled: '#64748b',
         },
       },
       fontFamily: {
@@ -53,10 +52,10 @@ module.exports = {
         ],
       },
       boxShadow: {
-        glow: '0 0 40px -10px rgba(99, 102, 241, 0.5)',
-        'glow-cyan': '0 0 40px -10px rgba(34, 211, 238, 0.45)',
+        'glow-brand': '0 0 40px -10px rgba(16, 185, 129, 0.42)',
+        'glow-accent': '0 0 40px -10px rgba(190, 242, 100, 0.30)',
         'glow-subtle':
-          '0 4px 20px -2px rgba(0, 0, 0, 0.5), 0 0 15px -2px rgba(99, 102, 241, 0.15)',
+          '0 4px 20px -2px rgba(0, 0, 0, 0.5), 0 0 15px -2px rgba(16, 185, 129, 0.12)',
       },
       backgroundImage: {
         'grid-pattern':
@@ -64,7 +63,7 @@ module.exports = {
         'dot-pattern':
           'radial-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px)',
         'hero-gradient':
-          'radial-gradient(ellipse 80% 50% at 50% -20%, rgba(99, 102, 241, 0.25), transparent)',
+          'radial-gradient(ellipse 80% 50% at 50% -20%, rgba(16, 185, 129, 0.20), transparent)',
       },
     },
   },

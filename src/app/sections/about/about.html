@@ -1,36 +1,34 @@
 <section id="about" class="relative py-24 sm:py-32">
-  <!-- Subtle decorative ambient glow -->
   <div
     class="pointer-events-none absolute right-0 top-1/2 h-80 w-80 -translate-y-1/2 rounded-full bg-accent-500/10 blur-[130px]"
     aria-hidden="true"
   ></div>
-
   <div class="section-container relative z-10">
     <div class="mb-12 flex flex-col gap-2">
       <span class="section-label">
-        <span class="h-1.5 w-1.5 rounded-full bg-primary-400"></span>
+        <span class="h-1.5 w-1.5 rounded-full bg-brand-400"></span>
         {{ 'about.label' | transloco }}
       </span>
       <h2 class="text-3xl sm:text-4xl lg:text-5xl">
         {{ 'about.title' | transloco }}
       </h2>
     </div>
-
     <div class="grid gap-8 lg:grid-cols-12 lg:gap-12">
       <div class="card p-8 lg:col-span-8 flex flex-col justify-between">
         <div class="space-y-4">
-          <p class="text-base sm:text-lg leading-relaxed text-slate-300">
+          <p
+            class="text-base sm:text-lg leading-relaxed text-content-secondary"
+          >
             {{ profile.summary | transloco }}
           </p>
         </div>
-
         <div
           class="mt-8 pt-6 border-t border-white/[0.08] flex flex-wrap items-center justify-between gap-4"
         >
           <div
-            class="inline-flex items-center gap-2 text-sm text-slate-400 font-mono"
+            class="inline-flex items-center gap-2 text-sm text-content-muted font-mono"
           >
-            <span class="h-2 w-2 rounded-full bg-primary-400"></span>
+            <span class="h-2 w-2 rounded-full bg-brand-400"></span>
             <span>{{ profile.location }}</span>
           </div>
           <a
@@ -45,7 +43,6 @@
           </a>
         </div>
       </div>
-
       <div
         class="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-1 gap-4 lg:col-span-4"
       >
@@ -54,11 +51,11 @@
             class="card-highlight text-center lg:text-left flex flex-col justify-center"
           >
             <p
-              class="text-3xl sm:text-4xl font-extrabold font-display bg-gradient-to-r from-white via-primary-200 to-accent-300 bg-clip-text text-transparent"
+              class="text-3xl sm:text-4xl font-extrabold font-display bg-gradient-to-r from-white via-brand-300 to-accent-300 bg-clip-text text-transparent"
             >
               {{ stat.value }}
             </p>
-            <p class="mt-1.5 text-xs sm:text-sm font-medium text-slate-400">
+            <p class="mt-1.5 text-xs sm:text-sm font-medium text-content-muted">
               {{ stat.key | transloco }}
             </p>
           </div>

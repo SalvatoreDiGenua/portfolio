@@ -1,7 +1,12 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 192 192" role="img" aria-labelledby="title desc">
-  <title id="title">Salvatore Di Genua portfolio logo</title><desc id="desc">Logo Salvatore Di Genua con parentesi angolari</desc>
-  <rect width="192" height="192" rx="38" fill="#0a0f0c"/>
-  <path d="M45 63 25 96l20 33" fill="none" stroke="#4ade80" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
-  <text x="49" y="108" fill="#f8fafc" font-family="JetBrains Mono,Consolas,monospace" font-size="43" font-weight="800" letter-spacing="-3">SDG</text>
-  <path d="M147 63 167 96l-20-33" fill="none" stroke="#bef264" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+  <title id="title">Salvatore Di Genua portfolio</title>
+  <desc id="desc">Developer portfolio icon with SDG monogram framed by code brackets.</desc>
+  <rect width="192" height="192" rx="38" fill="#06110d"/>
+  <rect x="7" y="7" width="178" height="178" rx="32" fill="#0a1712" stroke="#145c3b" stroke-width="2"/>
+  <path d="M45 51 20 96l25 45" fill="none" stroke="#4ade80" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M147 51l25 45-25 45" fill="none" stroke="#bef264" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M91 50 78 142" fill="none" stroke="#34d399" stroke-width="7" stroke-linecap="round" opacity="0.9"/>
+  <text x="95" y="113" text-anchor="middle" fill="#f8fafc" font-family="JetBrains Mono,Consolas,monospace" font-size="46" font-weight="800" letter-spacing="-3">SDG</text>
+  <circle cx="27" cy="28" r="5" fill="#bef264"/>
+  <circle cx="42" cy="28" r="5" fill="#4ade80"/>
 </svg>

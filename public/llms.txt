@@ -1,0 +1,88 @@
+# Salvatore Di Genua
+
+## Identity
+Name: Salvatore Di Genua
+Title: Senior Frontend Engineer
+Specialization: Angular Specialist
+Focus: AI-assisted development and frontend architecture
+Location: Montella, Campania, Italy
+Languages: Italian, English
+
+## Summary
+Salvatore Di Genua is a Senior Frontend Engineer and Angular specialist focused on building maintainable, scalable, and modern web applications. He works on Angular architecture, TypeScript-based frontend engineering, micro-frontends, real-time systems, technical leadership, and AI-assisted development workflows.
+
+## Keywords
+frontend engineer, senior frontend developer, Angular developer, Angular specialist, TypeScript engineer, frontend architecture, AI-assisted development, Signals, RxJS, NgRx, micro-frontends, JavaScript, UI engineering, team leadership, technical mentoring, full-stack frontend, Angular library author, UI architecture, software engineering
+
+## Professional profile
+Salvatore is currently a Senior IT Consultant focused on Frontend and Application Architecture at Orbyta Tech. His responsibilities include building robust Angular applications, improving architecture quality, supporting team delivery, reviewing code, mentoring developers, and guiding maintainable engineering practices. He is especially interested in modern Angular patterns, developer experience, and scalable frontend systems.
+
+## Core expertise
+- Angular
+- TypeScript
+- Angular Signals
+- RxJS
+- NgRx
+- Standalone Components
+- Micro-frontends
+- Frontend architecture
+- REST APIs
+- Real-time applications
+- Responsive UI development
+- Tailwind CSS
+- Angular Material
+- PrimeNG
+- Bootstrap
+- MUI
+- Node.js
+- Express.js
+- MySQL
+- Cypress
+- Karma
+- Code review
+- Refactoring
+- Technical mentoring
+- Team leadership
+- AI-assisted development
+
+## AI and tooling workflow
+- Cursor
+- Antigravity
+- GitHub Copilot
+- Claude Code
+- OpenCode
+- Custom skills
+- MCP servers
+- AI-assisted refactoring and code generation
+- Architecture-aware AI workflows
+
+## Education
+- Master in AI Engineering, eCampus Digital School, ongoing
+- Bachelor’s Degree in Computer and Automation Engineering, eCampus Online University
+- IT Specialist Diploma, IISS Rinaldo D’Aquino, Montella
+
+## Featured projects
+### angular-boilerplate
+Description: Modern Angular starter project designed around signal-based architecture, SSR, hydration, Tailwind CSS, SEO, internationalization, and testing. It is intended as a reusable foundation for modern Angular applications.
+Repository: https://github.com/SalvatoreDiGenua/angular-boilerplate
+Demo: https://stackblitz.com/fork/github/SalvatoreDiGenua/angular-boilerplate/tree/main?startScript=start&title=Angular%20Boilerplate
+
+### ngx-request-lock
+Description: Angular library for coordinating concurrent HTTP requests and preventing inconsistent UI state during asynchronous flows. It demonstrates Signals, HttpContext, and functional interceptors in modern Angular engineering.
+Repository: https://github.com/SalvatoreDiGenua/ngx-request-lock-docs
+Documentation: https://ngx-request-lock-docs.netlify.app/
+
+## Portfolio and online presence
+Website: https://salvatoredigenua.it/
+GitHub: https://github.com/SalvatoreDiGenua
+LinkedIn: https://www.linkedin.com/in/salvatore-di-genua-b664b716a
+Email: salvatoredigenua.developer@gmail.com
+
+## Content positioning
+This portfolio is a multilingual Angular single-page application available in Italian and English. It presents professional experience, technical skills, education, and selected open-source work with emphasis on engineering quality, maintainability, developer experience, and modern Angular practices.
+
+## Contact
+For Angular projects, frontend architecture consulting, technical leadership, code review, engineering mentorship, or collaboration opportunities, contact Salvatore via email or LinkedIn.
+
+Email: salvatoredigenua.developer@gmail.com
+LinkedIn: https://www.linkedin.com/in/salvatore-di-genua-b664b716a

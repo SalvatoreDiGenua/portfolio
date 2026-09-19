@@ -38,13 +38,13 @@ export class LanguageService {
   }
 
   private getInitialLanguage(): SupportedLanguage {
-    if (!isPlatformBrowser(this.platformId)) {
-      return 'en';
-    }
-
     const fromUrl = this.getLanguageFromUrl();
     if (fromUrl) {
       return fromUrl;
+    }
+
+    if (!isPlatformBrowser(this.platformId)) {
+      return 'en';
     }
 
     const storedLanguage = localStorage.getItem(LanguageService.storageKey);
@@ -56,9 +56,15 @@ export class LanguageService {
   }
 
   private getLanguageFromUrl(): SupportedLanguage | null {
-    const params = new URLSearchParams(this.document.location.search);
-    const value = params.get(LanguageService.langQueryParam);
-    return value === 'it' || value === 'en' ? value : null;
+    try {
+      const search = this.document?.location?.search;
+      if (!search) return null;
+      const params = new URLSearchParams(search);
+      const value = params.get(LanguageService.langQueryParam);
+      return value === 'it' || value === 'en' ? value : null;
+    } catch {
+      return null;
+    }
   }
 
   private syncUrl(language: SupportedLanguage): void {

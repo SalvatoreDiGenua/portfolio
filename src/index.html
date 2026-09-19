@@ -7,7 +7,7 @@
     </title>
     <meta
       name="description"
-      content="Portfolio of Salvatore Di Genua. Senior Frontend Engineer specializing in Angular and TypeScript, with experience in frontend architecture, Signals, SSR, and AI-assisted development."
+      content="Portfolio of Salvatore Di Genua, Senior Frontend Engineer specializing in Angular, TypeScript, Signals, SSR architecture, and AI-assisted web development."
     />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="robots" content="index, follow, max-image-preview:large" />
@@ -59,7 +59,7 @@
     />
     <meta
       property="og:description"
-      content="Portfolio of Salvatore Di Genua. Senior Frontend Engineer specializing in Angular and TypeScript, with experience in frontend architecture, Signals, SSR, and AI-assisted development."
+      content="Portfolio of Salvatore Di Genua, Senior Frontend Engineer specializing in Angular, TypeScript, Signals, SSR architecture, and AI-assisted web development."
     />
     <meta
       property="og:image"
@@ -80,7 +80,7 @@
     />
     <meta
       name="twitter:description"
-      content="Portfolio of Salvatore Di Genua. Senior Frontend Engineer specializing in Angular and TypeScript, with experience in frontend architecture, Signals, SSR, and AI-assisted development."
+      content="Portfolio of Salvatore Di Genua, Senior Frontend Engineer specializing in Angular, TypeScript, Signals, SSR architecture, and AI-assisted web development."
     />
     <meta
       name="twitter:image"
@@ -93,43 +93,88 @@
     <script type="application/ld+json" id="person-schema">
       {
         "@context": "https://schema.org",
-        "@type": "ProfilePage",
-        "dateCreated": "2024-01-01T00:00:00Z",
-        "dateModified": "2026-08-21T00:00:00Z",
-        "mainEntity": {
-          "@type": "Person",
-          "name": "Salvatore Di Genua",
-          "alternateName": "Salvatore Di Genua",
-          "jobTitle": "Senior Frontend Engineer & Angular Specialist",
-          "description": "Senior Frontend Engineer specializing in Angular and TypeScript, with experience in Signals, frontend architecture, SSR, and AI-assisted software development.",
-          "inLanguage": "en",
-          "email": "mailto:salvatoredigenua.developer@gmail.com",
-          "url": "https://salvatoredigenua.it/",
-          "image": "https://salvatoredigenua.it/og-image.png",
-          "address": {
-            "@type": "PostalAddress",
-            "addressLocality": "Montella",
-            "addressRegion": "Campania",
-            "addressCountry": "IT"
+        "@graph": [
+          {
+            "@type": "WebSite",
+            "@id": "https://salvatoredigenua.it/#website",
+            "url": "https://salvatoredigenua.it/",
+            "name": "Salvatore Di Genua - Portfolio",
+            "description": "Portfolio of Salvatore Di Genua, Senior Frontend Engineer & Angular Specialist.",
+            "publisher": {
+              "@id": "https://salvatoredigenua.it/#person"
+            },
+            "inLanguage": ["en", "it"]
           },
-          "knowsAbout": [
-            "Angular",
-            "TypeScript",
-            "Angular Signals",
-            "RxJS",
-            "NgRx",
-            "Tailwind CSS",
-            "Micro-Frontend",
-            "AI-Assisted Development",
-            "Model Context Protocol (MCP)",
-            "Cypress",
-            "Node.js"
-          ],
-          "sameAs": [
-            "https://github.com/SalvatoreDiGenua",
-            "https://www.linkedin.com/in/salvatore-di-genua-b664b716a"
-          ]
-        }
+          {
+            "@type": "ProfilePage",
+            "@id": "https://salvatoredigenua.it/#webpage",
+            "url": "https://salvatoredigenua.it/",
+            "name": "Salvatore Di Genua | Senior Frontend Engineer & Angular Specialist",
+            "isPartOf": {
+              "@id": "https://salvatoredigenua.it/#website"
+            },
+            "dateCreated": "2024-01-01T00:00:00Z",
+            "dateModified": "2026-09-19T00:00:00Z",
+            "mainEntity": {
+              "@id": "https://salvatoredigenua.it/#person"
+            }
+          },
+          {
+            "@type": "Person",
+            "@id": "https://salvatoredigenua.it/#person",
+            "name": "Salvatore Di Genua",
+            "alternateName": "Salvatore Di Genua",
+            "jobTitle": "Senior Frontend Engineer & Angular Specialist",
+            "description": "Portfolio of Salvatore Di Genua, Senior Frontend Engineer specializing in Angular, TypeScript, Signals, SSR architecture, and AI-assisted web development.",
+            "inLanguage": "en",
+            "email": "mailto:salvatoredigenua.developer@gmail.com",
+            "url": "https://salvatoredigenua.it/",
+            "image": "https://salvatoredigenua.it/og-image.png",
+            "knowsLanguage": ["it", "en"],
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Montella",
+              "addressRegion": "Campania",
+              "addressCountry": "IT"
+            },
+            "worksFor": {
+              "@type": "Organization",
+              "name": "Orbyta Tech"
+            },
+            "alumniOf": [
+              {
+                "@type": "EducationalOrganization",
+                "name": "eCampus Digital School"
+              },
+              {
+                "@type": "EducationalOrganization",
+                "name": "Università telematica eCampus"
+              }
+            ],
+            "hasOccupation": {
+              "@type": "Occupation",
+              "name": "Senior Frontend Engineer",
+              "skills": "Angular, TypeScript, Signals, RxJS, NgRx, Tailwind CSS, Micro-Frontend, AI-Assisted Development"
+            },
+            "knowsAbout": [
+              "Angular",
+              "TypeScript",
+              "Angular Signals",
+              "RxJS",
+              "NgRx",
+              "Tailwind CSS",
+              "Micro-Frontend",
+              "AI-Assisted Development",
+              "Model Context Protocol (MCP)",
+              "Cypress",
+              "Node.js"
+            ],
+            "sameAs": [
+              "https://github.com/SalvatoreDiGenua",
+              "https://www.linkedin.com/in/salvatore-di-genua-b664b716a"
+            ]
+          }
+        ]
       }
     </script>
   </head>

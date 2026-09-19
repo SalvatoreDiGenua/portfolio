@@ -7,27 +7,35 @@
     "education": "Formazione",
     "contact": "Contatti",
     "contactMe": "Contattami",
-    "skipToContent": "Salta al contenuto principale"
+    "skipToContent": "Salta al contenuto principale",
+    "ariaMain": "Navigazione principale",
+    "ariaHome": "Salvatore Di Genua - Torna all'inizio",
+    "ariaOpenMenu": "Apri menu di navigazione",
+    "ariaCloseMenu": "Chiudi menu di navigazione",
+    "ariaLangSwitch": "Passa alla lingua inglese (EN)"
   },
   "hero": {
     "availability": "Disponibile per nuove collaborazioni",
     "greeting": "Ciao, sono",
     "description": "Costruisco interfacce moderne e scalabili con Angular e uso strumenti di sviluppo assistito da AI per migliorare velocità di consegna e qualità del codice.",
     "experienceCta": "Guarda la mia esperienza",
-    "scroll": "Scorri"
+    "scroll": "Scorri",
+    "ariaScroll": "Scorri alla sezione Chi sono",
+    "roleTag": "Senior Frontend Engineer & Specialista Angular"
   },
   "about": {
-    "label": "01 - Chi sono",
+    "label": "Chi sono",
     "title": "Profilo professionale",
     "years": "Anni di esperienza",
     "projects": "Aziende / progetti chiave",
     "technologies": "Tecnologie principali",
+    "ariaLinkedIn": "Profilo LinkedIn di Salvatore Di Genua (apre in una nuova scheda)",
     "profile": {
       "summary": "Sviluppo applicazioni web dal 2019, con specializzazione in Angular e TypeScript e nelle funzionalità più recenti del framework, tra cui Signals e Standalone Components. Ho lavorato come sviluppatore e team lead su progetti fintech e piattaforme cloud, occupandomi di architettura, sviluppo, qualità del codice e collaborazione con clienti e stakeholder. Uso Cursor, Antigravity, Copilot, Claude Code e OpenCode nel lavoro quotidiano, insieme a skills personalizzate e server MCP per scrivere, rifattorizzare e documentare codice coerente con l'architettura del progetto."
     }
   },
   "skills": {
-    "label": "02 - Competenze",
+    "label": "Competenze",
     "title": "Stack tecnologico",
     "groups": {
       "frontend": {
@@ -101,7 +109,7 @@
     }
   },
   "experience": {
-    "label": "03 - Esperienza",
+    "label": "Esperienza",
     "title": "Percorso professionale",
     "items": {
       "orbyta": {
@@ -125,7 +133,7 @@
     }
   },
   "projects": {
-    "label": "04 - Progetti",
+    "label": "Progetti",
     "title": "Progetti personali",
     "angular": {
       "description": "Un boilerplate Angular riutilizzabile che dimostra Signals, SSR, hydration, @defer, Signal Forms, i18n, SEO e testing in un'applicazione funzionante."
@@ -135,10 +143,12 @@
     },
     "viewProject": "Repository",
     "liveDemo": "Demo live",
-    "documentation": "Documentazione"
+    "documentation": "Documentazione",
+    "viewRepoAria": "Vedi repository GitHub di {{name}} (apre in una nuova scheda)",
+    "viewLiveAria": "Visita la risorsa live di {{name}} (apre in una nuova scheda)"
   },
   "education": {
-    "label": "05 - Formazione",
+    "label": "Formazione",
     "title": "Percorso di studi",
     "items": {
       "master": {
@@ -159,14 +169,18 @@
     }
   },
   "contact": {
-    "label": "06 - Contatti",
+    "label": "Contatti",
     "title": "Parliamo del tuo prossimo progetto",
-    "description": "Sono disponibile per collaborazioni come consulente frontend, sviluppatore Angular o per ruoli di team leadership."
+    "description": "Sono disponibile per collaborazioni come consulente frontend, sviluppatore Angular o per ruoli di team leadership.",
+    "ariaMail": "Invia un'email a Salvatore Di Genua",
+    "ariaLinkedIn": "Connettiti con Salvatore Di Genua su LinkedIn (apre in una nuova scheda)"
   },
   "footer": {
     "rights": "Tutti i diritti riservati.",
     "built": "Costruito con Angular & Tailwind CSS",
     "sourceCode": "Codice sorgente",
-    "linkedin": "LinkedIn"
+    "linkedin": "LinkedIn",
+    "ariaSourceCode": "Repository GitHub del Portfolio (apre in una nuova scheda)",
+    "ariaLinkedIn": "Profilo LinkedIn di Salvatore Di Genua (apre in una nuova scheda)"
   }
 }

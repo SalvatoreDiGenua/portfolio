@@ -77,17 +77,25 @@ import { PROJECTS } from '../../core/profile.data';
                   [href]="project.repositoryUrl"
                   target="_blank"
                   rel="noopener noreferrer"
-                  [attr.aria-label]="'projects.viewProject' | transloco"
-                  >{{ 'projects.viewProject' | transloco }}</a
+                  [attr.aria-label]="
+                    'projects.viewRepoAria' | transloco: { name: project.name }
+                  "
                 >
+                  <span>{{ 'projects.viewProject' | transloco }}</span>
+                  <span class="sr-only"> ({{ project.name }})</span>
+                </a>
                 <a
                   class="inline-flex min-h-11 items-center justify-center rounded-lg border border-brand-500/30 bg-brand-500/10 px-4 py-2.5 text-xs font-mono font-semibold uppercase tracking-wider text-brand-300 transition-all hover:border-brand-400/50 hover:bg-brand-500/15 hover:text-brand-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-300 focus-visible:outline-offset-2"
                   [href]="project.liveUrl"
                   target="_blank"
                   rel="noopener noreferrer"
-                  [attr.aria-label]="project.liveLabel | transloco"
-                  >{{ project.liveLabel | transloco }}</a
+                  [attr.aria-label]="
+                    'projects.viewLiveAria' | transloco: { name: project.name }
+                  "
                 >
+                  <span>{{ project.liveLabel | transloco }}</span>
+                  <span class="sr-only"> ({{ project.name }})</span>
+                </a>
               </div>
             </article>
           }

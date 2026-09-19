@@ -36,7 +36,7 @@
             target="_blank"
             rel="noopener noreferrer"
             class="inline-flex items-center gap-1.5 text-xs font-mono font-semibold uppercase tracking-wider text-accent-400 transition-colors hover:text-accent-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent-400 rounded px-2 py-1"
-            aria-label="Profilo LinkedIn di Salvatore Di Genua (apre in una nuova scheda)"
+            [attr.aria-label]="'about.ariaLinkedIn' | transloco"
           >
             <span>LinkedIn Profile</span>
             <span aria-hidden="true">↗</span>
@@ -51,7 +51,7 @@
             class="card-highlight text-center lg:text-left flex flex-col justify-center"
           >
             <p
-              class="text-3xl sm:text-4xl font-extrabold font-display bg-gradient-to-r from-white via-brand-300 to-accent-300 bg-clip-text text-transparent"
+              class="text-3xl sm:text-4xl font-extrabold font-display bg-gradient-to-r from-white via-brand-300 to-accent-300 bg-clip-text text-white"
             >
               {{ stat.value }}
             </p>

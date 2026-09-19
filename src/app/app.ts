@@ -11,6 +11,7 @@ import { ExperienceComponent } from './sections/experience/experience';
 import { EducationComponent } from './sections/education/education';
 import { ContactComponent } from './sections/contact/contact';
 import { Projects } from './sections/projects/projects';
+import { MotherboardViewportComponent } from './immersive/scene/motherboard-viewport.component';
 
 @Component({
   selector: 'app-root',
@@ -18,6 +19,7 @@ import { Projects } from './sections/projects/projects';
     TranslocoModule,
     NavbarComponent,
     HeroComponent,
+    MotherboardViewportComponent,
     AboutComponent,
     SkillsComponent,
     ExperienceComponent,

@@ -3,12 +3,12 @@
 >
   <nav
     class="section-container flex h-16 items-center justify-between"
-    aria-label="Navigazione principale"
+    [attr.aria-label]="'nav.ariaMain' | transloco"
   >
     <a
       href="#top"
       class="group inline-flex items-center gap-2 font-mono text-base font-bold text-white transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent-300 rounded-lg px-1.5 py-1"
-      aria-label="Salvatore Di Genua - Torna all'inizio"
+      [attr.aria-label]="'nav.ariaHome' | transloco"
     >
       <span
         class="text-brand-300 transition-transform group-hover:-translate-x-0.5"
@@ -24,14 +24,6 @@
         class="text-accent-300 transition-transform group-hover:translate-x-0.5"
       >
         /&gt;
-      </span>
-      <span class="relative flex h-2 w-2 ml-1" title="Available for work">
-        <span
-          class="absolute inline-flex h-full w-full animate-ping rounded-full bg-brand-300 opacity-75"
-        ></span>
-        <span
-          class="relative inline-flex h-2 w-2 rounded-full bg-brand-400"
-        ></span>
       </span>
     </a>
     <ul class="hidden items-center gap-8 md:flex">
@@ -51,11 +43,7 @@
         type="button"
         class="inline-flex min-h-[38px] items-center gap-1.5 rounded-xl border border-white/10 bg-white/[0.04] px-3 py-1.5 text-xs font-mono font-semibold uppercase tracking-wider text-slate-300 backdrop-blur-md transition-all hover:border-brand-400/50 hover:bg-brand-500/10 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent-300"
         (click)="toggleLanguage()"
-        [attr.aria-label]="
-          languageService.language() === 'it'
-            ? 'Passa alla lingua inglese (EN)'
-            : 'Switch to Italian language (IT)'
-        "
+        [attr.aria-label]="'nav.ariaLangSwitch' | transloco"
       >
         <span [class.text-accent-300]="languageService.language() === 'it'">
           IT
@@ -77,7 +65,9 @@
         (click)="toggleMenu()"
         [attr.aria-expanded]="isOpen()"
         [attr.aria-label]="
-          isOpen() ? 'Chiudi menu di navigazione' : 'Apri menu di navigazione'
+          isOpen()
+            ? ('nav.ariaCloseMenu' | transloco)
+            : ('nav.ariaOpenMenu' | transloco)
         "
       >
         @if (!isOpen()) {

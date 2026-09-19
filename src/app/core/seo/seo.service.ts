@@ -7,22 +7,26 @@ interface SeoContent {
   title: string;
   description: string;
   locale: string;
+  jobTitle: string;
 }
 
 const BASE_URL = 'https://salvatoredigenua.it/';
 
 const CONTENT: Record<SupportedLanguage, SeoContent> = {
   it: {
-    title: 'Salvatore Di Genua | Senior Frontend Engineer Angular',
+    title:
+      'Salvatore Di Genua | Senior Frontend Engineer & Specialista Angular',
     description:
-      'Portfolio di Salvatore Di Genua, Senior Frontend Engineer specializzato in Angular, TypeScript e AI-assisted development.',
+      'Portfolio di Salvatore Di Genua, Senior Frontend Engineer specializzato in Angular, TypeScript, Signals, architettura SSR e sviluppo web assistito da AI.',
     locale: 'it_IT',
+    jobTitle: 'Senior Frontend Engineer & Specialista Angular',
   },
   en: {
-    title: 'Salvatore Di Genua | Senior Frontend Engineer Angular',
+    title: 'Salvatore Di Genua | Senior Frontend Engineer & Angular Specialist',
     description:
-      'Portfolio of Salvatore Di Genua, Senior Frontend Engineer specialized in Angular, TypeScript and AI-assisted development.',
+      'Portfolio of Salvatore Di Genua, Senior Frontend Engineer specializing in Angular, TypeScript, Signals, SSR architecture, and AI-assisted web development.',
     locale: 'en_US',
+    jobTitle: 'Senior Frontend Engineer & Angular Specialist',
   },
 };
 
@@ -84,7 +88,19 @@ export class SeoService {
 
     try {
       const schema = JSON.parse(script.textContent ?? '{}');
-      if (schema.mainEntity) {
+      if (Array.isArray(schema['@graph'])) {
+        for (const item of schema['@graph']) {
+          if (item['@type'] === 'Person') {
+            item.description = content.description;
+            item.inLanguage = language;
+            item.jobTitle = content.jobTitle;
+            item.url = url;
+          } else if (item['@type'] === 'ProfilePage') {
+            item.url = url;
+            item.name = content.title;
+          }
+        }
+      } else if (schema.mainEntity) {
         schema.mainEntity.description = content.description;
         schema.mainEntity.inLanguage = language;
         schema.mainEntity.url = url;

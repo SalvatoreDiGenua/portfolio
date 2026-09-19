@@ -29,11 +29,14 @@
         <a
           [href]="'mailto:' + profile.email"
           class="btn-primary min-h-[48px] !px-8 text-base shadow-glow-brand"
+          [attr.aria-label]="'contact.ariaMail' | transloco"
         >
           <img
-            src="https://s.magecdn.com/social/mw-mail.svg"
+            src="/icons/mail.svg"
             alt=""
             aria-hidden="true"
+            width="16"
+            height="16"
             class="h-4 w-4"
           />
           <span>{{ 'nav.contactMe' | transloco }}</span>
@@ -43,12 +46,14 @@
           target="_blank"
           rel="noopener noreferrer"
           class="btn-secondary min-h-[48px] !px-6 text-sm"
-          aria-label="Connettiti con Salvatore Di Genua su LinkedIn (apre in una nuova scheda)"
+          [attr.aria-label]="'contact.ariaLinkedIn' | transloco"
         >
           <img
-            src="https://s.magecdn.com/social/mw-linkedin.svg"
+            src="/icons/linkedin.svg"
             alt=""
             aria-hidden="true"
+            width="16"
+            height="16"
             class="h-4 w-4"
           />
           <span>LinkedIn</span>

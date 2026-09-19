@@ -22,12 +22,14 @@
         target="_blank"
         rel="noopener noreferrer"
         class="inline-flex items-center gap-2 text-slate-400 transition-colors hover:text-brand-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent-400 rounded px-2 py-1"
-        aria-label="Repository GitHub del Portfolio (apre in una nuova scheda)"
+        [attr.aria-label]="'footer.ariaSourceCode' | transloco"
       >
         <img
-          src="https://s.magecdn.com/social/mw-github.svg"
+          src="/icons/github.svg"
           alt=""
           aria-hidden="true"
+          width="16"
+          height="16"
           class="h-4 w-4"
         />
         <span>{{ 'footer.sourceCode' | transloco }}</span>
@@ -37,12 +39,14 @@
         target="_blank"
         rel="noopener noreferrer"
         class="inline-flex items-center gap-2 text-slate-400 transition-colors hover:text-brand-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent-400 rounded px-2 py-1"
-        aria-label="Profilo LinkedIn di Salvatore Di Genua (apre in una nuova scheda)"
+        [attr.aria-label]="'footer.ariaLinkedIn' | transloco"
       >
         <img
-          src="https://s.magecdn.com/social/mw-linkedin.svg"
+          src="/icons/linkedin.svg"
           alt=""
           aria-hidden="true"
+          width="16"
+          height="16"
           class="h-4 w-4"
         />
         <span>{{ 'footer.linkedin' | transloco }}</span>

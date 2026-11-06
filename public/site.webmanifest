@@ -4,8 +4,8 @@
   "description": "Portfolio of Salvatore Di Genua, Senior Frontend Engineer specialized in Angular, TypeScript and AI-assisted development.",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#0a0f0c",
-  "theme_color": "#0a0f0c",
+  "background_color": "#f2f7f5",
+  "theme_color": "#f2f7f5",
   "icons": [
     {
       "src": "/favicon.svg",

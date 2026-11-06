@@ -1,7 +1,5 @@
 export interface Profile {
   readonly name: string;
-  readonly title: string;
-  readonly subtitle: string;
   readonly location: string;
   readonly email: string;
   readonly linkedin: string;
@@ -25,18 +23,15 @@ export interface SkillGroup {
 export interface ProjectItem {
   readonly key: string;
   readonly name: string;
-  readonly category: string;
   readonly tags: readonly string[];
   readonly repositoryUrl: string;
   readonly liveUrl: string;
   readonly liveLabel: string;
-  readonly accent: 'primary' | 'accent';
+  readonly featured?: boolean;
 }
 
 export const PROFILE: Profile = {
   name: 'Salvatore Di Genua',
-  title: 'Senior Frontend Engineer - Angular Specialist',
-  subtitle: 'AI-Assisted Development & Team Leadership',
   location: 'Montella, Campania, Italia',
   email: 'salvatoredigenua.developer@gmail.com',
   linkedin: 'https://www.linkedin.com/in/salvatore-di-genua-b664b716a',
@@ -107,6 +102,7 @@ export const SKILLS: SkillGroup[] = [
       'antigravity',
       'copilot',
       'claude',
+      'codex',
       'opencode',
       'skills',
       'mcp',
@@ -120,24 +116,27 @@ export const SKILLS: SkillGroup[] = [
 
 export const PROJECTS: readonly ProjectItem[] = [
   {
+    key: 'projects.requestLock',
+    name: 'ngx-request-lock',
+    tags: ['Angular', 'Signals', 'HttpClient', 'Interceptors'],
+    repositoryUrl: 'https://github.com/SalvatoreDiGenua/ngx-request-lock-docs',
+    liveUrl: 'https://ngx-request-lock-docs.netlify.app/',
+    liveLabel: 'projects.documentation',
+    featured: true,
+  },
+  {
     key: 'projects.angular',
     name: 'angular-boilerplate',
-    category: 'Angular',
     tags: ['Angular', 'Signals', 'SSR', 'Hydration', 'Tailwind CSS'],
     repositoryUrl: 'https://github.com/SalvatoreDiGenua/angular-boilerplate',
     liveUrl:
       'https://stackblitz.com/fork/github/SalvatoreDiGenua/angular-boilerplate/tree/main?startScript=start&title=Angular%20Boilerplate',
     liveLabel: 'projects.liveDemo',
-    accent: 'accent',
-  },
-  {
-    key: 'projects.requestLock',
-    name: 'ngx-request-lock',
-    category: 'Angular Library',
-    tags: ['Angular', 'Signals', 'HttpClient', 'Interceptors'],
-    repositoryUrl: 'https://github.com/SalvatoreDiGenua/ngx-request-lock-docs',
-    liveUrl: 'https://ngx-request-lock-docs.netlify.app/',
-    liveLabel: 'projects.documentation',
-    accent: 'accent',
   },
 ];
+
+export const AGENTIC_RAG = {
+  id: 'agentic-rag',
+  name: 'Agentic RAG Platform',
+  backend: ['Python', 'LangChain', 'LangGraph'],
+} as const;

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { TranslocoModule } from '@jsverse/transloco';
-import { SKILLS } from '../../core/profile.data';
+import { AGENTIC_RAG, SKILLS } from '../../core/profile.data';
 
 @Component({
   selector: 'app-skills',
@@ -9,4 +9,5 @@ import { SKILLS } from '../../core/profile.data';
 })
 export class SkillsComponent {
   readonly skillGroups = SKILLS;
+  readonly upcoming = AGENTIC_RAG;
 }

@@ -8,5 +8,6 @@ import { PROFILE } from '../../core/profile.data';
   templateUrl: './hero.html',
 })
 export class HeroComponent {
-  readonly profile = PROFILE;
+  readonly givenName = PROFILE.name.split(' ', 1)[0];
+  readonly familyName = PROFILE.name.slice(this.givenName.length + 1);
 }

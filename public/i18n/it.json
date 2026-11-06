@@ -9,22 +9,18 @@
     "contactMe": "Contattami",
     "skipToContent": "Salta al contenuto principale",
     "ariaMain": "Navigazione principale",
-    "ariaHome": "Salvatore Di Genua - Torna all'inizio",
+    "ariaHome": "SDG, Salvatore Di Genua. Torna all'inizio",
     "ariaOpenMenu": "Apri menu di navigazione",
     "ariaCloseMenu": "Chiudi menu di navigazione",
-    "ariaLangSwitch": "Passa alla lingua inglese (EN)"
+    "ariaLangSwitch": "Passa all'inglese"
   },
   "hero": {
-    "availability": "Disponibile per nuove collaborazioni",
-    "greeting": "Ciao, sono",
-    "description": "Costruisco interfacce moderne e scalabili con Angular e uso strumenti di sviluppo assistito da AI per migliorare velocità di consegna e qualità del codice.",
-    "experienceCta": "Guarda la mia esperienza",
-    "scroll": "Scorri",
-    "ariaScroll": "Scorri alla sezione Chi sono",
-    "roleTag": "Senior Frontend Engineer & Specialista Angular"
+    "description": "Progetto applicazioni Angular e guido team frontend.",
+    "projectsCta": "Vedi i progetti",
+    "experienceCta": "Esperienza",
+    "roleTag": "Senior Frontend Engineer e specialista Angular"
   },
   "about": {
-    "label": "Chi sono",
     "title": "Profilo professionale",
     "years": "Anni di esperienza",
     "projects": "Aziende / progetti chiave",
@@ -35,7 +31,6 @@
     }
   },
   "skills": {
-    "label": "Competenze",
     "title": "Stack tecnologico",
     "groups": {
       "frontend": {
@@ -91,6 +86,7 @@
           "antigravity": "Antigravity",
           "copilot": "Copilot",
           "claude": "Claude Code",
+          "codex": "Codex",
           "opencode": "OpenCode",
           "skills": "Custom Skills",
           "mcp": "MCP Servers"
@@ -109,7 +105,6 @@
     }
   },
   "experience": {
-    "label": "Esperienza",
     "title": "Percorso professionale",
     "items": {
       "orbyta": {
@@ -133,22 +128,35 @@
     }
   },
   "projects": {
-    "label": "Progetti",
-    "title": "Progetti personali",
+    "title": "Progetti selezionati",
     "angular": {
-      "description": "Un boilerplate Angular riutilizzabile che dimostra Signals, SSR, hydration, @defer, Signal Forms, i18n, SEO e testing in un'applicazione funzionante."
+      "description": "Uno starter Angular riutilizzabile con Signals, SSR, hydration, caricamento differito, Signal Forms, traduzioni, SEO e test già configurati.",
+      "stack": "Dentro lo starter"
     },
     "requestLock": {
-      "description": "Una libreria Angular per coordinare il blocco dell'interfaccia durante richieste HTTP concorrenti, basata su Signals, HttpContext e functional interceptors."
+      "description": "Una libreria Angular che coordina lo stato dell’interfaccia quando più richieste HTTP fanno parte dello stesso flusso. Usa Signals, HttpContext e un interceptor funzionale."
     },
     "viewProject": "Repository",
     "liveDemo": "Demo live",
     "documentation": "Documentazione",
     "viewRepoAria": "Vedi repository GitHub di {{name}} (apre in una nuova scheda)",
-    "viewLiveAria": "Visita la risorsa live di {{name}} (apre in una nuova scheda)"
+    "viewLiveAria": "{{label}} di {{name}} (apre in una nuova scheda)",
+    "flow": {
+      "caption": "Due richieste, un flusso",
+      "bothStarted": "Partono le richieste A e B",
+      "firstSettled": "A termina, B è ancora in corso",
+      "secondSettled": "Anche B termina",
+      "locked": "Interfaccia bloccata",
+      "unlocked": "Interfaccia sbloccata",
+      "detail": "Le richieste e i controlli condividono lo stesso identificatore."
+    },
+    "upcoming": {
+      "heading": "In arrivo",
+      "status": "In sviluppo",
+      "description": "Sto sviluppando una chat per interrogare raccolte di PDF. L’agente cerca i passaggi pertinenti, verifica se sostengono la risposta e cita le pagine originali."
+    }
   },
   "education": {
-    "label": "Formazione",
     "title": "Percorso di studi",
     "items": {
       "master": {
@@ -169,10 +177,9 @@
     }
   },
   "contact": {
-    "label": "Contatti",
-    "title": "Parliamo del tuo prossimo progetto",
-    "description": "Sono disponibile per collaborazioni come consulente frontend, sviluppatore Angular o per ruoli di team leadership.",
-    "ariaMail": "Invia un'email a Salvatore Di Genua",
+    "title": "Parliamo di frontend",
+    "description": "Sono disponibile per ruoli senior e collaborazioni su Angular, architettura frontend e guida tecnica di team.",
+    "ariaMail": "Contattami via email",
     "ariaLinkedIn": "Connettiti con Salvatore Di Genua su LinkedIn (apre in una nuova scheda)"
   },
   "footer": {
@@ -180,7 +187,7 @@
     "built": "Costruito con Angular & Tailwind CSS",
     "sourceCode": "Codice sorgente",
     "linkedin": "LinkedIn",
-    "ariaSourceCode": "Repository GitHub del Portfolio (apre in una nuova scheda)",
+    "ariaSourceCode": "Codice sorgente del portfolio su GitHub (apre in una nuova scheda)",
     "ariaLinkedIn": "Profilo LinkedIn di Salvatore Di Genua (apre in una nuova scheda)"
   }
 }

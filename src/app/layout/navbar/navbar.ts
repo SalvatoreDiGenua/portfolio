@@ -16,10 +16,10 @@ export class NavbarComponent {
   readonly isOpen = signal(false);
   readonly languageService = inject(LanguageService);
   readonly links: NavLink[] = [
+    { key: 'nav.projects', href: '#projects' },
+    { key: 'nav.experience', href: '#experience' },
     { key: 'nav.about', href: '#about' },
     { key: 'nav.skills', href: '#skills' },
-    { key: 'nav.experience', href: '#experience' },
-    { key: 'nav.projects', href: '#projects' },
     { key: 'nav.education', href: '#education' },
     { key: 'nav.contact', href: '#contact' },
   ];
@@ -29,6 +29,12 @@ export class NavbarComponent {
   }
   closeMenu(): void {
     this.isOpen.set(false);
+  }
+  closeMenuWithFocus(button: HTMLButtonElement): void {
+    if (this.isOpen()) {
+      this.closeMenu();
+      button.focus();
+    }
   }
   toggleLanguage(): void {
     this.languageService.toggle();

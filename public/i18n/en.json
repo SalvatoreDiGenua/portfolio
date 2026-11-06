@@ -9,22 +9,18 @@
     "contactMe": "Contact me",
     "skipToContent": "Skip to main content",
     "ariaMain": "Main navigation",
-    "ariaHome": "Salvatore Di Genua - Back to top",
+    "ariaHome": "SDG, Salvatore Di Genua. Back to top",
     "ariaOpenMenu": "Open navigation menu",
     "ariaCloseMenu": "Close navigation menu",
-    "ariaLangSwitch": "Switch to Italian language (IT)"
+    "ariaLangSwitch": "Switch to Italian"
   },
   "hero": {
-    "availability": "Available for new collaborations",
-    "greeting": "Hi, I am",
-    "description": "I build modern and scalable interfaces with Angular and use AI-assisted development tools to improve delivery speed and code quality.",
-    "experienceCta": "View my experience",
-    "scroll": "Scroll",
-    "ariaScroll": "Scroll to About section",
-    "roleTag": "Senior Frontend Engineer & Angular Specialist"
+    "description": "I design Angular applications and lead frontend teams.",
+    "projectsCta": "View projects",
+    "experienceCta": "Experience",
+    "roleTag": "Senior Frontend Engineer and Angular specialist"
   },
   "about": {
-    "label": "About me",
     "title": "Professional profile",
     "years": "Years of experience",
     "projects": "Companies / key projects",
@@ -35,7 +31,6 @@
     }
   },
   "skills": {
-    "label": "Skills",
     "title": "Technology stack",
     "groups": {
       "frontend": {
@@ -91,6 +86,7 @@
           "antigravity": "Antigravity",
           "copilot": "Copilot",
           "claude": "Claude Code",
+          "codex": "Codex",
           "opencode": "OpenCode",
           "skills": "Custom Skills",
           "mcp": "MCP Servers"
@@ -109,7 +105,6 @@
     }
   },
   "experience": {
-    "label": "Experience",
     "title": "Professional journey",
     "items": {
       "orbyta": {
@@ -133,22 +128,35 @@
     }
   },
   "projects": {
-    "label": "Projects",
-    "title": "Personal projects",
+    "title": "Selected projects",
     "angular": {
-      "description": "A reusable Angular boilerplate that demonstrates Signals, SSR, hydration, @defer, Signal Forms, i18n, SEO and testing in a working application."
+      "description": "A reusable Angular starter with Signals, SSR, hydration, deferred loading, Signal Forms, translations, SEO and tests already configured.",
+      "stack": "Inside the starter"
     },
     "requestLock": {
-      "description": "An Angular library for coordinating UI locking during concurrent HTTP requests, built with Signals, HttpContext and functional interceptors."
+      "description": "An Angular library that coordinates UI state when several HTTP requests belong to the same flow. It uses Signals, HttpContext and a functional interceptor."
     },
-    "viewProject": "View project",
+    "viewProject": "Repository",
     "liveDemo": "Live demo",
     "documentation": "Documentation",
     "viewRepoAria": "View {{name}} GitHub repository (opens in a new tab)",
-    "viewLiveAria": "Visit {{name}} live resource (opens in a new tab)"
+    "viewLiveAria": "{{label}} for {{name}} (opens in a new tab)",
+    "flow": {
+      "caption": "Two requests, one flow",
+      "bothStarted": "Requests A and B start",
+      "firstSettled": "A settles while B is still running",
+      "secondSettled": "B settles too",
+      "locked": "UI locked",
+      "unlocked": "UI unlocked",
+      "detail": "The requests and UI controls share the same identifier."
+    },
+    "upcoming": {
+      "heading": "Coming soon",
+      "status": "In development",
+      "description": "I’m building a chat interface for PDF collections. The agent finds relevant passages, checks whether they support the answer and cites the original pages."
+    }
   },
   "education": {
-    "label": "Education",
     "title": "Education background",
     "items": {
       "master": {
@@ -169,10 +177,9 @@
     }
   },
   "contact": {
-    "label": "Contact",
-    "title": "Let's talk about your next project",
-    "description": "I am available for collaborations as a frontend consultant, Angular developer or team leader.",
-    "ariaMail": "Send an email to Salvatore Di Genua",
+    "title": "Let’s talk frontend",
+    "description": "I’m available for senior roles and collaborations in Angular, frontend architecture and technical team leadership.",
+    "ariaMail": "Contact me by email",
     "ariaLinkedIn": "Connect with Salvatore Di Genua on LinkedIn (opens in a new tab)"
   },
   "footer": {
@@ -180,7 +187,7 @@
     "built": "Built with Angular & Tailwind CSS",
     "sourceCode": "Source code",
     "linkedin": "LinkedIn",
-    "ariaSourceCode": "Portfolio GitHub repository (opens in a new tab)",
+    "ariaSourceCode": "Source code for the portfolio on GitHub (opens in a new tab)",
     "ariaLinkedIn": "Salvatore Di Genua's LinkedIn profile (opens in a new tab)"
   }
 }

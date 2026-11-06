@@ -1,83 +1,161 @@
+/* Hallmark · redesign: full · editorial · brand: emerald · shape: project notes · v2.0.0 */
+/* Put the working projects beside the introduction and give each section a layout suited to its content. */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
+  :root {
+    color-scheme: light;
+    --color-paper: #f2f7f5;
+    --color-ink: #10241e;
+    --color-muted: #435b52;
+    --color-line: #baccc4;
+    --color-emerald: #064e3b;
+    --color-on-emerald: #f2f7f5;
+    --color-emerald-soft: #d2e9e0;
+    --color-emerald-line: #70a694;
+    --color-lime: #d9f99d;
+    --color-lime-hover: #c5eb7d;
+    --color-blue: #dfedf7;
+    --color-blue-ink: #16445d;
+    --font-body: 'Plus Jakarta Sans', system-ui, sans-serif;
+    --font-display: 'Outfit', system-ui, sans-serif;
+    --nav-height: 4.5rem;
+  }
+
   html {
+    overflow-x: clip;
+    scroll-padding-top: calc(var(--nav-height) + 0.75rem);
     scroll-behavior: smooth;
-    color-scheme: dark;
   }
+
   body {
-    @apply bg-ink-950 text-content-secondary font-sans antialiased overflow-x-hidden;
+    @apply bg-paper font-sans text-ink antialiased;
+    overflow-x: clip;
   }
-  ::selection {
-    @apply bg-brand-500/40 text-white;
-  }
+
   h1,
   h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    @apply font-display font-bold tracking-tight text-content-primary;
+  h3 {
+    @apply font-display;
+    overflow-wrap: break-word;
+    min-width: 0;
   }
-  ::-webkit-scrollbar {
-    width: 8px;
+
+  ::selection {
+    @apply bg-lime text-ink;
   }
-  ::-webkit-scrollbar-track {
-    background: #070a08;
-  }
-  ::-webkit-scrollbar-thumb {
-    background: #1d2a22;
-    border-radius: 4px;
-  }
-  ::-webkit-scrollbar-thumb:hover {
-    background: #059669;
+
+  :focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: 4px;
   }
 }
 
 @layer components {
   .section-container {
-    @apply mx-auto w-full max-w-6xl px-6 sm:px-8 lg:px-10;
+    @apply mx-auto w-full max-w-[90rem] px-5 sm:px-8 lg:px-14;
   }
-  .section-label {
-    @apply inline-flex items-center gap-2 font-mono text-xs font-semibold uppercase tracking-widest text-brand-300;
+
+  .section-space {
+    @apply py-14 sm:py-20 lg:py-24;
   }
-  .btn-primary {
-    @apply inline-flex items-center justify-center gap-2 rounded-xl bg-brand-700 px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-brand-900/50 transition-all duration-300 hover:bg-brand-600 hover:shadow-glow-brand hover:-translate-y-0.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-400 active:translate-y-0;
+
+  .section-heading {
+    @apply text-4xl font-semibold leading-[0.98] tracking-tight sm:text-5xl lg:text-6xl;
+    text-wrap: balance;
   }
-  .btn-secondary {
-    @apply inline-flex items-center justify-center gap-2 rounded-xl border border-white/15 bg-white/[0.04] px-6 py-3 text-sm font-semibold text-content-primary backdrop-blur-md transition-all duration-300 hover:border-brand-400/50 hover:bg-brand-500/10 hover:text-white hover:-translate-y-0.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-400 active:translate-y-0;
+
+  .section-split {
+    @apply grid gap-8 lg:grid-cols-[minmax(0,4fr)_minmax(0,8fr)] lg:gap-12;
   }
-  .card {
-    @apply relative rounded-2xl border border-white/[0.08] bg-ink-900/70 p-6 backdrop-blur-xl transition-all duration-300 hover:border-brand-500/30 hover:bg-ink-850/80 hover:shadow-glow-subtle hover:-translate-y-1;
+
+  .site-nav {
+    min-height: var(--nav-height);
   }
-  .card-highlight {
-    @apply relative overflow-hidden rounded-2xl border border-brand-500/20 bg-gradient-to-b from-brand-900/40 via-ink-900/80 to-ink-950 p-6 backdrop-blur-xl transition-all duration-300 hover:border-brand-400/40 hover:shadow-glow-brand hover:-translate-y-1;
+
+  .nav-link {
+    @apply inline-flex min-h-11 items-center py-2 font-medium underline-offset-4 hover:underline;
   }
-  .chip {
-    @apply inline-flex items-center rounded-lg border border-white/10 bg-white/[0.04] px-3 py-1 text-xs font-mono font-medium text-content-secondary transition-colors hover:border-brand-400/40 hover:bg-brand-500/10 hover:text-brand-300;
+
+  .primary-link {
+    @apply inline-flex min-h-11 w-fit items-center bg-lime px-5 py-2.5 font-bold text-ink hover:bg-lime-hover active:bg-emerald active:text-emerald-foreground;
   }
-  .chip-accent {
-    @apply inline-flex items-center rounded-lg border border-accent-500/30 bg-accent-500/10 px-3 py-1 text-xs font-mono font-medium text-accent-300 transition-colors hover:border-accent-300 hover:bg-accent-500/20 hover:text-accent-300;
+
+  .text-link {
+    @apply inline-flex min-h-11 w-fit items-center font-semibold underline underline-offset-4 hover:decoration-2;
   }
+
   .skip-link {
-    @apply sr-only focus:not-sr-only focus:fixed focus:top-20 focus:left-4 focus:z-[60] focus:rounded-lg focus:bg-brand-700 focus:px-4 focus:py-2 focus:text-sm focus:font-semibold focus:text-white focus:shadow-glow-brand focus:outline-none focus:ring-2 focus:ring-accent-400;
+    @apply sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-3 focus:z-[60] focus:bg-lime focus:px-4 focus:py-2 focus:font-semibold focus:text-ink;
+  }
+
+  .project-flow {
+    position: relative;
+    isolation: isolate;
+  }
+
+  .project-flow::after {
+    position: absolute;
+    inset: 0 auto 0 0;
+    width: 2px;
+    background: var(--color-lime);
+    transform-origin: top;
+    content: '';
   }
 }
 
-:focus-visible {
-  outline: 2px solid #bef264;
-  outline-offset: 2px;
+app-navbar {
+  display: contents;
+}
+
+.hero-name {
+  font-size: clamp(3.25rem, 12.3vw, 11rem);
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  line-height: 0.83;
+}
+
+.hero-name span {
+  display: block;
+}
+
+.hero-name span + span {
+  margin-inline-start: clamp(0rem, 7vw, 7rem);
+}
+
+@media (max-width: 39.99rem) {
+  .hero-name span + span {
+    margin-inline-start: 0;
+  }
+}
+
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) and (min-width: 64rem) {
+    .project-flow {
+      view-timeline: --project-flow block;
+    }
+
+    .project-flow::after {
+      animation: trace-flow linear both;
+      animation-timeline: --project-flow;
+      animation-range: entry 15% cover 48%;
+    }
+
+    @keyframes trace-flow {
+      from {
+        transform: scaleY(0.1);
+      }
+      to {
+        transform: scaleY(1);
+      }
+    }
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.001ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.001ms !important;
-    scroll-behavior: auto !important;
+  html {
+    scroll-behavior: auto;
   }
 }

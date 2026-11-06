@@ -8,10 +8,10 @@
       {{ 'experience.title' | transloco }}
     </h2>
 
-    <ol class="divide-y divide-line border-y border-line">
+    <ol class="divide-y divide-line border-y border-l border-line">
       @for (exp of experiences; track exp.key) {
         <li
-          class="grid gap-3 py-6 sm:grid-cols-[minmax(0,1fr)_minmax(0,3fr)] sm:gap-6 sm:py-8"
+          class="relative grid gap-3 py-6 pl-5 before:absolute before:-left-1.5 before:top-8 before:size-3 before:rounded-full before:border-2 before:border-paper before:bg-emerald sm:grid-cols-[minmax(0,1fr)_minmax(0,3fr)] sm:gap-6 sm:py-8 sm:pl-7 sm:before:top-10"
         >
           <div>
             <p class="font-bold text-emerald">

@@ -4,9 +4,19 @@
   aria-labelledby="skills-title"
 >
   <div class="section-container section-split">
-    <h2 id="skills-title" class="section-heading">
-      {{ 'skills.title' | transloco }}
-    </h2>
+    <div>
+      <svg
+        class="mb-3 size-9 text-emerald"
+        viewBox="0 0 24 24"
+        aria-hidden="true"
+        focusable="false"
+      >
+        <use href="/icons/tabler-outline.svg#stack-2"></use>
+      </svg>
+      <h2 id="skills-title" class="section-heading">
+        {{ 'skills.title' | transloco }}
+      </h2>
+    </div>
     <dl class="divide-y divide-line border-y border-line">
       @for (group of skillGroups; track group.key) {
         <div
@@ -26,7 +36,7 @@
             @if (group.key === 'skills.groups.backend') {
               <a
                 [href]="'#' + upcoming.id"
-                class="text-link mt-2 inline-grid gap-0.5 text-emerald"
+                class="text-link mt-3 inline-grid gap-0.5 bg-blue px-3 py-2 text-blue-ink"
               >
                 <span>{{ upcoming.backend.join(', ') }}</span>
                 <span class="text-sm font-medium">

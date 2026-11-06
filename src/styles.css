@@ -163,7 +163,7 @@ app-navbar {
 
 @supports (animation-timeline: view()) {
   @media (min-width: 40rem) and (prefers-reduced-motion: no-preference) {
-    :is(app-about, app-ai, app-experience, app-skills, app-education)
+    :is(app-about, app-experience, app-skills, app-education)
       > section
       > .section-container {
       animation: chapter-enter linear both;

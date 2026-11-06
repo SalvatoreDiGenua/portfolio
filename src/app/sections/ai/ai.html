@@ -3,37 +3,173 @@
   class="section-space bg-blue text-blue-ink"
   aria-labelledby="ai-title"
 >
-  <div class="section-container section-split">
+  <div class="section-container section-split items-start">
     <div>
       <h2 id="ai-title" class="section-heading">
         {{ 'ai.title' | transloco }}
       </h2>
       <p class="mt-4 max-w-sm leading-relaxed">{{ 'ai.intro' | transloco }}</p>
+
+      <svg
+        class="ai-illustration mt-5 h-auto w-full max-w-sm text-emerald"
+        viewBox="0 0 360 232"
+        width="360"
+        height="232"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2.5"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        aria-hidden="true"
+        focusable="false"
+      >
+        <path
+          class="stroke-emerald-line"
+          stroke-width="1"
+          d="M20 208h320m-320 8h320M34 117v-18m-9 9h18m264 72v-16m-8 8h16"
+        />
+        <path
+          class="fill-emerald-soft"
+          d="M78 208v-20a20 20 0 0 1 20-20h82a20 20 0 0 1 20 20v20Z"
+        />
+        <path d="M116 192h46m-34 8h22" />
+
+        <g class="ai-robot-head">
+          <path d="M139 88v-18" />
+          <circle class="fill-lime" cx="139" cy="65" r="6" />
+          <rect
+            class="fill-emerald-soft"
+            x="56"
+            y="116"
+            width="166"
+            height="34"
+            rx="17"
+          />
+          <rect
+            class="fill-paper"
+            x="70"
+            y="85"
+            width="138"
+            height="100"
+            rx="27"
+          />
+          <rect
+            class="fill-emerald"
+            x="81"
+            y="97"
+            width="116"
+            height="70"
+            rx="18"
+          />
+          <g class="ai-robot-eyes fill-lime" stroke="none">
+            <rect x="105" y="117" width="12" height="18" rx="6" />
+            <rect x="161" y="117" width="12" height="18" rx="6" />
+          </g>
+          <path class="stroke-emerald-soft" d="M132 146q7 6 14 0" />
+        </g>
+
+        <circle class="fill-paper" cx="207" cy="87" r="3" />
+        <circle class="fill-paper" cx="221" cy="75" r="5" />
+        <path
+          class="fill-paper"
+          d="M247 86a19 19 0 0 1-12-33 24 24 0 0 1 30-27 29 29 0 0 1 50 9 26 26 0 0 1-2 51Z"
+        />
+        <g class="ai-gear ai-gear-primary">
+          <use
+            href="/icons/tabler-outline.svg#settings"
+            x="244"
+            y="38"
+            width="44"
+            height="44"
+          ></use>
+        </g>
+        <g class="ai-gear ai-gear-secondary">
+          <use
+            href="/icons/tabler-outline.svg#settings"
+            x="285"
+            y="31"
+            width="34"
+            height="34"
+          ></use>
+        </g>
+      </svg>
     </div>
-    <div class="grid gap-8 sm:grid-cols-2">
-      <article class="border-t border-current pt-4">
-        <h3 class="text-2xl font-semibold leading-tight">
-          {{ 'ai.systems.title' | transloco }}
-        </h3>
-        <p class="mt-3 leading-relaxed">
-          {{ 'ai.systems.description' | transloco }}
-        </p>
-        <a [href]="'#' + project.id" class="text-link mt-3">
-          {{ project.name }} ({{ 'projects.upcoming.status' | transloco }})
-        </a>
-      </article>
-      <article class="border-t border-current pt-4">
-        <h3 class="text-2xl font-semibold leading-tight">
-          {{ 'ai.workflow.title' | transloco }}
-        </h3>
-        <p class="mt-3 leading-relaxed">
+
+    <div class="grid gap-7 sm:gap-8">
+      <article
+        class="bg-emerald p-5 text-emerald-foreground sm:p-8"
+        aria-labelledby="ai-workflow-title"
+      >
+        <div class="flex items-center gap-3">
+          <span
+            class="grid size-10 shrink-0 place-items-center bg-lime text-ink"
+          >
+            <svg
+              class="size-6"
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+              focusable="false"
+            >
+              <use href="/icons/tabler-outline.svg#terminal-2"></use>
+            </svg>
+          </span>
+          <h3
+            id="ai-workflow-title"
+            class="text-3xl font-semibold leading-tight sm:text-4xl"
+          >
+            {{ 'ai.workflow.title' | transloco }}
+          </h3>
+        </div>
+        <p class="mt-4 max-w-prose leading-relaxed text-emerald-soft">
           {{ 'ai.workflow.description' | transloco }}
         </p>
-        <ul class="mt-4 flex flex-wrap gap-x-4 gap-y-2 text-sm font-semibold">
-          @for (tool of tools; track tool) {
-            <li>{{ 'ai.workflow.tools.' + tool | transloco }}</li>
+        <div
+          class="mt-5 grid gap-x-8 gap-y-4 border-t border-emerald-line pt-4 sm:grid-cols-[minmax(0,2fr)_minmax(0,1fr)]"
+        >
+          @for (group of toolGroups; track group.key) {
+            <div>
+              <h4 class="text-sm font-bold text-lime">
+                {{ 'ai.workflow.' + group.key | transloco }}
+              </h4>
+              <ul
+                class="mt-2 flex flex-wrap gap-x-4 gap-y-1.5 text-sm font-semibold"
+                role="list"
+              >
+                @for (tool of group.tools; track tool) {
+                  <li>{{ 'ai.workflow.tools.' + tool | transloco }}</li>
+                }
+              </ul>
+            </div>
           }
-        </ul>
+        </div>
+      </article>
+
+      <article
+        class="border-t border-blue-ink pt-4"
+        aria-labelledby="ai-systems-title"
+      >
+        <div class="flex items-start gap-3">
+          <svg
+            class="mt-0.5 size-6 shrink-0"
+            viewBox="0 0 24 24"
+            aria-hidden="true"
+            focusable="false"
+          >
+            <use href="/icons/tabler-outline.svg#file-search"></use>
+          </svg>
+          <h3
+            id="ai-systems-title"
+            class="text-2xl font-semibold leading-tight"
+          >
+            {{ 'ai.systems.title' | transloco }}
+          </h3>
+        </div>
+        <p class="mt-3 max-w-prose leading-relaxed">
+          {{ 'ai.systems.description' | transloco }}
+        </p>
+        <a [href]="'#' + project.id" class="text-link mt-2">
+          {{ project.name }} ({{ 'projects.upcoming.status' | transloco }})
+        </a>
       </article>
     </div>
   </div>

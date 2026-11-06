@@ -14,9 +14,17 @@
       <div class="mt-5 flex flex-wrap items-center gap-x-6 gap-y-2">
         <a
           [href]="'mailto:' + profile.email"
-          class="primary-link focus-visible:outline-emerald-foreground"
+          class="primary-link gap-2 focus-visible:outline-emerald-foreground"
           [attr.aria-label]="'contact.ariaMail' | transloco"
         >
+          <svg
+            class="size-5 shrink-0"
+            viewBox="0 0 24 24"
+            aria-hidden="true"
+            focusable="false"
+          >
+            <use href="/icons/tabler-outline.svg#mail"></use>
+          </svg>
           {{ 'nav.contactMe' | transloco }}
         </a>
         <a

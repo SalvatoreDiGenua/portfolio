@@ -1,11 +1,27 @@
-<section id="education" class="section-space" aria-labelledby="education-title">
+<section
+  id="education"
+  class="section-space bg-emerald-soft"
+  aria-labelledby="education-title"
+>
   <div class="section-container">
-    <h2 id="education-title" class="section-heading mb-8">
-      {{ 'education.title' | transloco }}
-    </h2>
-    <ul class="grid gap-x-8 gap-y-6 lg:grid-cols-3">
+    <div class="mb-8 flex items-start gap-3 sm:items-center sm:gap-5">
+      <svg
+        class="mt-0.5 size-9 shrink-0 text-emerald sm:size-11"
+        viewBox="0 0 24 24"
+        aria-hidden="true"
+        focusable="false"
+      >
+        <use href="/icons/tabler-outline.svg#school"></use>
+      </svg>
+      <h2 id="education-title" class="section-heading">
+        {{ 'education.title' | transloco }}
+      </h2>
+    </div>
+    <ul
+      class="grid gap-px border border-emerald-line bg-emerald-line lg:grid-cols-3"
+    >
       @for (item of education; track item.key) {
-        <li class="border-t border-line pt-4">
+        <li class="bg-paper px-5 py-6 sm:px-6">
           <p class="text-sm font-bold tabular-nums text-emerald">
             {{ item.key + '.period' | transloco }}
           </p>

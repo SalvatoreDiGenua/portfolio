@@ -103,15 +103,12 @@ export const SKILLS: SkillGroup[] = [
   },
 ];
 
-export const AI_TOOLS = [
-  'codex',
-  'claude',
-  'cursor',
-  'opencode',
-  'antigravity',
-  'copilot',
-  'mcp',
-  'skills',
+export const AI_TOOL_GROUPS = [
+  {
+    key: 'assistants',
+    tools: ['codex', 'claude', 'cursor', 'opencode', 'antigravity', 'copilot'],
+  },
+  { key: 'integrations', tools: ['mcp', 'skills'] },
 ] as const;
 
 export const PROJECTS: readonly ProjectItem[] = [

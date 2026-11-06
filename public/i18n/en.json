@@ -196,6 +196,8 @@
     },
     "workflow": {
       "title": "AI-assisted development",
+      "assistants": "Assistants and editors",
+      "integrations": "Integrations",
       "description": "I use AI tools to explore repositories, prepare refactors and write tests. I review and test the changes before integrating them.",
       "tools": {
         "cursor": "Cursor",

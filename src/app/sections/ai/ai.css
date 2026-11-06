@@ -1,0 +1,70 @@
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .ai-illustration {
+      view-timeline: --ai-illustration block;
+    }
+
+    .ai-gear {
+      transform-box: fill-box;
+      transform-origin: center;
+      animation: gear-turn linear both;
+      animation-timeline: --ai-illustration;
+      animation-range: entry 8% exit 65%;
+    }
+
+    .ai-gear-primary {
+      --gear-turn: 245deg;
+    }
+
+    .ai-gear-secondary {
+      --gear-turn: -315deg;
+    }
+
+    .ai-robot-head,
+    .ai-robot-eyes {
+      animation-timeline: --ai-illustration;
+      animation-range: entry 12% cover 58%;
+    }
+
+    .ai-robot-head {
+      transform-box: fill-box;
+      transform-origin: center bottom;
+      animation-name: look-up;
+      animation-timing-function: linear;
+      animation-fill-mode: both;
+    }
+
+    .ai-robot-eyes {
+      animation-name: look-right;
+      animation-timing-function: linear;
+      animation-fill-mode: both;
+    }
+
+    @keyframes gear-turn {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(var(--gear-turn));
+      }
+    }
+
+    @keyframes look-up {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(-5deg);
+      }
+    }
+
+    @keyframes look-right {
+      from {
+        transform: translate(0, 0);
+      }
+      to {
+        transform: translate(5px, -3px);
+      }
+    }
+  }
+}

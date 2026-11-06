@@ -71,6 +71,16 @@
     @apply grid gap-8 lg:grid-cols-[minmax(0,4fr)_minmax(0,8fr)] lg:gap-12;
   }
 
+  .section-illustration {
+    @apply mt-4 h-auto w-full max-w-[17rem] text-emerald sm:max-w-xs;
+  }
+
+  .section-illustration--dark {
+    @apply text-emerald-soft;
+    --art-paper: var(--color-ink);
+    --art-mint: var(--color-emerald);
+  }
+
   .site-nav {
     min-height: var(--nav-height);
   }

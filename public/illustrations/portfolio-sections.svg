@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg">
+  <symbol id="opening" viewBox="0 0 104 42" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M24 8H12v26h12m56-26h12v26H80"/>
+    <path d="M25 21h54"/>
+    <circle cx="35" cy="21" r="4" fill="var(--art-paper, #f2f7f5)"/>
+    <circle cx="52" cy="21" r="8" fill="var(--art-lime, #d9f99d)"/>
+    <circle cx="69" cy="21" r="4" fill="var(--art-paper, #f2f7f5)"/>
+  </symbol>
+
+  <symbol id="profile" viewBox="0 0 360 232" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M25 193h307m-307 9h307M43 57v18m-9-9h18m255 92v16m-8-8h16" stroke="var(--art-line, #70a694)" stroke-width="1"/>
+    <rect x="44" y="54" width="230" height="126" rx="15" fill="var(--art-mint, #d2e9e0)"/>
+    <rect x="35" y="62" width="230" height="126" rx="15" fill="var(--art-paper, #f2f7f5)"/>
+    <rect x="53" y="81" width="70" height="83" rx="10" fill="var(--art-mint, #d2e9e0)"/>
+    <circle cx="88" cy="107" r="12" fill="var(--art-paper, #f2f7f5)"/>
+    <path d="M66 148v-3a22 22 0 0 1 44 0v3Z" fill="var(--art-paper, #f2f7f5)"/>
+    <path d="M143 98h67m-67 16h49m-49 20h76m-76 16h43"/>
+    <path d="M279 52a31 31 0 0 1 31 31c0 19-24 37-31 44-7-7-31-25-31-44a31 31 0 0 1 31-31Z" fill="var(--art-lime, #d9f99d)"/>
+    <circle cx="279" cy="83" r="10" fill="var(--art-paper, #f2f7f5)"/>
+  </symbol>
+
+  <symbol id="projects" viewBox="0 0 360 232" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M30 204h300m-300 8h300M48 53v16m-8-8h16m244 92v16m-8-8h16" stroke="var(--art-line, #70a694)" stroke-width="1"/>
+    <path d="M71 57h126l30 29v104H71Z" fill="var(--art-mint, #d2e9e0)"/>
+    <path d="M100 43h130l30 29v117H100Z" fill="var(--art-paper, #f2f7f5)"/>
+    <path d="M132 27h126l30 29v133H132Z" fill="var(--art-paper, #f2f7f5)"/>
+    <path d="M258 27v29h30m-132 27h91m-91 13h62"/>
+    <path d="M167 140h36m16 0h35m-87 23h87" stroke="var(--art-line, #70a694)" stroke-width="1.5"/>
+    <circle cx="163" cy="140" r="7" fill="var(--art-mint, #d2e9e0)"/>
+    <circle cx="211" cy="140" r="8" fill="var(--art-lime, #d9f99d)" stroke="var(--art-lime, #d9f99d)"/>
+    <circle cx="259" cy="140" r="7" fill="var(--art-mint, #d2e9e0)"/>
+  </symbol>
+
+  <symbol id="experience" viewBox="0 0 360 232" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M27 191h303m-303 8h303m-303-100h16m-8-8v16m272 38h16m-8-8v16" stroke="var(--art-line, #70a694)" stroke-width="1"/>
+    <path d="M48 190v-38h80v-38h80V75h98v115Z" fill="var(--art-mint, #d2e9e0)"/>
+    <path d="M128 152v38m80-76v76" stroke="var(--art-line, #70a694)" stroke-width="1.5"/>
+    <path d="M71 152h57v-38h80V75h71"/>
+    <circle cx="71" cy="152" r="8" fill="var(--art-paper, #f2f7f5)"/>
+    <circle cx="150" cy="114" r="8" fill="var(--art-paper, #f2f7f5)"/>
+    <circle cx="247" cy="75" r="9" fill="var(--art-lime, #d9f99d)"/>
+    <path d="M247 65V38h40l-10 10 10 10h-40" fill="var(--art-paper, #f2f7f5)"/>
+  </symbol>
+
+  <symbol id="stack" viewBox="0 0 360 232" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M27 192h306m-306 8h306M46 59h16m-8-8v16m249 67h16m-8-8v16" stroke="var(--art-line, #70a694)" stroke-width="1"/>
+    <path d="m65 147 112-44 113 44-113 44Z" fill="var(--art-mint, #d2e9e0)"/>
+    <path d="m65 114 112-44 113 44-113 44Z" fill="var(--art-paper, #f2f7f5)"/>
+    <path d="m65 81 112-44 113 44-113 44Z" fill="var(--art-mint, #d2e9e0)"/>
+    <path d="m112 81 65-25 65 25-65 25Z" fill="var(--art-paper, #f2f7f5)" stroke="var(--art-line, #70a694)" stroke-width="1.5"/>
+    <path d="M177 81V46m0 35 53 21m-53-21-50 20" stroke="var(--art-line, #70a694)" stroke-width="1.5"/>
+    <circle cx="177" cy="81" r="8" fill="var(--art-lime, #d9f99d)"/>
+    <circle cx="128" cy="100" r="5" fill="var(--art-paper, #f2f7f5)"/>
+    <circle cx="230" cy="102" r="5" fill="var(--art-paper, #f2f7f5)"/>
+  </symbol>
+
+  <symbol id="education" viewBox="0 0 360 232" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M24 193h311m-311 8h311M46 55h16m-8-8v16m241 67h16m-8-8v16" stroke="var(--art-line, #70a694)" stroke-width="1"/>
+    <path d="M45 73c42-8 79 3 123 28 39-25 81-36 124-28v103c-46-7-89 2-124 18-35-16-79-25-123-18Z" fill="var(--art-mint, #d2e9e0)"/>
+    <path d="M57 59c40-6 76 6 111 31 36-25 72-37 111-31v102c-42-5-77 8-111 31-34-23-70-36-111-31Z" fill="var(--art-paper, #f2f7f5)"/>
+    <path d="M168 90v101M77 88c24 1 47 8 70 21m-70 2c24 1 47 8 70 21m-70 2c24 1 47 8 70 21m43-45c22-12 45-19 69-21m-69 44c22-12 45-19 69-21" stroke="var(--art-line, #70a694)" stroke-width="1.5"/>
+    <path d="M235 61c8-2 16-3 24-3v55l-12-7-12 10Z" fill="var(--art-lime, #d9f99d)"/>
+  </symbol>
+
+  <symbol id="contact" viewBox="0 0 360 232" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M27 192h302m-302 8h302M48 65h16m-8-8v16m246 83h16m-8-8v16" stroke="var(--art-line, #70a694)" stroke-width="1"/>
+    <rect x="52" y="91" width="215" height="96" rx="12" fill="var(--art-mint, #d2e9e0)"/>
+    <path d="m53 99 93 55a24 24 0 0 0 25 0l95-55M55 181l67-47m142 47-67-47"/>
+    <path d="M179 38h102a20 20 0 0 1 20 20v28a20 20 0 0 1-20 20h-48l-26 19v-19h-28a20 20 0 0 1-20-20V58a20 20 0 0 1 20-20Z" fill="var(--art-paper, #f2f7f5)"/>
+    <g fill="var(--art-lime, #d9f99d)" stroke="none">
+      <circle cx="207" cy="72" r="5"/>
+      <circle cx="230" cy="72" r="5"/>
+      <circle cx="253" cy="72" r="5"/>
+    </g>
+  </symbol>
+</svg>

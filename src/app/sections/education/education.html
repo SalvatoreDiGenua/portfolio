@@ -3,29 +3,47 @@
   class="section-space bg-emerald-soft"
   aria-labelledby="education-title"
 >
-  <div class="section-container">
-    <div class="mb-8 flex items-start gap-3 sm:items-center sm:gap-5">
-      <svg
-        class="mt-0.5 size-9 shrink-0 text-emerald sm:size-11"
-        viewBox="0 0 24 24"
-        aria-hidden="true"
-        focusable="false"
-      >
-        <use href="/icons/tabler-outline.svg#school"></use>
-      </svg>
+  <div class="section-container section-split items-start">
+    <div>
       <h2 id="education-title" class="section-heading">
         {{ 'education.title' | transloco }}
       </h2>
+      <svg
+        class="section-illustration"
+        viewBox="0 0 360 232"
+        width="360"
+        height="232"
+        aria-hidden="true"
+        focusable="false"
+      >
+        <use href="/illustrations/portfolio-sections.svg#education"></use>
+      </svg>
     </div>
     <ul
-      class="grid gap-px border border-emerald-line bg-emerald-line lg:grid-cols-3"
+      class="grid gap-px border border-emerald-line bg-emerald-line sm:grid-cols-2"
     >
-      @for (item of education; track item.key) {
-        <li class="bg-paper px-5 py-6 sm:px-6">
-          <p class="text-sm font-bold tabular-nums text-emerald">
+      @for (item of education; track item.key; let first = $first) {
+        <li
+          class="group bg-emerald-soft p-5 first:bg-paper sm:p-7 sm:first:col-span-2"
+        >
+          <p
+            class="flex items-center gap-2 text-sm font-bold tabular-nums text-emerald"
+          >
+            @if (first) {
+              <svg
+                class="size-5 shrink-0"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+                focusable="false"
+              >
+                <use href="/icons/tabler-outline.svg#school"></use>
+              </svg>
+            }
             {{ item.key + '.period' | transloco }}
           </p>
-          <h3 class="mt-2 text-2xl font-semibold leading-tight">
+          <h3
+            class="mt-2 text-xl font-semibold leading-tight group-first:text-3xl"
+          >
             {{ item.key + '.title' | transloco }}
           </h3>
           <p class="mt-2 text-muted">

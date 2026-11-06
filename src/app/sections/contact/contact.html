@@ -3,11 +3,23 @@
   class="section-space bg-ink text-emerald-foreground"
   aria-labelledby="contact-title"
 >
-  <div class="section-container section-split items-end">
-    <h2 id="contact-title" class="section-heading">
-      {{ 'contact.title' | transloco }}
-    </h2>
+  <div class="section-container section-split items-center">
     <div>
+      <h2 id="contact-title" class="section-heading">
+        {{ 'contact.title' | transloco }}
+      </h2>
+      <svg
+        class="section-illustration section-illustration--dark"
+        viewBox="0 0 360 232"
+        width="360"
+        height="232"
+        aria-hidden="true"
+        focusable="false"
+      >
+        <use href="/illustrations/portfolio-sections.svg#contact"></use>
+      </svg>
+    </div>
+    <div class="bg-emerald p-5 sm:p-8">
       <p class="max-w-prose text-lg leading-relaxed text-emerald-soft">
         {{ 'contact.description' | transloco }}
       </p>

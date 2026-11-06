@@ -5,24 +5,38 @@
 >
   <div class="section-container section-split">
     <div>
-      <svg
-        class="mb-3 size-9 text-emerald"
-        viewBox="0 0 24 24"
-        aria-hidden="true"
-        focusable="false"
-      >
-        <use href="/icons/tabler-outline.svg#stack-2"></use>
-      </svg>
       <h2 id="skills-title" class="section-heading">
         {{ 'skills.title' | transloco }}
       </h2>
+      <svg
+        class="section-illustration"
+        viewBox="0 0 360 232"
+        width="360"
+        height="232"
+        aria-hidden="true"
+        focusable="false"
+      >
+        <use href="/illustrations/portfolio-sections.svg#stack"></use>
+      </svg>
     </div>
     <dl class="divide-y divide-line border-y border-line">
-      @for (group of skillGroups; track group.key) {
+      @for (group of skillGroups; track group.key; let first = $first) {
         <div
-          class="grid gap-2 py-4 sm:grid-cols-[minmax(0,1fr)_minmax(0,2fr)] sm:gap-6"
+          class="grid gap-2 px-5 py-4 first:bg-emerald-soft sm:grid-cols-[minmax(0,1fr)_minmax(0,2fr)] sm:gap-6 sm:px-7"
         >
-          <dt class="font-display text-xl font-semibold leading-tight">
+          <dt
+            class="flex items-start gap-2 font-display text-xl font-semibold leading-tight"
+          >
+            @if (first) {
+              <svg
+                class="mt-0.5 size-5 shrink-0 text-emerald"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+                focusable="false"
+              >
+                <use href="/icons/tabler-outline.svg#stack-2"></use>
+              </svg>
+            }
             {{ group.key + '.title' | transloco }}
           </dt>
           <dd>

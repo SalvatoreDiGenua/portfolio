@@ -3,21 +3,35 @@
   class="section-space border-b border-line"
   aria-labelledby="experience-title"
 >
-  <div class="section-container section-split">
-    <h2 id="experience-title" class="section-heading">
-      {{ 'experience.title' | transloco }}
-    </h2>
+  <div class="section-container section-split items-start">
+    <div>
+      <h2 id="experience-title" class="section-heading">
+        {{ 'experience.title' | transloco }}
+      </h2>
+      <svg
+        class="section-illustration"
+        viewBox="0 0 360 232"
+        width="360"
+        height="232"
+        aria-hidden="true"
+        focusable="false"
+      >
+        <use href="/illustrations/portfolio-sections.svg#experience"></use>
+      </svg>
+    </div>
 
     <ol class="divide-y divide-line border-y border-l border-line">
       @for (exp of experiences; track exp.key) {
         <li
-          class="relative grid gap-3 py-6 pl-5 before:absolute before:-left-1.5 before:top-8 before:size-3 before:rounded-full before:border-2 before:border-paper before:bg-emerald sm:grid-cols-[minmax(0,1fr)_minmax(0,3fr)] sm:gap-6 sm:py-8 sm:pl-7 sm:before:top-10"
+          class="group relative grid gap-3 px-5 py-6 before:absolute before:-left-1.5 before:top-8 before:size-3 before:rounded-full before:border-2 before:border-paper before:bg-emerald first:bg-emerald first:text-emerald-foreground first:before:bg-lime sm:grid-cols-[minmax(0,1fr)_minmax(0,3fr)] sm:gap-6 sm:px-7 sm:py-8 sm:before:top-10"
         >
           <div>
-            <p class="font-bold text-emerald">
+            <p class="font-bold text-emerald group-first:text-lime">
               {{ exp.key + '.company' | transloco }}
             </p>
-            <p class="mt-1 text-sm tabular-nums text-muted">
+            <p
+              class="mt-1 text-sm tabular-nums text-muted group-first:text-emerald-soft"
+            >
               {{ exp.key + '.period' | transloco }}
             </p>
           </div>
@@ -25,7 +39,9 @@
             <h3 class="text-2xl font-semibold leading-tight">
               {{ exp.key + '.role' | transloco }}
             </h3>
-            <p class="mt-3 max-w-prose leading-relaxed text-muted">
+            <p
+              class="mt-3 max-w-prose leading-relaxed text-muted group-first:text-emerald-soft"
+            >
               {{ exp.key + '.description' | transloco }}
             </p>
             <ul

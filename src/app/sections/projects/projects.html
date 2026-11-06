@@ -4,9 +4,23 @@
   aria-labelledby="projects-title"
 >
   <div class="section-container">
-    <h2 id="projects-title" class="section-heading">
-      {{ 'projects.title' | transloco }}
-    </h2>
+    <div
+      class="grid grid-cols-[minmax(0,1fr)_auto] items-center gap-3 sm:gap-8"
+    >
+      <h2 id="projects-title" class="section-heading">
+        {{ 'projects.title' | transloco }}
+      </h2>
+      <svg
+        class="section-illustration section-illustration--dark mt-0 w-28 sm:w-44 lg:w-56"
+        viewBox="0 0 360 232"
+        width="360"
+        height="232"
+        aria-hidden="true"
+        focusable="false"
+      >
+        <use href="/illustrations/portfolio-sections.svg#projects"></use>
+      </svg>
+    </div>
     <ul class="mt-4 flex flex-wrap gap-x-6 border-y border-emerald-line py-2">
       @for (project of projects; track project.name) {
         <li>

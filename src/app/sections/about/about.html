@@ -3,7 +3,7 @@
   class="section-space border-b border-line"
   aria-labelledby="about-title"
 >
-  <div class="section-container section-split">
+  <div class="section-container section-split items-start">
     <div>
       <h2 id="about-title" class="section-heading">
         {{ 'about.title' | transloco }}
@@ -19,8 +19,18 @@
         </svg>
         {{ profile.location }}
       </p>
+      <svg
+        class="section-illustration"
+        viewBox="0 0 360 232"
+        width="360"
+        height="232"
+        aria-hidden="true"
+        focusable="false"
+      >
+        <use href="/illustrations/portfolio-sections.svg#profile"></use>
+      </svg>
     </div>
-    <div>
+    <div class="border-y border-emerald-line bg-emerald-soft p-5 sm:p-8">
       <p class="max-w-prose text-lg leading-relaxed">
         {{ profile.summary | transloco }}
       </p>
@@ -45,10 +55,12 @@
         </a>
       </div>
       <dl
-        class="mt-5 grid grid-cols-3 divide-x divide-emerald-line border-t border-emerald-line bg-emerald-soft px-2 py-4 sm:px-3 sm:py-5"
+        class="mt-4 grid grid-cols-3 divide-x divide-emerald-line border-t border-emerald-line pt-4"
       >
         @for (stat of stats; track stat.key) {
-          <div class="flex min-w-0 flex-col-reverse justify-end px-2 sm:px-4">
+          <div
+            class="flex min-w-0 flex-col-reverse justify-end px-2 first:pl-0 sm:px-4"
+          >
             <dt class="mt-1 break-words text-sm text-muted">
               {{ stat.key | transloco }}
             </dt>

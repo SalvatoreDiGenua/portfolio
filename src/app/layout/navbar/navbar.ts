@@ -16,9 +16,10 @@ export class NavbarComponent {
   readonly isOpen = signal(false);
   readonly languageService = inject(LanguageService);
   readonly links: NavLink[] = [
-    { key: 'nav.projects', href: '#projects' },
-    { key: 'nav.experience', href: '#experience' },
     { key: 'nav.about', href: '#about' },
+    { key: 'nav.projects', href: '#projects' },
+    { key: 'nav.ai', href: '#ai' },
+    { key: 'nav.experience', href: '#experience' },
     { key: 'nav.skills', href: '#skills' },
     { key: 'nav.education', href: '#education' },
     { key: 'nav.contact', href: '#contact' },

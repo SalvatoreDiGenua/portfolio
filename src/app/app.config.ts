@@ -42,7 +42,7 @@ export const appConfig: ApplicationConfig = {
     provideZonelessChangeDetection(),
     provideAnimations(),
     provideHttpClient(),
-    provideRouter(routes, withViewTransitions()),
+    provideRouter(routes, withViewTransitions({ skipInitialTransition: true })),
     provideTransloco({
       config: {
         availableLangs: ['en', 'it'] as SupportedLanguage[],

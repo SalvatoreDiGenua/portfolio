@@ -14,17 +14,16 @@ const BASE_URL = 'https://salvatoredigenua.it/';
 
 const CONTENT: Record<SupportedLanguage, SeoContent> = {
   it: {
-    title:
-      'Salvatore Di Genua | Senior Frontend Engineer & Specialista Angular',
+    title: 'Salvatore Di Genua | Full stack e sistemi AI',
     description:
-      'Portfolio di Salvatore Di Genua, Senior Frontend Engineer specializzato in Angular, TypeScript, Signals, architettura SSR e sviluppo web assistito da AI.',
+      'Portfolio di Salvatore Di Genua. Architettura Angular, sviluppo full stack, sistemi agentici per la ricerca documentale e sviluppo assistito da AI.',
     locale: 'it_IT',
     jobTitle: 'Senior Frontend Engineer & Specialista Angular',
   },
   en: {
-    title: 'Salvatore Di Genua | Senior Frontend Engineer & Angular Specialist',
+    title: 'Salvatore Di Genua | Full-stack development & AI systems',
     description:
-      'Portfolio of Salvatore Di Genua, Senior Frontend Engineer specializing in Angular, TypeScript, Signals, SSR architecture, and AI-assisted web development.',
+      'Portfolio of Salvatore Di Genua. Angular architecture, full-stack development, agentic document retrieval, and AI-assisted development.',
     locale: 'en_US',
     jobTitle: 'Senior Frontend Engineer & Angular Specialist',
   },

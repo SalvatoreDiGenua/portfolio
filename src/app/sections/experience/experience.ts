@@ -6,6 +6,7 @@ import { EXPERIENCES } from '../../core/profile.data';
   selector: 'app-experience',
   imports: [TranslocoModule],
   templateUrl: './experience.html',
+  host: { class: 'block' },
 })
 export class ExperienceComponent {
   readonly experiences = EXPERIENCES;

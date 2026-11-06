@@ -12,23 +12,25 @@
     "ariaHome": "SDG, Salvatore Di Genua. Torna all'inizio",
     "ariaOpenMenu": "Apri menu di navigazione",
     "ariaCloseMenu": "Chiudi menu di navigazione",
-    "ariaLangSwitch": "Passa all'inglese"
+    "ariaLangSwitch": "Passa all'inglese",
+    "ai": "AI"
   },
   "hero": {
-    "description": "Progetto applicazioni Angular e guido team frontend.",
+    "description": "Progetto applicazioni Angular, integro API e sviluppo agenti che lavorano su fonti verificabili.",
     "projectsCta": "Vedi i progetti",
     "experienceCta": "Esperienza",
-    "roleTag": "Senior Frontend Engineer e specialista Angular"
+    "roleTag": "Sviluppo full stack e sistemi AI"
   },
   "about": {
-    "title": "Profilo professionale",
+    "title": "Chi sono",
     "years": "Anni di esperienza",
     "projects": "Aziende / progetti chiave",
     "technologies": "Tecnologie principali",
     "ariaLinkedIn": "Profilo LinkedIn di Salvatore Di Genua (apre in una nuova scheda)",
     "profile": {
-      "summary": "Sviluppo applicazioni web dal 2019, con specializzazione in Angular e TypeScript e nelle funzionalità più recenti del framework, tra cui Signals e Standalone Components. Ho lavorato come sviluppatore e team lead su progetti fintech e piattaforme cloud, occupandomi di architettura, sviluppo, qualità del codice e collaborazione con clienti e stakeholder. Uso Cursor, Antigravity, Copilot, Claude Code e OpenCode nel lavoro quotidiano, insieme a skills personalizzate e server MCP per scrivere, rifattorizzare e documentare codice coerente con l'architettura del progetto."
-    }
+      "summary": "Sviluppo applicazioni web dal 2019. Mi occupo di architettura frontend con Angular e TypeScript, integrazione di API REST e funzionalità in tempo reale. Ho guidato un team frontend e mi occupo di mentoring tecnico, revisione del codice e test."
+    },
+    "ariaGitHub": "GitHub di Salvatore Di Genua (apre in una nuova scheda)"
   },
   "skills": {
     "title": "Stack tecnologico",
@@ -77,19 +79,6 @@
           "express": "Express.js",
           "socket": "Socket.IO",
           "mysql": "MySQL"
-        }
-      },
-      "ai": {
-        "title": "AI-Assisted Development",
-        "items": {
-          "cursor": "Cursor",
-          "antigravity": "Antigravity",
-          "copilot": "Copilot",
-          "claude": "Claude Code",
-          "codex": "Codex",
-          "opencode": "OpenCode",
-          "skills": "Custom Skills",
-          "mcp": "MCP Servers"
         }
       },
       "methods": {
@@ -154,6 +143,14 @@
       "heading": "In arrivo",
       "status": "In sviluppo",
       "description": "Sto sviluppando una chat per interrogare raccolte di PDF. L’agente cerca i passaggi pertinenti, verifica se sostengono la risposta e cita le pagine originali."
+    },
+    "preview": {
+      "title": "Progetti in sequenza",
+      "requestA": "Richiesta A",
+      "requestB": "Richiesta B",
+      "retrieve": "Ricerca dei passaggi pertinenti",
+      "verify": "Verifica del supporto delle fonti",
+      "cite": "Citazioni delle pagine originali"
     }
   },
   "education": {
@@ -177,8 +174,8 @@
     }
   },
   "contact": {
-    "title": "Parliamo di frontend",
-    "description": "Sono disponibile per ruoli senior e collaborazioni su Angular, architettura frontend e guida tecnica di team.",
+    "title": "Parliamo di sviluppo full stack",
+    "description": "Sono disponibile per ruoli senior e collaborazioni su applicazioni full stack, architettura Angular e sistemi AI.",
     "ariaMail": "Contattami via email",
     "ariaLinkedIn": "Connettiti con Salvatore Di Genua su LinkedIn (apre in una nuova scheda)"
   },
@@ -189,5 +186,27 @@
     "linkedin": "LinkedIn",
     "ariaSourceCode": "Codice sorgente del portfolio su GitHub (apre in una nuova scheda)",
     "ariaLinkedIn": "Profilo LinkedIn di Salvatore Di Genua (apre in una nuova scheda)"
+  },
+  "ai": {
+    "title": "Sistemi e strumenti AI",
+    "intro": "Lavoro con l’AI sia nelle applicazioni sia nello sviluppo del codice.",
+    "systems": {
+      "title": "Agenti e ricerca documentale",
+      "description": "In Agentic RAG Platform confronto due modi di orchestrare lo stesso flusso in Python, con LangChain e LangGraph. Le citazioni permettono di risalire dalla risposta alla pagina del PDF."
+    },
+    "workflow": {
+      "title": "Sviluppo assistito",
+      "description": "Uso strumenti AI per esplorare repository, preparare refactoring e scrivere test. Verifico le modifiche con code review e test prima di integrarle.",
+      "tools": {
+        "cursor": "Cursor",
+        "antigravity": "Antigravity",
+        "copilot": "Copilot",
+        "claude": "Claude Code",
+        "codex": "Codex",
+        "opencode": "OpenCode",
+        "skills": "Custom Skills",
+        "mcp": "MCP Servers"
+      }
+    }
   }
 }

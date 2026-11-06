@@ -6,9 +6,18 @@
 
 <main id="main-content" tabindex="-1">
   <app-hero />
-  <app-projects />
-  <app-experience />
   <app-about />
+  <app-projects />
+  @defer (on viewport; hydrate on viewport) {
+    <app-ai />
+  } @placeholder {
+    <div id="ai" class="min-h-96" aria-hidden="true"></div>
+  }
+  @defer (on viewport; hydrate on viewport) {
+    <app-experience />
+  } @placeholder {
+    <div id="experience" class="min-h-96" aria-hidden="true"></div>
+  }
   <app-skills />
   <app-education />
   <app-contact />

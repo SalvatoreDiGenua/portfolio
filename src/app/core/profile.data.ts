@@ -3,6 +3,7 @@ export interface Profile {
   readonly location: string;
   readonly email: string;
   readonly linkedin: string;
+  readonly github: string;
   readonly summary: string;
 }
 
@@ -35,6 +36,7 @@ export const PROFILE: Profile = {
   location: 'Montella, Campania, Italia',
   email: 'salvatoredigenua.developer@gmail.com',
   linkedin: 'https://www.linkedin.com/in/salvatore-di-genua-b664b716a',
+  github: 'https://github.com/SalvatoreDiGenua',
   summary: 'about.profile.summary',
 };
 
@@ -96,23 +98,21 @@ export const SKILLS: SkillGroup[] = [
     items: ['rest', 'node', 'express', 'socket', 'mysql'],
   },
   {
-    key: 'skills.groups.ai',
-    items: [
-      'cursor',
-      'antigravity',
-      'copilot',
-      'claude',
-      'codex',
-      'opencode',
-      'skills',
-      'mcp',
-    ],
-  },
-  {
     key: 'skills.groups.methods',
     items: ['scrum', 'microfrontend', 'leadership', 'mentoring'],
   },
 ];
+
+export const AI_TOOLS = [
+  'codex',
+  'claude',
+  'cursor',
+  'opencode',
+  'antigravity',
+  'copilot',
+  'mcp',
+  'skills',
+] as const;
 
 export const PROJECTS: readonly ProjectItem[] = [
   {

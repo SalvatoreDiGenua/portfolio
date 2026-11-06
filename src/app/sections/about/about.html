@@ -14,15 +14,26 @@
       <p class="max-w-prose text-lg leading-relaxed">
         {{ profile.summary | transloco }}
       </p>
-      <a
-        [href]="profile.linkedin"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="text-link mt-3 text-emerald"
-        [attr.aria-label]="'about.ariaLinkedIn' | transloco"
-      >
-        LinkedIn
-      </a>
+      <div class="mt-2 flex flex-wrap gap-x-6">
+        <a
+          [href]="profile.linkedin"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="text-link text-emerald"
+          [attr.aria-label]="'about.ariaLinkedIn' | transloco"
+        >
+          LinkedIn
+        </a>
+        <a
+          [href]="profile.github"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="text-link text-emerald"
+          [attr.aria-label]="'about.ariaGitHub' | transloco"
+        >
+          GitHub
+        </a>
+      </div>
       <dl
         class="mt-5 grid grid-cols-3 gap-3 border-t border-line pt-5 sm:gap-6"
       >

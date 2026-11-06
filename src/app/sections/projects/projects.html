@@ -1,144 +1,154 @@
-<section id="projects" aria-labelledby="projects-title">
-  <h2 id="projects-title" class="sr-only">
-    {{ 'projects.title' | transloco }}
-  </h2>
+<section
+  id="projects"
+  class="section-space bg-emerald text-emerald-foreground"
+  aria-labelledby="projects-title"
+>
+  <div class="section-container">
+    <h2 id="projects-title" class="section-heading">
+      {{ 'projects.title' | transloco }}
+    </h2>
+    <ul class="mt-4 flex flex-wrap gap-x-6 border-b border-emerald-line pb-4">
+      @for (project of projects; track project.name) {
+        <li>
+          <a class="text-link" [href]="'#project-' + project.name">
+            {{ project.name }}
+          </a>
+        </li>
+      }
+      <li>
+        <a class="text-link" [href]="'#' + upcoming.id">{{ upcoming.name }}</a>
+      </li>
+    </ul>
 
-  @for (project of projects; track project.name) {
-    <article
-      class="section-space"
-      [class.bg-emerald]="project.featured"
-      [class.text-emerald-foreground]="project.featured"
-      [class.border-b]="!project.featured"
-      [class.border-line]="!project.featured"
-    >
-      <div
-        class="section-container grid items-start gap-8 lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)] lg:gap-12"
-      >
-        <div>
-          <h3 class="section-heading">{{ project.name }}</h3>
-          <p
-            class="mt-4 max-w-prose leading-relaxed"
-            [class.text-emerald-soft]="project.featured"
-            [class.text-muted]="!project.featured"
+    <div class="project-track">
+      <div class="min-w-0 divide-y divide-emerald-line">
+        @for (project of projects; track project.name) {
+          <article
+            #chapter
+            [id]="'project-' + project.name"
+            class="project-chapter py-10"
           >
-            {{ project.key + '.description' | transloco }}
-          </p>
-          <div class="mt-4 flex flex-wrap gap-x-6">
-            <a
-              class="text-link"
-              [href]="project.repositoryUrl"
-              target="_blank"
-              rel="noopener noreferrer"
-              [attr.aria-label]="
-                'projects.viewRepoAria' | transloco: { name: project.name }
-              "
-            >
-              {{ 'projects.viewProject' | transloco }}
-            </a>
-            <a
-              class="text-link"
-              [href]="project.liveUrl"
-              target="_blank"
-              rel="noopener noreferrer"
-              [attr.aria-label]="
-                'projects.viewLiveAria'
-                  | transloco
-                    : {
-                        name: project.name,
-                        label: (project.liveLabel | transloco),
-                      }
-              "
-            >
-              {{ project.liveLabel | transloco }}
-            </a>
-          </div>
-        </div>
-        @if (project.featured) {
-          <figure class="min-w-0">
-            <figcaption
-              class="mb-3 flex flex-wrap items-baseline justify-between gap-x-4 gap-y-2 border-b border-emerald-line pb-3"
-            >
-              <span class="font-semibold">
-                {{ 'projects.flow.caption' | transloco }}
-              </span>
-              <code class="bg-lime px-2 py-1 text-sm font-semibold text-ink">
-                requestId
-              </code>
-            </figcaption>
-            <ol
-              class="project-flow divide-y divide-emerald-line border-l border-emerald-line pl-4 sm:pl-5"
-            >
-              <li
-                class="grid gap-1 py-3 sm:grid-cols-[minmax(0,1fr)_auto] sm:gap-4"
-              >
-                <span>{{ 'projects.flow.bothStarted' | transloco }}</span>
-                <span class="text-sm font-semibold text-lime">
-                  {{ 'projects.flow.locked' | transloco }}
-                </span>
-              </li>
-              <li
-                class="grid gap-1 py-3 sm:grid-cols-[minmax(0,1fr)_auto] sm:gap-4"
-              >
-                <span>{{ 'projects.flow.firstSettled' | transloco }}</span>
-                <span class="text-sm font-semibold text-lime">
-                  {{ 'projects.flow.locked' | transloco }}
-                </span>
-              </li>
-              <li
-                class="grid gap-1 py-3 sm:grid-cols-[minmax(0,1fr)_auto] sm:gap-4"
-              >
-                <span>{{ 'projects.flow.secondSettled' | transloco }}</span>
-                <span class="text-sm font-semibold text-emerald-foreground">
-                  {{ 'projects.flow.unlocked' | transloco }}
-                </span>
-              </li>
-            </ol>
-            <p class="mt-3 text-sm leading-relaxed text-emerald-soft">
-              {{ 'projects.flow.detail' | transloco }}
+            <h3 class="text-3xl font-semibold leading-tight sm:text-4xl">
+              {{ project.name }}
+            </h3>
+            <p class="mt-3 max-w-prose leading-relaxed text-emerald-soft">
+              {{ project.key + '.description' | transloco }}
             </p>
-          </figure>
-        } @else {
-          <div class="border-y border-line py-5 lg:self-center">
-            <p class="mb-3 font-semibold">
-              {{ 'projects.angular.stack' | transloco }}
+            <div class="mt-3 flex flex-wrap gap-x-6">
+              <a
+                class="text-link"
+                [href]="project.repositoryUrl"
+                target="_blank"
+                rel="noopener noreferrer"
+                [attr.aria-label]="
+                  'projects.viewRepoAria' | transloco: { name: project.name }
+                "
+              >
+                {{ 'projects.viewProject' | transloco }}
+              </a>
+              <a
+                class="text-link"
+                [href]="project.liveUrl"
+                target="_blank"
+                rel="noopener noreferrer"
+                [attr.aria-label]="
+                  'projects.viewLiveAria'
+                    | transloco
+                      : {
+                          name: project.name,
+                          label: (project.liveLabel | transloco),
+                        }
+                "
+              >
+                {{ project.liveLabel | transloco }}
+              </a>
+            </div>
+            @if (project.featured) {
+              <figure class="mt-4 min-w-0 border-t border-emerald-line pt-4">
+                <figcaption
+                  class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-2 pb-2"
+                >
+                  <span class="font-semibold">
+                    {{ 'projects.flow.caption' | transloco }}
+                  </span>
+                  <code
+                    class="bg-lime px-2 py-1 text-sm font-semibold text-ink"
+                  >
+                    requestId
+                  </code>
+                </figcaption>
+                <ol
+                  class="divide-y divide-emerald-line border-y border-emerald-line"
+                >
+                  <li
+                    class="grid gap-1 py-2 sm:grid-cols-[minmax(0,1fr)_auto] sm:gap-3"
+                  >
+                    <span>{{ 'projects.flow.bothStarted' | transloco }}</span>
+                    <span class="text-sm font-semibold text-lime">
+                      {{ 'projects.flow.locked' | transloco }}
+                    </span>
+                  </li>
+                  <li
+                    class="grid gap-1 py-2 sm:grid-cols-[minmax(0,1fr)_auto] sm:gap-3"
+                  >
+                    <span>{{ 'projects.flow.firstSettled' | transloco }}</span>
+                    <span class="text-sm font-semibold text-lime">
+                      {{ 'projects.flow.locked' | transloco }}
+                    </span>
+                  </li>
+                  <li
+                    class="grid gap-1 py-2 sm:grid-cols-[minmax(0,1fr)_auto] sm:gap-3"
+                  >
+                    <span>{{ 'projects.flow.secondSettled' | transloco }}</span>
+                    <span class="text-sm font-semibold">
+                      {{ 'projects.flow.unlocked' | transloco }}
+                    </span>
+                  </li>
+                </ol>
+                <p class="mt-2 text-sm leading-relaxed text-emerald-soft">
+                  {{ 'projects.flow.detail' | transloco }}
+                </p>
+              </figure>
+            } @else {
+              <ul
+                class="mt-4 flex flex-wrap gap-x-4 gap-y-2 border-t border-emerald-line pt-4 text-sm text-emerald-soft"
+              >
+                @for (tag of project.tags; track tag) {
+                  <li>{{ tag }}</li>
+                }
+              </ul>
+            }
+          </article>
+        }
+        <article #chapter [id]="upcoming.id" class="project-chapter py-10">
+          <div class="bg-blue p-5 text-blue-ink sm:p-7">
+            <h3 class="text-3xl font-semibold leading-tight sm:text-4xl">
+              {{ upcoming.name }}
+            </h3>
+            <p class="mt-2 font-semibold">
+              {{ 'projects.upcoming.heading' | transloco }}
             </p>
-            <ul class="flex flex-wrap gap-x-4 gap-y-2 text-sm text-muted">
-              @for (tag of project.tags; track tag) {
-                <li>{{ tag }}</li>
+            <p class="mt-3 max-w-prose leading-relaxed">
+              {{ 'projects.upcoming.description' | transloco }}
+            </p>
+            <ul
+              class="mt-4 flex flex-wrap gap-x-4 gap-y-2 border-t border-current pt-4 text-sm font-semibold"
+            >
+              @for (technology of upcoming.backend; track technology) {
+                <li>{{ technology }}</li>
               }
             </ul>
           </div>
+        </article>
+      </div>
+
+      <div class="project-preview" aria-hidden="true">
+        @defer (on viewport; hydrate on viewport) {
+          <app-project-preview [chapters]="chapters()" />
+        } @placeholder {
+          <div class="project-preview-card"></div>
         }
       </div>
-    </article>
-  }
-</section>
-
-<section
-  [id]="upcoming.id"
-  class="section-space bg-blue text-blue-ink"
-  aria-labelledby="agentic-rag-title"
->
-  <div class="section-container section-split items-start">
-    <div>
-      <h2 id="agentic-rag-title" class="section-heading">
-        {{ upcoming.name }}
-      </h2>
-      <p class="mt-3 font-semibold">
-        {{ 'projects.upcoming.heading' | transloco }}
-      </p>
-    </div>
-    <div>
-      <p class="max-w-prose text-lg leading-relaxed">
-        {{ 'projects.upcoming.description' | transloco }}
-      </p>
-      <ul
-        class="mt-5 flex flex-wrap gap-x-4 gap-y-2 border-t border-current pt-4 text-sm font-semibold"
-      >
-        @for (technology of upcoming.backend; track technology) {
-          <li>{{ technology }}</li>
-        }
-      </ul>
     </div>
   </div>
 </section>

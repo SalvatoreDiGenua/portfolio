@@ -4,7 +4,7 @@
     [attr.aria-label]="'nav.ariaMain' | transloco"
   >
     <a
-      href="#top"
+      [href]="languageService.sectionHref('#top')"
       class="nav-link font-display text-3xl font-bold tracking-tight"
       [attr.aria-label]="'nav.ariaHome' | transloco"
       (click)="closeMenu()"
@@ -14,21 +14,24 @@
     <ul class="ml-auto hidden items-center gap-5 text-sm lg:flex xl:gap-8">
       @for (link of links; track link.href) {
         <li>
-          <a [href]="link.href" class="nav-link">{{ link.key | transloco }}</a>
+          <a [href]="languageService.sectionHref(link.href)" class="nav-link">
+            {{ link.key | transloco }}
+          </a>
         </li>
       }
     </ul>
     <div class="flex items-center gap-2 lg:ml-4">
-      <button
-        type="button"
+      <a
+        [href]="languageService.alternatePath()"
+        [attr.hreflang]="languageService.alternateLanguage()"
         class="nav-link px-2 text-sm"
-        (click)="toggleLanguage()"
+        (click)="toggleLanguage($event)"
         aria-describedby="language-switch-hint"
       >
         <span [class.font-bold]="languageService.language() === 'it'">IT</span>
         <span class="px-1 text-muted">&ngsp;/&ngsp;</span>
         <span [class.font-bold]="languageService.language() === 'en'">EN</span>
-      </button>
+      </a>
       <span id="language-switch-hint" class="sr-only">
         {{ 'nav.ariaLangSwitch' | transloco }}
       </span>
@@ -69,7 +72,7 @@
         @for (link of links; track link.href) {
           <li>
             <a
-              [href]="link.href"
+              [href]="languageService.sectionHref(link.href)"
               class="nav-link w-full"
               (click)="closeMenu()"
               (keydown.escape)="closeMenuWithFocus(menuButton)"

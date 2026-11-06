@@ -1,35 +1,46 @@
 import { DOCUMENT, isPlatformBrowser } from '@angular/common';
-import { PLATFORM_ID, Service, inject, signal } from '@angular/core';
+import { PLATFORM_ID, Service, computed, inject, signal } from '@angular/core';
 import { TranslocoService } from '@jsverse/transloco';
-
-export type SupportedLanguage = 'it' | 'en';
+import {
+  LANGUAGE_PATHS,
+  LANGUAGE_QUERY_PARAM,
+  SupportedLanguage,
+} from './locale';
 
 @Service()
 export class LanguageService {
   private readonly transloco = inject(TranslocoService);
   private readonly document = inject(DOCUMENT);
   private readonly platformId = inject(PLATFORM_ID);
-  public static readonly storageKey = 'sdg-portfolio.language';
-  public static readonly langQueryParam = 'lang';
 
-  readonly language = signal<SupportedLanguage>(this.getInitialLanguage());
+  private readonly initialLanguage = this.getInitialLanguage();
+  readonly language = signal(this.initialLanguage);
+  readonly hasChangedLanguage = computed(
+    () => this.language() !== this.initialLanguage,
+  );
+  readonly alternateLanguage = computed(() =>
+    this.language() === 'it' ? 'en' : 'it',
+  );
+  readonly alternatePath = computed(
+    () => LANGUAGE_PATHS[this.alternateLanguage()],
+  );
 
   constructor() {
     this.applyLanguage(this.language());
   }
 
-  setLanguage(language: SupportedLanguage): void {
+  toggle(): void {
+    const language = this.alternateLanguage();
     this.language.set(language);
     this.applyLanguage(language);
 
     if (isPlatformBrowser(this.platformId)) {
-      localStorage.setItem(LanguageService.storageKey, language);
-      this.syncUrl(language);
+      const history = this.document.defaultView?.history;
+      const url = new URL(this.document.location.href);
+      url.pathname = LANGUAGE_PATHS[language];
+      url.searchParams.delete(LANGUAGE_QUERY_PARAM);
+      history?.replaceState(history.state, '', url);
     }
-  }
-
-  toggle(): void {
-    this.setLanguage(this.language() === 'it' ? 'en' : 'it');
   }
 
   private applyLanguage(language: SupportedLanguage): void {
@@ -37,39 +48,20 @@ export class LanguageService {
     this.document.documentElement.lang = language;
   }
 
+  sectionHref(fragment: string): string {
+    const search = this.document.location?.search ?? '';
+    return LANGUAGE_PATHS[this.language()] + search + fragment;
+  }
+
   private getInitialLanguage(): SupportedLanguage {
-    const fromUrl = this.getLanguageFromUrl();
-    if (fromUrl) {
-      return fromUrl;
+    const location = this.document.location;
+    if (
+      location?.pathname === '/it' ||
+      location?.pathname === LANGUAGE_PATHS.it
+    ) {
+      return 'it';
     }
 
-    if (!isPlatformBrowser(this.platformId)) {
-      return 'en';
-    }
-
-    const storedLanguage = localStorage.getItem(LanguageService.storageKey);
-    if (storedLanguage === 'it' || storedLanguage === 'en') {
-      return storedLanguage;
-    }
-
-    return navigator.language.toLowerCase().startsWith('it') ? 'it' : 'en';
-  }
-
-  private getLanguageFromUrl(): SupportedLanguage | null {
-    try {
-      const search = this.document?.location?.search;
-      if (!search) return null;
-      const params = new URLSearchParams(search);
-      const value = params.get(LanguageService.langQueryParam);
-      return value === 'it' || value === 'en' ? value : null;
-    } catch {
-      return null;
-    }
-  }
-
-  private syncUrl(language: SupportedLanguage): void {
-    const url = new URL(this.document.location.href);
-    url.searchParams.set(LanguageService.langQueryParam, language);
-    window.history.replaceState({}, '', url);
+    return 'en';
   }
 }

@@ -1,41 +1,20 @@
 import {
   ApplicationConfig,
   isDevMode,
-  PLATFORM_ID,
   provideZonelessChangeDetection,
 } from '@angular/core';
 import { provideAnimations } from '@angular/platform-browser/animations';
 import { provideHttpClient } from '@angular/common/http';
+import {
+  LocationStrategy,
+  TrailingSlashPathLocationStrategy,
+} from '@angular/common';
 import { provideTransloco } from '@jsverse/transloco';
-import { provideTranslocoPersistLang } from '@jsverse/transloco-persist-lang';
 import { TranslocoHttpLoader } from './core/i18n/transloco-loader';
 import { provideClientHydration } from '@angular/platform-browser';
-import { isPlatformBrowser } from '@angular/common';
-import {
-  LanguageService,
-  SupportedLanguage,
-} from './core/i18n/language.service';
+import { SupportedLanguage } from './core/i18n/locale';
 import { routes } from './app.routes';
 import { provideRouter, withViewTransitions } from '@angular/router';
-
-class NoopStorage implements Storage {
-  length = 0;
-  clear(): void {
-    //
-  }
-  getItem(): string | null {
-    return null;
-  }
-  key(): string | null {
-    return null;
-  }
-  removeItem(): void {
-    //
-  }
-  setItem(): void {
-    //
-  }
-}
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -43,6 +22,7 @@ export const appConfig: ApplicationConfig = {
     provideAnimations(),
     provideHttpClient(),
     provideRouter(routes, withViewTransitions({ skipInitialTransition: true })),
+    { provide: LocationStrategy, useClass: TrailingSlashPathLocationStrategy },
     provideTransloco({
       config: {
         availableLangs: ['en', 'it'] as SupportedLanguage[],
@@ -52,14 +32,6 @@ export const appConfig: ApplicationConfig = {
         prodMode: !isDevMode(),
       },
       loader: TranslocoHttpLoader,
-    }),
-    provideTranslocoPersistLang({
-      storage: {
-        useFactory: (platformId: object) =>
-          isPlatformBrowser(platformId) ? localStorage : new NoopStorage(),
-        deps: [PLATFORM_ID],
-      },
-      storageKey: LanguageService.storageKey,
     }),
     provideClientHydration(),
   ],

@@ -17,7 +17,7 @@
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "serve:ssg": "npx http-server dist/portfolio/browser -p 8080",
-    "serve:ssr": "node dist/portfolio/server/server.mjs"
+    "serve:ssr": "ng build --configuration production,server && node dist/portfolio-server/server/server.mjs"
   },
   "dependencies": {
     "@angular/animations": "^22.1.0",
@@ -31,7 +31,6 @@
     "@angular/router": "^22.1.0",
     "@angular/ssr": "^22.1.4",
     "@jsverse/transloco": "^8.4.0",
-    "@jsverse/transloco-persist-lang": "^8.4.0",
     "express": "^5.1.0",
     "rxjs": "~7.8.0",
     "tslib": "^2.6.0",

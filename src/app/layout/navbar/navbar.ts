@@ -37,7 +37,18 @@ export class NavbarComponent {
       button.focus();
     }
   }
-  toggleLanguage(): void {
+  toggleLanguage(event: MouseEvent): void {
+    if (
+      event.button !== 0 ||
+      event.altKey ||
+      event.ctrlKey ||
+      event.metaKey ||
+      event.shiftKey
+    ) {
+      return;
+    }
+
+    event.preventDefault();
     this.languageService.toggle();
   }
 }

@@ -6,6 +6,7 @@ import {
 } from '@angular/ssr/node';
 import express from 'express';
 import { join } from 'node:path';
+import { LANGUAGE_PATHS, legacyLanguageRedirect } from './app/core/i18n/locale';
 
 const browserDistFolder = join(import.meta.dirname, '../browser');
 
@@ -29,22 +30,34 @@ const angularApp = new AngularNodeAppEngine();
  */
 app.use(
   express.static(browserDistFolder, {
-    maxAge: '1y',
+    maxAge: '1d',
     index: false,
     redirect: false,
   }),
 );
 
 /**
- * Handle all other requests by rendering the Angular application.
+ * Serve the prerendered English and Italian pages.
  */
-app.use((req, res, next) => {
+app.get([LANGUAGE_PATHS.en, LANGUAGE_PATHS.it], (req, res, next) => {
+  const redirect = legacyLanguageRedirect(
+    new URL(req.originalUrl, 'http://localhost'),
+  );
+  if (redirect) {
+    res.redirect(301, redirect);
+    return;
+  }
+
   angularApp
     .handle(req)
     .then((response) =>
       response ? writeResponseToNodeResponse(response, res) : next(),
     )
     .catch(next);
+});
+
+app.use((_req, res) => {
+  res.status(404).sendFile(join(browserDistFolder, '404.html'));
 });
 
 /**

@@ -24,7 +24,10 @@
     <ul class="mt-4 flex flex-wrap gap-x-6 border-y border-emerald-line py-2">
       @for (project of projects; track project.name) {
         <li>
-          <a class="text-link gap-1.5" [href]="'#project-' + project.name">
+          <a
+            class="text-link gap-1.5"
+            [href]="languageService.sectionHref('#project-' + project.name)"
+          >
             {{ project.name }}
             <svg
               class="size-4 shrink-0 text-lime"
@@ -38,7 +41,10 @@
         </li>
       }
       <li>
-        <a class="text-link gap-1.5" [href]="'#' + upcoming.id">
+        <a
+          class="text-link gap-1.5"
+          [href]="languageService.sectionHref('#' + upcoming.id)"
+        >
           {{ upcoming.name }}
           <svg
             class="size-4 shrink-0 text-lime"
@@ -177,7 +183,11 @@
       </div>
 
       <div class="project-preview" aria-hidden="true">
-        @defer (on viewport; hydrate on viewport) {
+        @defer (
+          on viewport;
+          hydrate on viewport;
+          hydrate when languageService.hasChangedLanguage()
+        ) {
           <app-project-preview [chapters]="chapters()" />
         } @placeholder {
           <div class="project-preview-card"></div>

@@ -38,7 +38,7 @@ import { Projects } from './sections/projects/projects';
   templateUrl: './app.html',
 })
 export class App {
-  private readonly languageService = inject(LanguageService);
+  protected readonly languageService = inject(LanguageService);
   private readonly seo = inject(SeoService);
   private readonly document = inject(DOCUMENT);
   private readonly application = inject(ApplicationRef);

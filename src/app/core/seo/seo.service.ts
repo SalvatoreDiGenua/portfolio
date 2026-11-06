@@ -1,31 +1,36 @@
 import { Service, inject } from '@angular/core';
 import { DOCUMENT } from '@angular/common';
 import { Meta, Title } from '@angular/platform-browser';
-import { LanguageService, SupportedLanguage } from '../i18n/language.service';
+import { LANGUAGE_PATHS, SupportedLanguage } from '../i18n/locale';
 
 interface SeoContent {
   title: string;
   description: string;
+  imageAlt: string;
   locale: string;
   jobTitle: string;
 }
 
-const BASE_URL = 'https://salvatoredigenua.it/';
+const SITE_ORIGIN = 'https://salvatoredigenua.it';
 
 const CONTENT: Record<SupportedLanguage, SeoContent> = {
   it: {
-    title: 'Salvatore Di Genua | Full stack e sistemi AI',
+    title: 'Salvatore Di Genua | Angular, Full Stack e sistemi AI',
     description:
-      'Portfolio di Salvatore Di Genua. Architettura Angular, sviluppo full stack, sistemi agentici per la ricerca documentale e sviluppo assistito da AI.',
+      'Portfolio di Salvatore Di Genua, Senior Frontend Engineer. Progetti Angular, sviluppo full stack e una piattaforma AI in sviluppo per la ricerca nei PDF.',
+    imageAlt:
+      'Copertina del portfolio di Salvatore Di Genua con il nome e il robot della sezione AI.',
     locale: 'it_IT',
-    jobTitle: 'Senior Frontend Engineer & Specialista Angular',
+    jobTitle: 'Senior Frontend Engineer e specialista Angular',
   },
   en: {
-    title: 'Salvatore Di Genua | Full-stack development & AI systems',
+    title: 'Salvatore Di Genua | Angular, Full Stack and AI Systems',
     description:
-      'Portfolio of Salvatore Di Genua. Angular architecture, full-stack development, agentic document retrieval, and AI-assisted development.',
+      'Portfolio of Salvatore Di Genua, Senior Frontend Engineer. Angular projects, full-stack development, and an AI document retrieval platform in development.',
+    imageAlt:
+      'Salvatore Di Genua’s portfolio cover with his name and the robot from the AI section.',
     locale: 'en_US',
-    jobTitle: 'Senior Frontend Engineer & Angular Specialist',
+    jobTitle: 'Senior Frontend Engineer and Angular specialist',
   },
 };
 
@@ -38,9 +43,7 @@ export class SeoService {
   update(language: SupportedLanguage): void {
     const content = CONTENT[language];
     const alternateLocale = CONTENT[language === 'it' ? 'en' : 'it'].locale;
-    const canonicalUrl = this.buildCanonicalUrl(language);
-
-    this.document.documentElement.lang = language;
+    const canonicalUrl = new URL(LANGUAGE_PATHS[language], SITE_ORIGIN).href;
 
     this.title.setTitle(content.title);
     this.meta.updateTag({ name: 'description', content: content.description });
@@ -55,26 +58,24 @@ export class SeoService {
       property: 'og:locale:alternate',
       content: alternateLocale,
     });
+    this.meta.updateTag({
+      property: 'og:image:alt',
+      content: content.imageAlt,
+    });
     this.meta.updateTag({ name: 'twitter:title', content: content.title });
     this.meta.updateTag({
       name: 'twitter:description',
       content: content.description,
     });
+    this.meta.updateTag({
+      name: 'twitter:image:alt',
+      content: content.imageAlt,
+    });
 
-    this.updateCanonical(canonicalUrl);
+    this.document
+      .querySelector('link[rel="canonical"]')
+      ?.setAttribute('href', canonicalUrl);
     this.updateStructuredData(language, content, canonicalUrl);
-  }
-
-  private updateCanonical(url: string): void {
-    let canonical = this.document.querySelector<HTMLLinkElement>(
-      'link[rel="canonical"]',
-    );
-    if (!canonical) {
-      canonical = this.document.createElement('link');
-      canonical.rel = 'canonical';
-      this.document.head.appendChild(canonical);
-    }
-    canonical.href = url;
   }
 
   private updateStructuredData(
@@ -85,41 +86,19 @@ export class SeoService {
     const script = this.document.getElementById('person-schema');
     if (!script) return;
 
-    try {
-      const schema = JSON.parse(script.textContent ?? '{}');
-      if (Array.isArray(schema['@graph'])) {
-        for (const item of schema['@graph']) {
-          if (item['@type'] === 'Person') {
-            item.description = content.description;
-            item.inLanguage = language;
-            item.jobTitle = content.jobTitle;
-            item.url = url;
-          } else if (item['@type'] === 'ProfilePage') {
-            item.url = url;
-            item.name = content.title;
-          }
-        }
-      } else if (schema.mainEntity) {
-        schema.mainEntity.description = content.description;
-        schema.mainEntity.inLanguage = language;
-        schema.mainEntity.url = url;
-      } else {
-        schema.description = content.description;
-        schema.inLanguage = language;
-        schema.url = url;
+    const schema = JSON.parse(script.textContent ?? '{}');
+    for (const item of schema['@graph']) {
+      if (item['@type'] === 'Person') {
+        item.description = content.description;
+        item.jobTitle = content.jobTitle;
+      } else if (item['@type'] === 'ProfilePage') {
+        item['@id'] = url + '#webpage';
+        item.url = url;
+        item.name = content.title;
+        item.description = content.description;
+        item.inLanguage = language;
       }
-      script.textContent = JSON.stringify(schema, null, 2);
-    } catch {
-      // ignore parse errors
     }
-  }
-
-  private buildCanonicalUrl(language: SupportedLanguage): string {
-    const url = new URL(this.document.location.href);
-    if (url.searchParams.has(LanguageService.langQueryParam)) {
-      url.searchParams.set(LanguageService.langQueryParam, language);
-      return url.toString();
-    }
-    return BASE_URL;
+    script.textContent = JSON.stringify(schema);
   }
 }
